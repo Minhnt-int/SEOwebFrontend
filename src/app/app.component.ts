@@ -10,7 +10,7 @@ import { log } from 'console';
 })
 export class AppComponent {
   title = 'SEOwebFront';
-
+  loginPopup: boolean = false;
 
   constructor(public dialog: MatDialog) {
 
@@ -18,9 +18,17 @@ export class AppComponent {
 
   loginFormPopup(): void {
     console.log("click!");
+    if (this.loginPopup) return;
+    this.loginPopup = true;
+
     const dialogRef = this.dialog.open(LoginPopupComponent, {
-      width: '250px',
+      width: '1000px',
       // data: { name: this.name, animal: this.animal }
     });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.loginPopup = false;
+    });
+
   }
 }
