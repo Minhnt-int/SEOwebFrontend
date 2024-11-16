@@ -47,7 +47,7 @@
                                 <button type="submit" value="Tìm kiếm"
                                   class="ux-search-submit submit-button secondary button  icon mb-0"
                                   aria-label="Submit">
-                                  <i class="icon-search"></i> </button>
+                                  <i class="fa fa-search" aria-hidden="true"></i> </button>
                               </div>
                             </div>
                             <div class="live-search-results text-left z-top">
@@ -76,6 +76,7 @@
 
                     <i class="icon-shopping-basket" data-icon-label="0">
                     </i>
+
                   </a>
 
 
@@ -130,21 +131,19 @@
                   </div>
 
                 </li>
-                <li class="account-item has-icon
+                <!-- <li class="account-item has-icon
     ">
 
-                  <!-- <a href="https://kinhbacfurniture.com/my-account/"
-                                        class="nav-top-link nav-top-not-logged-in is-small"
-                                        data-open="#login-form-popup">
-                                        <span>
-                                            Đăng nhập </span>
+                  <a href="https://kinhbacfurniture.com/my-account/" class="nav-top-link nav-top-not-logged-in is-small"
+                    data-open="#login-form-popup">
+                    <span>
+                      Đăng nhập </span>
 
-                                    </a> -->
-
-                  <a (click)="loginFormPopup()">Đăng nhậpp</a>
+                  </a>
 
 
-                </li>
+
+                </li> -->
               </ul>
             </div>
 
@@ -158,7 +157,7 @@
             <div id="logo" class="flex-col logo">
 
               <!-- Header logo -->
-              <a href="https://kinhbacfurniture.com/" title="Kinh Bắc Furniture - Tô điểm ngôi nhà của bạn" rel="home">
+              <a href="/" title="Kinh Bắc Furniture - Tô điểm ngôi nhà của bạn" rel="home">
                 <img width="1020" height="661"
                   src="./assets/Trang chủ - Kinh Bắc Furniture_files/logo-KB-door-1024x664.png"
                   class="header_logo header-logo" alt="Kinh Bắc Furniture"><img width="1020" height="661"
@@ -190,10 +189,10 @@
                     thiệu</a>
                 </li>
                 <li id="menu-item-247"
-                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-247 menu-item-design-default has-dropdown">
-                  <a href="https://kinhbacfurniture.com/cua-hang/" class="nav-top-link" aria-expanded="false"
-                    aria-haspopup="menu">Sản phẩm<i class="icon-angle-down"></i></a>
-                  <ul class="sub-menu nav-dropdown nav-dropdown-default">
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-247 menu-item-design-default custom-has-dropdown">
+                  <a href="/cua-hang" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Sản phẩm<i
+                      class="icon-angle-down"></i></a>
+                  <ul class="sub-menu custom-nav-dropdown  nav-dropdown-default">
                     <li id="menu-item-612"
                       class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-612">
                       <a href="https://kinhbacfurniture.com/danh-muc/cua-go-nhua-composite/">Cửa
@@ -213,20 +212,20 @@
                 </li>
                 <li id="menu-item-133"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133 menu-item-design-default">
-                  <a href="https://kinhbacfurniture.com/du-an/" class="nav-top-link">Dự án</a>
+                  <a href="/du-an" class="nav-top-link">Dự án</a>
                 </li>
                 <li id="menu-item-134"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134 menu-item-design-default">
-                  <a href="https://kinhbacfurniture.com/bao-gia/" class="nav-top-link">Bảng báo
+                  <a href="/bao-gia" class="nav-top-link">Bảng báo
                     giá</a>
                 </li>
                 <li id="menu-item-135"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135 menu-item-design-default">
-                  <a href="https://kinhbacfurniture.com/blog/" class="nav-top-link">Tin tức</a>
+                  <a href="/blog" class="nav-top-link">Tin tức</a>
                 </li>
                 <li id="menu-item-136"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136 menu-item-design-default">
-                  <a href="https://kinhbacfurniture.com/thiet-ke-thi-cong-noi-that/" class="nav-top-link">Thiết kế thi
+                  <a href="/thiet-ke-thi-cong-noi-that" class="nav-top-link">Thiết kế thi
                     công nội thất</a>
                 </li>
               </ul>
@@ -349,23 +348,41 @@
 
 
                 <div class="social-icons follow-icons footer_social_icons full-width text-center"
-                  style="font-size:110%"><a href="https://www.facebook.com/thedinofa" target="_blank"
-                    rel="noopener noreferrer nofollow" data-label="Facebook" class="icon plain facebook tooltip"
-                    title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a
-                    href="https://www.facebook.com/thedinofa" target="_blank" rel="noopener noreferrer nofollow"
+                  style="font-size:110%">
+                  <a href="https://www.facebook.com/thedinofa" target="_blank" rel="noopener noreferrer nofollow"
+                    data-label="Facebook" class="icon plain facebook tooltip" title="Follow on Facebook"
+                    aria-label="Follow on Facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://www.facebook.com/thedinofa" target="_blank" rel="noopener noreferrer nofollow"
                     data-label="Instagram" class="icon plain instagram tooltip" title="Follow on Instagram"
-                    aria-label="Follow on Instagram"><i class="icon-instagram"></i></a><a
-                    href="https://www.facebook.com/thedinofa" target="_blank" rel="noopener noreferrer nofollow"
+                    aria-label="Follow on Instagram">
+                    <i class="fa fa-instagram" aria-hidden="true">
+                    </i>
+                  </a>
+                  <a href="https://www.facebook.com/thedinofa" target="_blank" rel="noopener noreferrer nofollow"
                     data-label="TikTok" class="icon plain tiktok tooltip" title="Follow on TikTok"
-                    aria-label="Follow on TikTok"><i class="icon-tiktok"></i></a><a
-                    href="mailto:https://www.facebook.com/thedinofa" data-label="E-mail" target="_blank" rel="nofollow"
-                    class="icon plain email tooltip" title="Send us an email" aria-label="Send us an email"><i
-                      class="icon-envelop"></i></a><a href="tel:https://www.facebook.com/thedinofa" data-label="Phone"
-                    target="_blank" rel="nofollow" class="icon plain phone tooltip" title="Call us"
-                    aria-label="Call us"><i class="icon-phone"></i></a><a href="https://www.facebook.com/thedinofa"
-                    data-label="YouTube" target="_blank" rel="noopener noreferrer nofollow"
-                    class="icon plain youtube tooltip" title="Follow on YouTube" aria-label="Follow on YouTube"><i
-                      class="icon-youtube"></i></a></div>
+                    aria-label="Follow on TikTok">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-tiktok" viewBox="0 0 16 16">
+                      <path
+                        d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+                    </svg>
+                  </a>
+                  <a href="mailto:https://www.facebook.com/thedinofa" data-label="E-mail" target="_blank" rel="nofollow"
+                    class="icon plain email tooltip" title="Send us an email" aria-label="Send us an email">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  </a>
+                  <a href="tel:https://www.facebook.com/thedinofa" data-label="Phone" target="_blank" rel="nofollow"
+                    class="icon plain phone tooltip" title="Call us" aria-label="Call us">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://www.facebook.com/thedinofa" data-label="YouTube" target="_blank"
+                    rel="noopener noreferrer nofollow" class="icon plain youtube tooltip" title="Follow on YouTube"
+                    aria-label="Follow on YouTube">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                  </a>
+                </div>
 
                 <div id="gap-811134023" class="gap-element clearfix" style="display:block; height:auto;">
 
@@ -650,13 +667,13 @@ $urlZalo = "https://zalo.me/0967571515";
           <button class="toggle" aria-label="Toggle"><i class="icon-angle-down"></i></button>
           <ul class="sub-menu nav-sidebar-ul children">
             <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-612"><a
-                href="https://kinhbacfurniture.com/danh-muc/cua-go-nhua-composite/">Cửa gỗ nhựa
+                href="/cua-go-nhua-composite/">Cửa gỗ nhựa
                 Composite</a></li>
             <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-613"><a
-                href="https://kinhbacfurniture.com/danh-muc/cua-go-cong-nghiep/">Cửa gỗ công nghiệp</a>
+                href="/cua-go-cong-nghiep/">Cửa gỗ công nghiệp</a>
             </li>
             <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-611"><a
-                href="https://kinhbacfurniture.com/danh-muc/cua-chong-chay/">Cửa chống cháy</a></li>
+                href="/danh-muc/cua-chong-chay/">Cửa chống cháy</a></li>
           </ul>
         </li>
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133"><a
@@ -668,13 +685,12 @@ $urlZalo = "https://zalo.me/0967571515";
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a
             href="https://kinhbacfurniture.com/thiet-ke-thi-cong-noi-that/">Thiết kế thi công nội thất</a>
         </li>
-        <li class="account-item has-icon menu-item">
-          <!-- <a href="https://kinhbacfurniture.com/my-account/" class="nav-top-link nav-top-not-logged-in">
-                        <span class="header-account-title">
-                            Đăng nhập </span>
-                    </a> -->
-          <a (click)="loginFormPopup()">Đăng nhập</a>
-        </li>
+        <!-- <li class="account-item has-icon menu-item">
+          <a href="https://kinhbacfurniture.com/my-account/" class="nav-top-link nav-top-not-logged-in">
+            <span class="header-account-title">
+              Đăng nhập </span>
+          </a>
+        </li> -->
         <li class="header-newsletter-item has-icon">
 
           <a href="https://kinhbacfurniture.com/#header-newsletter-signup" class="tooltip"
@@ -707,156 +723,15 @@ $urlZalo = "https://zalo.me/0967571515";
 
   </div>
 
-  <script type="text/javascript">
-    (function () {
-      var c = document.body.className;
-      c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
-      document.body.className = c;
-    })();
-  </script>
-  <script type="text/template" id="tmpl-variation-template">
-	<div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
-	<div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
-	<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
-</script>
-  <script type="text/template" id="tmpl-unavailable-variation-template">
-	<p>Rất tiếc, sản phẩm này hiện không tồn tại. Hãy chọn một phương thức kết hợp khác.</p>
-</script>
-
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/index.js.download"
-    id="swv-js"></script>
-  <script type="text/javascript" id="contact-form-7-js-extra">
-    /* <![CDATA[ */
-    var wpcf7 = { "api": { "root": "https:\/\/kinhbacfurniture.com\/wp-json\/", "namespace": "contact-form-7\/v1" } };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/index(1).js.download"
-    id="contact-form-7-js"></script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/jquery.blockUI.min.js.download"
-    id="jquery-blockui-js"></script>
-  <script type="text/javascript" id="wc-add-to-cart-js-extra">
-    /* <![CDATA[ */
-    var wc_add_to_cart_params = { "ajax_url": "\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "Xem gi\u1ecf h\u00e0ng", "cart_url": "https:\/\/kinhbacfurniture.com\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/add-to-cart.min.js.download"
-    id="wc-add-to-cart-js"></script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/js.cookie.min.js.download"
-    id="js-cookie-js"></script>
-  <script type="text/javascript" id="woocommerce-js-extra">
-    /* <![CDATA[ */
-    var woocommerce_params = { "ajax_url": "\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%" };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/woocommerce.min.js.download"
-    id="woocommerce-js"></script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/hoverIntent.min.js.download"
-    id="hoverIntent-js"></script>
-  <script type="text/javascript" id="flatsome-js-js-extra">
-    /* <![CDATA[ */
-    var flatsomeVars = { "theme": { "version": "3.17.4" }, "ajaxurl": "https:\/\/kinhbacfurniture.com\/wp-admin\/admin-ajax.php", "rtl": "", "sticky_height": "70", "stickyHeaderHeight": "0", "scrollPaddingTop": "0", "assets_url": "https:\/\/kinhbacfurniture.com\/wp-content\/themes\/flatsome\/assets\/", "lightbox": { "close_markup": "<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>", "close_btn_inside": false }, "user": { "can_edit_pages": false }, "i18n": { "mainMenu": "Main Menu", "toggleButton": "Toggle" }, "options": { "cookie_notice_version": "1", "swatches_layout": "", "swatches_disable_deselect": false, "swatches_box_select_event": false, "swatches_box_behavior_selected": false, "swatches_box_update_urls": "1", "swatches_box_reset": false, "swatches_box_reset_limited": false, "swatches_box_reset_extent": false, "swatches_box_reset_time": 300, "search_result_latency": "0" }, "is_mini_cart_reveal": "1" };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/flatsome.js.download"
-    id="flatsome-js-js"></script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/wishlist.js.download"
-    id="flatsome-woocommerce-wishlist-js"></script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/yith-ajax-navigation.js.download"
-    id="flatsome-yith-woocommerce-ajax-navigation-js"></script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/flatsome-live-search.js.download"
-    id="flatsome-live-search-js"></script>
-  <script type="text/javascript"
-    src="./assets/Trang chủ - Kinh Bắc Furniture_files/flatsome-swatches-frontend.js.download"
-    id="flatsome-swatches-frontend-js"></script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/api.js.download"
-    id="google-recaptcha-js"></script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/wp-polyfill.min.js.download"
-    id="wp-polyfill-js"></script>
-  <script type="text/javascript" id="wpcf7-recaptcha-js-extra">
-    /* <![CDATA[ */
-    var wpcf7_recaptcha = { "sitekey": "6LesrYUnAAAAAGa4XCw9hmW6re6ogcB8ftdbR9fg", "actions": { "homepage": "homepage", "contactform": "contactform" } };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/index(2).js.download"
-    id="wpcf7-recaptcha-js"></script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/woocommerce.js.download"
-    id="flatsome-theme-woocommerce-js-js"></script>
-  <!--[if IE]>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/intersection-observer-polyfill@0.1.0/dist/IntersectionObserver.js?ver=0.1.0" id="intersection-observer-polyfill-js"></script>
-<![endif]-->
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/jquery.selectBox.min.js.download"
-    id="jquery-selectBox-js"></script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/jquery.prettyPhoto.min.js.download"
-    id="prettyPhoto-js"></script>
-  <script type="text/javascript" id="jquery-yith-wcwl-js-extra">
-    /* <![CDATA[ */
-    var yith_wcwl_l10n = { "ajax_url": "\/wp-admin\/admin-ajax.php", "redirect_to_cart": "no", "yith_wcwl_button_position": "shortcode", "multi_wishlist": "", "hide_add_button": "1", "enable_ajax_loading": "", "ajax_loader_url": "https:\/\/kinhbacfurniture.com\/wp-content\/plugins\/yith-woocommerce-wishlist\/assets\/images\/ajax-loader-alt.svg", "remove_from_wishlist_after_add_to_cart": "1", "is_wishlist_responsive": "1", "time_to_close_prettyphoto": "3000", "fragments_index_glue": ".", "reload_on_found_variation": "1", "mobile_media_query": "768", "labels": { "cookie_disabled": "We are sorry, but this feature is available only if cookies on your browser are enabled.", "added_to_cart_message": "<div class=\"woocommerce-notices-wrapper\"><div class=\"woocommerce-message\" role=\"alert\">Product added to cart successfully<\/div><\/div>" }, "actions": { "add_to_wishlist_action": "add_to_wishlist", "remove_from_wishlist_action": "remove_from_wishlist", "reload_wishlist_and_adding_elem_action": "reload_wishlist_and_adding_elem", "load_mobile_action": "load_mobile", "delete_item_action": "delete_item", "save_title_action": "save_title", "save_privacy_action": "save_privacy", "load_fragments": "load_fragments" }, "nonce": { "add_to_wishlist_nonce": "2c95a04190", "remove_from_wishlist_nonce": "f662646602", "reload_wishlist_and_adding_elem_nonce": "68191c9e88", "load_mobile_nonce": "f9296d2b5e", "delete_item_nonce": "a1d0457d85", "save_title_nonce": "e7824b696a", "save_privacy_nonce": "098b8bab1b", "load_fragments_nonce": "4bb87bb847" }, "redirect_after_ask_estimate": "", "ask_estimate_redirect_url": "https:\/\/kinhbacfurniture.com" };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/jquery.yith-wcwl.min.js.download"
-    id="jquery-yith-wcwl-js"></script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/underscore.min.js.download"
-    id="underscore-js"></script>
-  <script type="text/javascript" id="wp-util-js-extra">
-    /* <![CDATA[ */
-    var _wpUtilSettings = { "ajax": { "url": "\/wp-admin\/admin-ajax.php" } };
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="./assets/Trang chủ - Kinh Bắc Furniture_files/wp-util.min.js.download"
-    id="wp-util-js"></script>
-  <script type="text/javascript" id="wc-add-to-cart-variation-js-extra">
-    /* <![CDATA[ */
-    var wc_add_to_cart_variation_params = { "wc_ajax_url": "\/?wc-ajax=%%endpoint%%", "i18n_no_matching_variations_text": "R\u1ea5t ti\u1ebfc, kh\u00f4ng c\u00f3 s\u1ea3n ph\u1ea9m n\u00e0o ph\u00f9 h\u1ee3p v\u1edbi l\u1ef1a ch\u1ecdn c\u1ee7a b\u1ea1n. H\u00e3y ch\u1ecdn m\u1ed9t ph\u01b0\u01a1ng th\u1ee9c k\u1ebft h\u1ee3p kh\u00e1c.", "i18n_make_a_selection_text": "Ch\u1ecdn c\u00e1c t\u00f9y ch\u1ecdn cho s\u1ea3n ph\u1ea9m tr\u01b0\u1edbc khi cho s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng c\u1ee7a b\u1ea1n.", "i18n_unavailable_text": "R\u1ea5t ti\u1ebfc, s\u1ea3n ph\u1ea9m n\u00e0y hi\u1ec7n kh\u00f4ng t\u1ed3n t\u1ea1i. H\u00e3y ch\u1ecdn m\u1ed9t ph\u01b0\u01a1ng th\u1ee9c k\u1ebft h\u1ee3p kh\u00e1c." };
-    /* ]]> */
-  </script>
-  <script type="text/javascript"
-    src="./assets/Trang chủ - Kinh Bắc Furniture_files/add-to-cart-variation.min.js.download"
-    id="wc-add-to-cart-variation-js"></script>
-  <!--[if IE]>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.0.1/ie11CustomProperties.min.js?ver=4.0.1" id="css-vars-polyfill-js"></script>
-<![endif]-->
-  <script>
-    jQuery(document).ready(function ($) {
-      $('.owl-carousel').owlCarousel({
-        loop: false,
-        margin: 10,
-        nav: true,
-        navText: [
-          "<i class='fa fa-angle-left wt-left'></i>",
-          "<i class='fa fa-angle-right wt-right'></i>"
-        ],
-        //                                                          autoplay: true,
-        autoplayHoverPause: true,
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 2
-          },
-          1000: {
-            items: 4
-          }
-        }
-      })
-      jQuery(".carousel-wrap>.owl-carousel>.owl-stage-outer>.owl-stage>.owl-item>div[class*='col-']").removeClass(function (index, css) {
-        return (css.match(/(^|\s)col-\S+/g) || []).join(' ');
-      });
-
-
-    });
-
-  </script>
-
 
 
   <div>
     <div class="grecaptcha-badge" data-style="bottomright"
       style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
-      <!-- <div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation"
-                    name="a-66n1atlrwlw9" frameborder="0" scrolling="no"
-                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-                    src="./assets/Trang chủ - Kinh Bắc Furniture_files/anchor.html"></iframe></div> -->
+      <div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation"
+          name="a-66n1atlrwlw9" frameborder="0" scrolling="no"
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+          src="./assets/Trang chủ - Kinh Bắc Furniture_files/anchor.html"></iframe></div>
       <div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response"
         class="g-recaptcha-response"
         style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
@@ -865,15 +740,14 @@ $urlZalo = "https://zalo.me/0967571515";
   <div>
     <div class="grecaptcha-badge" data-style="none"
       style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
-      <!-- <div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation"
-                    name="a-rijdd94pvgi5" frameborder="0" scrolling="no"
-                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-                    src="./assets/Trang chủ - Kinh Bắc Furniture_files/anchor(1).html"></iframe></div> -->
+      <div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation"
+          name="a-rijdd94pvgi5" frameborder="0" scrolling="no"
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+          src="./assets/Trang chủ - Kinh Bắc Furniture_files/anchor(1).html"></iframe></div>
       <div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100001" name="g-recaptcha-response"
         class="g-recaptcha-response"
         style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
     </div>
-    <!-- <iframe style="display: none;"
-            src="./assets/Trang chủ - Kinh Bắc Furniture_files/saved_resource.html"></iframe> -->
+    <iframe style="display: none;" src="./assets/Trang chủ - Kinh Bắc Furniture_files/saved_resource.html"></iframe>
   </div>
 </div>
