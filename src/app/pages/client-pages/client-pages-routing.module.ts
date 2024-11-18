@@ -4,7 +4,6 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NewsPageComponent } from './news-page/news-page.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 import { IntroPageComponent } from './intro-page/intro-page.component';
-import { ProductPageComponent } from './product-page/product-page.component';
 import { PricePageComponent } from './price-page/price-page.component';
 
 const routes: Routes = [
@@ -30,7 +29,8 @@ const routes: Routes = [
   },
   {
     path: 'cua-hang',
-    component: ProductPageComponent,
+    loadChildren: () =>
+      import('./product-page/product-page.module').then((m) => m.ProductPageModule),
   },
   {
     path: 'bao-gia',
