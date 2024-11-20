@@ -19,8 +19,8 @@ export class ProductDetailPageComponent {
   ngOnInit(): void {
     this.productName = this.route.snapshot.paramMap.get('productUrl');
     this.details =  this.productService.findProductDetailbyUrl(this.productName);
-    // console.log(this.details.length);
     this.detail = this.details[0];
+    console.log(this.detail);
     // Hoặc sử dụng route.params để lấy dữ liệu động
     // this.route.params.subscribe(params => {
     //   this.productName = params['productName'];

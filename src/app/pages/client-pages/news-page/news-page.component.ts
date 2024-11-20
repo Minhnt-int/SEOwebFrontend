@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-news-page',
-  standalone: true,
-  imports: [],
+  standalone: false,
   templateUrl: './news-page.component.html',
   styleUrl: './news-page.component.scss'
 })

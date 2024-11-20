@@ -5,6 +5,7 @@ import { NewsPageComponent } from './news-page/news-page.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 import { IntroPageComponent } from './intro-page/intro-page.component';
 import { PricePageComponent } from './price-page/price-page.component';
+import { DesignPageComponent } from './design-page/design-page.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'thiet-ke-thi-cong-noi-that',
-    component: ProjectPageComponent,
+    component: DesignPageComponent,
   },
   {
     path: 'gioi-thieu',
