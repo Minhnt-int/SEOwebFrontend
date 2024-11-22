@@ -2,16 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProductPageRoutingModule } from './product-page-routing.module';
-import { ProductPageComponent } from './component/product-page/product-page.component';
-import { ProductDetailPageComponent } from './component/product-detail-page/product-detail-page.component';
 
-import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { ProductPageComponent } from './component/product-page/product-page.component';
+import { ProducttypePageComponent } from './component/producttype-page/producttype-page.component';
 @NgModule({
-  declarations: [ProductPageComponent, ProductDetailPageComponent],
+  declarations: [ProductPageComponent, ProducttypePageComponent],
   imports: [
     CommonModule,
     ProductPageRoutingModule,
-    NzTabsModule
   ]
 })
 export class ProductPageModule { }

@@ -1,27 +1,27 @@
 <main id="main" class="">
   <div id="content" role="main" class="content-area">
     <div class="slider-wrapper relative" id="slider-1183383840">
-      <nz-carousel
-        nzAutoPlay
-        #carousel
+      <div
         class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal is-draggable flickity-enabled"
       >
-        <!-- @for (text of array; track text) { -->
-        <!-- <div nz-carousel-content>
+        <nz-carousel nzAutoPlay #carousel>
+          <!-- @for (text of array; track text) { -->
+          <!-- <div nz-carousel-content>
           <h3>{{ text }}</h3>
         </div> -->
 
-        <img
-          *ngFor="let text of array"
-          nz-carousel-content
-          fetchpriority="high"
-          decoding="async"
-          [src]="'/assets/img/home-page/' + text"
-          alt=""
-          class="attachment-original size-original"
-          style="z-index: 100; max-width: 2560px"
-        />
-        <!-- } -->
+          <img
+            *ngFor="let text of array"
+            nz-carousel-content
+            fetchpriority="high"
+            decoding="async"
+            [src]="'/assets/img/home-page/' + text"
+            alt=""
+            class="attachment-original size-original"
+            style="z-index: 100; max-width: 2560px"
+          />
+          <!-- } -->
+        </nz-carousel>
         <button
           class="flickity-button flickity-prev-next-button previous"
           type="button"
@@ -48,7 +48,7 @@
             ></path>
           </svg>
         </button>
-      </nz-carousel>
+      </div>
       <div class="loading-spin dark large centered" style="display: none"></div>
     </div>
 
@@ -183,7 +183,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-03-PN-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-03-PN-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       sizes="(max-width: 300px) 100vw, 300px"
                     /><img
@@ -191,7 +191,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -315,7 +315,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-02-PN-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-02-PN-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -439,7 +439,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-10-SA-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-10-SA-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -448,7 +448,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -572,7 +572,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-03-K-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-03-K-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -581,7 +581,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -705,7 +705,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-09-SA-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-09-SA-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -829,7 +829,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-02-SA-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-02-SA-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -838,7 +838,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -962,7 +962,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-08-SA-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-08-SA-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -971,7 +971,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1095,7 +1095,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-02-PA-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-02-PA-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1104,7 +1104,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1242,7 +1242,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-02-PN-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-02-PN-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1366,7 +1366,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-04-2PA-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-04-2PA-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1375,7 +1375,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1499,7 +1499,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-W6-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-W6-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1508,7 +1508,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1632,7 +1632,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-01-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-01-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1641,7 +1641,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1765,7 +1765,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-02-1-PN-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-02-1-PN-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1774,7 +1774,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1898,7 +1898,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-01-SS-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-01-SS-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -1907,7 +1907,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -2031,7 +2031,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-01-SA-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-01-SA-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -2040,7 +2040,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/436300384_320492404405599_8170504358963088823_n-300x300.jpg"
+                      src="/assets/img/product-page/436300384_320492404405599_8170504358963088823_n-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -2164,7 +2164,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/KB-02-CN-01-300x300.jpg"
+                      src="/assets/img/product-page/KB-02-CN-01-300x300.jpg"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"
@@ -2173,7 +2173,7 @@
                       decoding="async"
                       width="300"
                       height="300"
-                      src="/assets/Trang chủ - Kinh Bắc Furniture_files/1-01-300x300.jpg"
+                      src="/assets/img/product-page/1-01-300x300.jpg"
                       class="show-on-hover absolute fill hide-for-small back-image"
                       alt=""
                       sizes="(max-width: 300px) 100vw, 300px"

@@ -259,39 +259,33 @@
                 </li>
                 <li
                   id="menu-item-247"
-                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-247 menu-item-design-default has-dropdown"
+                  nz-dropdown
+                  [nzDropdownMenu]="menu"
+                  nzPlacement="bottomCenter"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-247 menu-item-design-default"
                 >
-                  <a
-                    href="/cua-hang"
-                    class="nav-top-link"
-                    aria-expanded="false"
-                    aria-haspopup="menu"
-                    >Sản phẩm<i class="icon-angle-down"></i
+                  <a href="/san-pham" class="nav-top-link"
+                    >Sản phẩm<span nz-icon nzType="down"></span
                   ></a>
-                  <ul class="sub-menu nav-dropdown nav-dropdown-default">
-                    <li
-                      id="menu-item-612"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-612"
-                    >
-                      <a href="danh-muc/cua-go-nhua-composite/"
-                        >Cửa gỗ nhựa Composite</a
-                      >
-                    </li>
-                    <li
-                      id="menu-item-613"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-613"
-                    >
-                      <a href="danh-muc/cua-go-cong-nghiep/"
-                        >Cửa gỗ công nghiệp</a
-                      >
-                    </li>
-                    <li
-                      id="menu-item-611"
-                      class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-611"
-                    >
-                      <a href="danh-muc/cua-chong-chay/">Cửa chống cháy</a>
-                    </li>
-                  </ul>
+                  <nz-dropdown-menu #menu="nzDropdownMenu">
+                    <ul>
+                      <ul nz-menu nzSelectable>
+                        <li nz-menu-item id="menu-item-612">
+                          <a href="san-pham/cua-go-nhua-composite/"
+                            >Cửa gỗ nhựa Composite</a
+                          >
+                        </li>
+                        <li nz-menu-item id="menu-item-613">
+                          <a href="san-pham/cua-go-cong-nghiep/"
+                            >Cửa gỗ công nghiệp</a
+                          >
+                        </li>
+                        <li nz-menu-item id="menu-item-611">
+                          <a href="san-pham/cua-chong-chay/">Cửa chống cháy</a>
+                        </li>
+                      </ul>
+                    </ul>
+                  </nz-dropdown-menu>
                 </li>
                 <li
                   id="menu-item-133"
@@ -515,11 +509,6 @@
                 <div id="text-559117378" class="text">
                   <p>NỘI THẤT CAO CẤP KINH BẮC</p>
                   <p>Biến ngôi nhà của bạn thành nơi đáng sống</p>
-                  <div class="ddict_btn" style="top: 12px; left: 175.7px">
-                    <img
-                      src="chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png"
-                    />
-                  </div>
 
                   <style>
                     #text-559117378 {
@@ -794,7 +783,7 @@ $urlZalo = "https://zalo.me/0967571515";
           class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-247 has-child"
           aria-expanded="false"
         >
-          <a href="cua-hang/">Sản phẩm</a>
+          <a href="san-pham/">Sản phẩm</a>
           <button class="toggle" aria-label="Toggle">
             <i class="icon-angle-down"></i>
           </button>
@@ -802,17 +791,19 @@ $urlZalo = "https://zalo.me/0967571515";
             <li
               class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-612"
             >
-              <a href="/cua-go-nhua-composite/">Cửa gỗ nhựa Composite</a>
+              <a href="san-pham/cua-go-nhua-composite/"
+                >Cửa gỗ nhựa Composite</a
+              >
             </li>
             <li
               class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-613"
             >
-              <a href="/cua-go-cong-nghiep/">Cửa gỗ công nghiệp</a>
+              <a href="san-pham/cua-go-cong-nghiep/">Cửa gỗ công nghiệp</a>
             </li>
             <li
               class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-611"
             >
-              <a href="/danh-muc/cua-chong-chay/">Cửa chống cháy</a>
+              <a href="san-pham/cua-chong-chay/">Cửa chống cháy</a>
             </li>
           </ul>
         </li>
@@ -895,106 +886,5 @@ $urlZalo = "https://zalo.me/0967571515";
         </li>
       </ul>
     </div>
-  </div>
-
-  <div>
-    <div
-      class="grecaptcha-badge"
-      data-style="bottomright"
-      style="
-        width: 256px;
-        height: 60px;
-        position: fixed;
-        visibility: hidden;
-        display: block;
-        transition: right 0.3s;
-        bottom: 14px;
-        right: -186px;
-        box-shadow: gray 0px 0px 5px;
-        border-radius: 2px;
-        overflow: hidden;
-      "
-    >
-      <div class="grecaptcha-logo">
-        <iframe
-          title="reCAPTCHA"
-          width="256"
-          height="60"
-          role="presentation"
-          name="a-66n1atlrwlw9"
-          frameborder="0"
-          scrolling="no"
-          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-          src="./assets/Trang chủ - Kinh Bắc Furniture_files/anchor.html"
-        ></iframe>
-      </div>
-      <div class="grecaptcha-error"></div>
-      <textarea
-        id="g-recaptcha-response-100000"
-        name="g-recaptcha-response"
-        class="g-recaptcha-response"
-        style="
-          width: 250px;
-          height: 40px;
-          border: 1px solid rgb(193, 193, 193);
-          margin: 10px 25px;
-          padding: 0px;
-          resize: none;
-          display: none;
-        "
-      ></textarea>
-    </div>
-  </div>
-  <div>
-    <div
-      class="grecaptcha-badge"
-      data-style="none"
-      style="
-        width: 256px;
-        height: 60px;
-        position: fixed;
-        visibility: hidden;
-        display: block;
-        transition: right 0.3s;
-        bottom: 14px;
-        right: -186px;
-        box-shadow: gray 0px 0px 5px;
-        border-radius: 2px;
-        overflow: hidden;
-      "
-    >
-      <div class="grecaptcha-logo">
-        <iframe
-          title="reCAPTCHA"
-          width="256"
-          height="60"
-          role="presentation"
-          name="a-rijdd94pvgi5"
-          frameborder="0"
-          scrolling="no"
-          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-          src="./assets/Trang chủ - Kinh Bắc Furniture_files/anchor(1).html"
-        ></iframe>
-      </div>
-      <div class="grecaptcha-error"></div>
-      <textarea
-        id="g-recaptcha-response-100001"
-        name="g-recaptcha-response"
-        class="g-recaptcha-response"
-        style="
-          width: 250px;
-          height: 40px;
-          border: 1px solid rgb(193, 193, 193);
-          margin: 10px 25px;
-          padding: 0px;
-          resize: none;
-          display: none;
-        "
-      ></textarea>
-    </div>
-    <iframe
-      style="display: none"
-      src="./assets/Trang chủ - Kinh Bắc Furniture_files/saved_resource.html"
-    ></iframe>
   </div>
 </div>

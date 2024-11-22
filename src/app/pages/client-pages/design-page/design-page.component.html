@@ -24,12 +24,6 @@
                       cấp</strong
                     >
                   </p>
-                  <div class="ddict_btn" style="top: 64px; left: 421.5px">
-                    <img
-                      decoding="async"
-                      src="chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png"
-                    />
-                  </div>
 
                   <style>
                     #text-1282824850 {
@@ -194,237 +188,33 @@
         }
       </style>
     </div>
-    <nz-carousel
-      nzAutoPlay
-      #carousel
-      class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal is-draggable flickity-enabled"
-    >
-      <img
-        *ngFor="let text of array"
-        nz-carousel-content
-        fetchpriority="high"
-        decoding="async"
-        width="2560"
-        height="1440"
-        [src]="'/assets/img/design-page/' + text"
-        alt=""
-        sizes="(max-width: 2560px) 100vw, 2560px"
-        class="attachment-original size-original"
-        style="z-index: 100; max-width: 2560px"
-      />
-      <button
-        class="flickity-button flickity-prev-next-button previous"
-        type="button"
-        aria-label="Previous"
-        (click)="previous()"
-      >
-        <svg class="flickity-button-icon" viewBox="0 0 100 100">
-          <path
-            d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
-            class="arrow"
-          ></path>
-        </svg></button
-      ><button
-        class="flickity-button flickity-prev-next-button next"
-        type="button"
-        aria-label="Next"
-      >
-        <svg class="flickity-button-icon" viewBox="0 0 100 100">
-          <path
-            d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
-            class="arrow"
-            transform="translate(100, 100) rotate(180) "
-          ></path>
-        </svg>
-      </button>
-    </nz-carousel>
-    <div class="slider-wrapper relative" id="slider-2125001323">
+    <div class="slider-wrapper relative" id="slider-1183383840">
       <div
         class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal is-draggable flickity-enabled"
-        data-flickity-options='{
-                "cellAlign": "center",
-                "imagesLoaded": true,
-                "lazyLoad": 1,
-                "freeScroll": false,
-                "wrapAround": true,
-                "autoPlay": 6000,
-                "pauseAutoPlayOnHover" : true,
-                "prevNextButtons": true,
-                "contain" : true,
-                "adaptiveHeight" : true,
-                "dragThreshold" : 10,
-                "percentPosition": true,
-                "pageDots": true,
-                "rightToLeft": false,
-                "draggable": true,
-                "selectedAttraction": 0.1,
-                "parallax" : 0,
-                "friction": 0.6        }'
-        tabindex="0"
       >
-        <div
-          class="flickity-viewport"
-          style="height: 604.641px; touch-action: pan-y"
-        >
-          <div
-            class="flickity-slider"
-            style="left: 0px; transform: translateX(-500%)"
-          >
-            <div
-              class="img has-hover x md-x lg-x y md-y lg-y"
-              id="image_1881274475"
-              style="position: absolute; left: 0%"
-              aria-hidden="true"
-            >
-              <div class="img-inner dark">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="2560"
-                  height="1440"
-                  src="/assets/img/design-page/4-01-scaled.jpg"
-                  class="attachment-original size-original"
-                  alt=""
-                  sizes="(max-width: 2560px) 100vw, 2560px"
-                />
-              </div>
+        <nz-carousel nzAutoPlay #carousel>
+          <!-- @for (text of array; track text) { -->
+          <!-- <div nz-carousel-content>
+          <h3>{{ text }}</h3>
+        </div> -->
 
-              <style>
-                #image_1881274475 {
-                  width: 100%;
-                }
-              </style>
-            </div>
-            <div
-              class="img has-hover x md-x lg-x y md-y lg-y"
-              id="image_206319873"
-              style="position: absolute; left: 100%"
-              aria-hidden="true"
-            >
-              <div class="img-inner dark">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="2560"
-                  height="1441"
-                  src="/assets/img/design-page/4-05-scaled.jpg"
-                  class="attachment-original size-original"
-                  alt=""
-                  sizes="(max-width: 2560px) 100vw, 2560px"
-                />
-              </div>
-
-              <style>
-                #image_206319873 {
-                  width: 100%;
-                }
-              </style>
-            </div>
-            <div
-              class="img has-hover x md-x lg-x y md-y lg-y"
-              id="image_2128809977"
-              style="position: absolute; left: 200%"
-              aria-hidden="true"
-            >
-              <div class="img-inner dark">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="2560"
-                  height="1441"
-                  src="/assets/img/design-page/4-04-scaled.jpg"
-                  class="attachment-original size-original"
-                  alt=""
-                  sizes="(max-width: 2560px) 100vw, 2560px"
-                />
-              </div>
-
-              <style>
-                #image_2128809977 {
-                  width: 100%;
-                }
-              </style>
-            </div>
-            <div
-              class="img has-hover x md-x lg-x y md-y lg-y"
-              id="image_1557345664"
-              style="position: absolute; left: 300%"
-              aria-hidden="true"
-            >
-              <div class="img-inner dark">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="2560"
-                  height="1441"
-                  src="/assets/img/design-page/4-03-scaled.jpg"
-                  class="attachment-original size-original"
-                  alt=""
-                  sizes="(max-width: 2560px) 100vw, 2560px"
-                />
-              </div>
-
-              <style>
-                #image_1557345664 {
-                  width: 100%;
-                }
-              </style>
-            </div>
-            <div
-              class="img has-hover x md-x lg-x y md-y lg-y"
-              id="image_720643627"
-              style="position: absolute; left: 400%"
-              aria-hidden="true"
-            >
-              <div class="img-inner dark">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="2560"
-                  height="1441"
-                  src="/assets/img/design-page/4-02-scaled.jpg"
-                  class="attachment-original size-original"
-                  alt=""
-                  sizes="(max-width: 2560px) 100vw, 2560px"
-                />
-              </div>
-
-              <style>
-                #image_720643627 {
-                  width: 100%;
-                }
-              </style>
-            </div>
-            <div
-              class="img has-hover x md-x lg-x y md-y lg-y is-selected"
-              id="image_726332565"
-              style="position: absolute; left: 500%"
-            >
-              <div class="img-inner dark">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="2560"
-                  height="1441"
-                  src="/assets/img/design-page/4-06-scaled.jpg"
-                  class="attachment-original size-original"
-                  alt=""
-                  sizes="(max-width: 2560px) 100vw, 2560px"
-                />
-              </div>
-
-              <style>
-                #image_726332565 {
-                  width: 100%;
-                }
-              </style>
-            </div>
-          </div>
-        </div>
+          <img
+            *ngFor="let text of array"
+            nz-carousel-content
+            fetchpriority="high"
+            decoding="async"
+            [src]="'/assets/img/design-page/' + text"
+            alt=""
+            class="attachment-original size-original"
+            style="z-index: 100; max-width: 2560px"
+          />
+          <!-- } -->
+        </nz-carousel>
         <button
           class="flickity-button flickity-prev-next-button previous"
           type="button"
           aria-label="Previous"
+          (click)="previous()"
         >
           <svg class="flickity-button-icon" viewBox="0 0 100 100">
             <path
@@ -436,6 +226,7 @@
           class="flickity-button flickity-prev-next-button next"
           type="button"
           aria-label="Next"
+          (click)="next()"
         >
           <svg class="flickity-button-icon" viewBox="0 0 100 100">
             <path
@@ -445,20 +236,7 @@
             ></path>
           </svg>
         </button>
-        <ol class="flickity-page-dots">
-          <li class="dot" aria-label="Page dot 1"></li>
-          <li class="dot" aria-label="Page dot 2"></li>
-          <li class="dot" aria-label="Page dot 3"></li>
-          <li class="dot" aria-label="Page dot 4"></li>
-          <li class="dot" aria-label="Page dot 5"></li>
-          <li
-            class="dot is-selected"
-            aria-label="Page dot 6"
-            aria-current="step"
-          ></li>
-        </ol>
       </div>
-
       <div class="loading-spin dark large centered" style="display: none"></div>
     </div>
 
@@ -1233,18 +1011,6 @@
                 ></i>
               </li>
             </ul>
-            <div class="ddict_btn" style="top: 292px; left: 170.1px">
-              <img
-                decoding="async"
-                src="chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png"
-              />
-            </div>
-            <div class="ddict_btn" style="top: 97px; left: 498.375px">
-              <img
-                decoding="async"
-                src="chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png"
-              />
-            </div>
 
             <style>
               #text-647645978 {

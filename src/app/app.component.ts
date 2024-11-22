@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SEOwebFront';
+  style = "width: 400px, line-height: 160px"
 }

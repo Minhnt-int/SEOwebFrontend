@@ -1,22 +1,6 @@
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/styles.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/custom-related-products-public.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/owl.carousel.min.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/owl.theme.default.min.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/ion.range-slider.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/shortcodes.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/wishlist.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/flatsome-swatches-frontend.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/flatsome.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/flatsome-shop.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/style.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/icon.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/font-awesome.min.css");
-@import url("../../../../assets/Trang chủ - Kinh Bắc Furniture_files/826a7e3dce.css");
 
-.slider-wrapper {
-}
+
 nz-carousel {
-  align-self: center;
   height: 85vh;
   aspect-ratio: 2048 / 904;
   overflow: hidden;
@@ -25,19 +9,11 @@ nz-carousel {
     width: auto;
     object-fit: contain;
   }
-  button {
-    z-index: 100;
-    position: absolute;
-  }
 }
 
-// .flickity-button-icon {
-//   .arrow {
-//   fill: rgba(0, 0, 0, 0.5) !important;
-
-//   }
-//   border: 2px solid rgba(0, 0, 0, 0.5) !important;
-// }
+.flickity-button  {
+  z-index: 10000;
+}
 
 [nz-carousel-content] {
   background: #fff;

@@ -16,10 +16,11 @@
                 <div class="box-image">
                   <div class="image-fade_in_back">
                     <a
-                      [href]="'cua-hang/detail/' + product.url"
-                      aria-label="`${product.productName}"
+                      [href]="'/detail/' + product.url"
+                      [attr.aria-label]="
+                        'Xem chi tiết về ' + product.productName
+                      "
                     >
-                      <!-- <a [routerLink]="['', product.url]" aria-label=`${product.productName}`> -->
                       <img
                         width="300"
                         height="300"
@@ -101,7 +102,7 @@
                     <p
                       class="category uppercase is-smaller no-text-overflow product-cat op-7"
                     >
-                      {{ product.productType }}
+                      {{ typeText(product.productType) }}
                     </p>
                     <p
                       class="name product-title woocommerce-loop-product__title"
@@ -117,8 +118,9 @@
                     <span class="price"
                       ><span class="woocommerce-Price-amount amount"
                         ><bdi
-                          >{{ product.productPrice }}&nbsp;<span
-                            class="woocommerce-Price-currencySymbol"
+                          >{{
+                            product.productPrice | number : "1.0-0"
+                          }}&nbsp;<span class="woocommerce-Price-currencySymbol"
                             >₫</span
                           ></bdi
                         ></span
@@ -213,16 +215,6 @@
                             alt=""
                             decoding="async"
                             loading="lazy"
-                            srcset="
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/08/KB-10-SA-01-300x300.jpg    300w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/08/KB-10-SA-01-1024x1024.jpg 1024w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/08/KB-10-SA-01-150x150.jpg    150w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/08/KB-10-SA-01-768x768.jpg    768w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/08/KB-10-SA-01-1536x1536.jpg 1536w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/08/KB-10-SA-01-2048x2048.jpg 2048w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/08/KB-10-SA-01-600x600.jpg    600w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/08/KB-10-SA-01-100x100.jpg    100w
-                            "
                             sizes="(max-width: 300px) 100vw, 300px"
                           /><img
                             width="300"
@@ -232,16 +224,6 @@
                             alt=""
                             decoding="async"
                             loading="lazy"
-                            srcset="
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/09/1-01-300x300.jpg    300w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/09/1-01-1024x1024.jpg 1024w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/09/1-01-150x150.jpg    150w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/09/1-01-768x768.jpg    768w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/09/1-01-1536x1536.jpg 1536w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/09/1-01-2048x2048.jpg 2048w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/09/1-01-600x600.jpg    600w,
-                              https://kinhbacfurniture.com/wp-content/uploads/2023/09/1-01-100x100.jpg    100w
-                            "
                             sizes="(max-width: 300px) 100vw, 300px"
                           />
                         </a>
@@ -375,14 +357,6 @@
                         alt=""
                         decoding="async"
                         loading="lazy"
-                        srcset="
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/05/441312691_320492447738928_5030056107160077507_n-225x300.jpg    225w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/05/441312691_320492447738928_5030056107160077507_n-769x1024.jpg   769w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/05/441312691_320492447738928_5030056107160077507_n-768x1023.jpg   768w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/05/441312691_320492447738928_5030056107160077507_n-1153x1536.jpg 1153w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/05/441312691_320492447738928_5030056107160077507_n-600x799.jpg    600w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/05/441312691_320492447738928_5030056107160077507_n.jpg           1537w
-                        "
                         sizes="(max-width: 225px) 100vw, 225px"
                       />
                     </a>
@@ -433,16 +407,6 @@
                         alt=""
                         decoding="async"
                         loading="lazy"
-                        srcset="
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/03/386067336_187252144396293_425490963523801210_n-300x300.jpg    300w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/03/386067336_187252144396293_425490963523801210_n-1024x1024.jpg 1024w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/03/386067336_187252144396293_425490963523801210_n-150x150.jpg    150w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/03/386067336_187252144396293_425490963523801210_n-768x768.jpg    768w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/03/386067336_187252144396293_425490963523801210_n-1536x1536.jpg 1536w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/03/386067336_187252144396293_425490963523801210_n-600x600.jpg    600w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/03/386067336_187252144396293_425490963523801210_n-100x100.jpg    100w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/03/386067336_187252144396293_425490963523801210_n.jpg           2048w
-                        "
                         sizes="(max-width: 300px) 100vw, 300px"
                       />
                     </a>
@@ -493,14 +457,6 @@
                         alt=""
                         decoding="async"
                         loading="lazy"
-                        srcset="
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/433622897_291488830639290_1165563850270327400_n-300x259.jpg    300w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/433622897_291488830639290_1165563850270327400_n-1024x883.jpg  1024w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/433622897_291488830639290_1165563850270327400_n-768x662.jpg    768w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/433622897_291488830639290_1165563850270327400_n-1536x1324.jpg 1536w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/433622897_291488830639290_1165563850270327400_n-600x517.jpg    600w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/433622897_291488830639290_1165563850270327400_n.jpg           2048w
-                        "
                         sizes="(max-width: 300px) 100vw, 300px"
                       />
                     </a>
@@ -551,16 +507,6 @@
                         alt=""
                         decoding="async"
                         loading="lazy"
-                        srcset="
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/401588885_211921415262699_1755972951023720929_n-300x300.jpg    300w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/401588885_211921415262699_1755972951023720929_n-1024x1024.jpg 1024w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/401588885_211921415262699_1755972951023720929_n-150x150.jpg    150w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/401588885_211921415262699_1755972951023720929_n-768x768.jpg    768w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/401588885_211921415262699_1755972951023720929_n-1536x1536.jpg 1536w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/401588885_211921415262699_1755972951023720929_n-600x600.jpg    600w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/401588885_211921415262699_1755972951023720929_n-100x100.jpg    100w,
-                          https://kinhbacfurniture.com/wp-content/uploads/2024/04/401588885_211921415262699_1755972951023720929_n.jpg           2048w
-                        "
                         sizes="(max-width: 300px) 100vw, 300px"
                       />
                     </a>
@@ -595,524 +541,5 @@
       </div>
       <!-- shop container -->
     </div>
-  </div>
-  <div class="cpd-after-woocommerce">
-    <section class="section" id="section_1397174845">
-      <div class="bg section-bg fill bg-fill bg-loaded">
-        <div class="section-bg-overlay absolute fill"></div>
-      </div>
-
-      <div class="section-content relative">
-        <div class="row" id="row-1891319787">
-          <div id="col-1686028323" class="col small-12 large-12">
-            <div class="col-inner">
-              <div id="text-386218430" class="text">
-                <h3>CHỌN NỘI THẤT CAO CẤP KINH BẮC BẠN ĐƯỢC GÌ?</h3>
-
-                <style>
-                  #text-386218430 {
-                    text-align: center;
-                    color: rgb(255, 255, 255);
-                  }
-
-                  #text-386218430 > * {
-                    color: rgb(255, 255, 255);
-                  }
-                </style>
-              </div>
-
-              <div id="text-1518354260" class="text">
-                <p>Đến với chúng tôi. Bạn sẽ nhận được nhưng sản phẩm</p>
-                <p>
-                  chất lượng tốt nhất -mẫu mã đẹp nhất - giá thành rẻ nhất -
-                  dịch vụ chăm sóc khách hàng chu đáo.
-                </p>
-
-                <style>
-                  #text-1518354260 {
-                    font-size: 1rem;
-                    line-height: 0.85;
-                    text-align: center;
-                    color: rgb(255, 255, 255);
-                  }
-
-                  #text-1518354260 > * {
-                    color: rgb(255, 255, 255);
-                  }
-                </style>
-              </div>
-
-              <div
-                id="gap-1141535111"
-                class="gap-element clearfix"
-                style="display: block; height: auto"
-              >
-                <style>
-                  #gap-1141535111 {
-                    padding-top: 5px;
-                  }
-                </style>
-              </div>
-
-              <div class="row" id="row-1926852385">
-                <div id="col-294430046" class="col medium-4 small-12 large-4">
-                  <div class="col-inner">
-                    <div
-                      class="icon-box featured-box icon-box-center text-center"
-                    >
-                      <div class="icon-box-img" style="width: 60px">
-                        <div class="icon">
-                          <div
-                            class="icon-inner"
-                            style="color: rgba(206, 25, 25, 0)"
-                          >
-                            <img
-                              width="300"
-                              height="300"
-                              src="/assets/img/product-page/guarantee-10years-300x300.png"
-                              class="attachment-medium size-medium"
-                              alt=""
-                              decoding="async"
-                              loading="lazy"
-                              srcset="
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/guarantee-10years-300x300.png 300w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/guarantee-10years-150x150.png 150w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/guarantee-10years-100x100.png 100w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/guarantee-10years.png         512w
-                              "
-                              sizes="auto, (max-width: 300px) 100vw, 300px"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="icon-box-text last-reset">
-                        <div id="text-2023736268" class="text">
-                          <h3>Bảo hành đến 10 năm chất lượng</h3>
-
-                          <style>
-                            #text-2023736268 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-2023736268 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-
-                        <div id="text-547049782" class="text">
-                          <p>
-                            Được sản xuất từ nguyên vật liệu thân thiện môi
-                            trường và có độ bền cao.
-                          </p>
-                          <div
-                            class="ddict_btn"
-                            style="top: 1px; left: 529.45px"
-                          >
-                            <img
-                              src="chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png"
-                            />
-                          </div>
-
-                          <style>
-                            #text-547049782 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-547049782 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="col-1327405943" class="col medium-4 small-12 large-4">
-                  <div class="col-inner">
-                    <div
-                      class="icon-box featured-box icon-box-center text-center"
-                    >
-                      <div class="icon-box-img" style="width: 60px">
-                        <div class="icon">
-                          <div
-                            class="icon-inner"
-                            style="color: rgba(206, 25, 25, 0)"
-                          >
-                            <img
-                              width="300"
-                              height="300"
-                              src="/assets/img/product-page/graphic-design-300x300.png"
-                              class="attachment-medium size-medium"
-                              alt=""
-                              decoding="async"
-                              loading="lazy"
-                              srcset="
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/graphic-design-300x300.png 300w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/graphic-design-150x150.png 150w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/graphic-design-100x100.png 100w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/graphic-design.png         512w
-                              "
-                              sizes="auto, (max-width: 300px) 100vw, 300px"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="icon-box-text last-reset">
-                        <div id="text-4117511449" class="text">
-                          <h3>Đo đạc và thiết kế theo yêu cầu</h3>
-
-                          <style>
-                            #text-4117511449 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-4117511449 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-
-                        <div id="text-1474429046" class="text">
-                          <p>Luôn luôn đo đạc chính xác, tỉ mỉ.</p>
-                          <div
-                            class="ddict_btn"
-                            style="top: -33px; left: 529.45px"
-                          >
-                            <img
-                              src="chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png"
-                            />
-                          </div>
-
-                          <style>
-                            #text-1474429046 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-1474429046 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="col-1377704467" class="col medium-4 small-12 large-4">
-                  <div class="col-inner">
-                    <div
-                      class="icon-box featured-box icon-box-center text-center"
-                    >
-                      <div class="icon-box-img" style="width: 60px">
-                        <div class="icon">
-                          <div
-                            class="icon-inner"
-                            style="color: rgba(206, 25, 25, 0)"
-                          >
-                            <img
-                              width="300"
-                              height="300"
-                              src="/assets/img/product-page/shopping-cart-300x300.png"
-                              class="attachment-medium size-medium"
-                              alt=""
-                              decoding="async"
-                              loading="lazy"
-                              srcset="
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/shopping-cart-300x300.png 300w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/shopping-cart-150x150.png 150w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/shopping-cart-100x100.png 100w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/shopping-cart.png         512w
-                              "
-                              sizes="auto, (max-width: 300px) 100vw, 300px"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="icon-box-text last-reset">
-                        <div id="text-710375649" class="text">
-                          <h3>Tư vấn chu đáo</h3>
-                          <div
-                            class="ddict_btn"
-                            style="top: 44px; left: 150.137px"
-                          >
-                            <img
-                              src="chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png"
-                            />
-                          </div>
-
-                          <style>
-                            #text-710375649 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-710375649 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-
-                        <div id="text-4086485860" class="text">
-                          <p>
-                            Tư vấn miễn phí, chuyên nghiệp, nhằm mang đến dịch
-                            vụ tốt nhất cho khách hàng.
-                          </p>
-                          <div
-                            class="ddict_btn"
-                            style="top: 17px; left: 529.45px"
-                          >
-                            <img
-                              src="chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png"
-                            />
-                          </div>
-
-                          <style>
-                            #text-4086485860 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-4086485860 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="col-890679031" class="col medium-4 small-12 large-4">
-                  <div class="col-inner">
-                    <div
-                      class="icon-box featured-box icon-box-center text-center"
-                    >
-                      <div class="icon-box-img" style="width: 60px">
-                        <div class="icon">
-                          <div
-                            class="icon-inner"
-                            style="color: rgba(206, 25, 25, 0)"
-                          >
-                            <img
-                              width="300"
-                              height="300"
-                              src="/assets/img/product-page/tags-300x300.png"
-                              class="attachment-medium size-medium"
-                              alt=""
-                              decoding="async"
-                              loading="lazy"
-                              srcset="
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/tags-300x300.png 300w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/tags-150x150.png 150w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/tags-100x100.png 100w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/tags.png         512w
-                              "
-                              sizes="auto, (max-width: 300px) 100vw, 300px"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="icon-box-text last-reset">
-                        <div id="text-3751791778" class="text">
-                          <h3>Giá tại xưởng không qua trung gian</h3>
-
-                          <style>
-                            #text-3751791778 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-3751791778 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-
-                        <div id="text-2628256355" class="text">
-                          <p>
-                            Sở hữu 02 nhà máy sản xuất với số lượng lớn, đáp ứng
-                            mọi nhu cầu của khách hàng.
-                          </p>
-
-                          <style>
-                            #text-2628256355 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-2628256355 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="col-37277766" class="col medium-4 small-12 large-4">
-                  <div class="col-inner">
-                    <div
-                      class="icon-box featured-box icon-box-center text-center"
-                    >
-                      <div class="icon-box-img" style="width: 60px">
-                        <div class="icon">
-                          <div
-                            class="icon-inner"
-                            style="color: rgba(206, 25, 25, 0)"
-                          >
-                            <img
-                              width="300"
-                              height="300"
-                              src="/assets/img/product-page/experience-300x300.png"
-                              class="attachment-medium size-medium"
-                              alt=""
-                              decoding="async"
-                              loading="lazy"
-                              srcset="
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/experience-300x300.png 300w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/experience-150x150.png 150w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/experience-100x100.png 100w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/experience.png         512w
-                              "
-                              sizes="auto, (max-width: 300px) 100vw, 300px"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="icon-box-text last-reset">
-                        <div id="text-3297561108" class="text">
-                          <h3>Hơn 10 năm kinh nghiệm trong ngành</h3>
-
-                          <style>
-                            #text-3297561108 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-3297561108 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-
-                        <div id="text-2146451789" class="text">
-                          <p>
-                            Có nhiều năm kinh nghiệm thi công các hạng mục công
-                            trình: nhà phố, chung cư, biệt thư,... và tham gia
-                            vào các dự án lớn.
-                          </p>
-                          <div
-                            class="ddict_btn"
-                            style="top: 11px; left: 529.45px"
-                          >
-                            <img
-                              src="chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png"
-                            />
-                          </div>
-
-                          <style>
-                            #text-2146451789 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-2146451789 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="col-480326612" class="col medium-4 small-12 large-4">
-                  <div class="col-inner">
-                    <div
-                      class="icon-box featured-box icon-box-center text-center"
-                    >
-                      <div class="icon-box-img" style="width: 60px">
-                        <div class="icon">
-                          <div
-                            class="icon-inner"
-                            style="color: rgba(206, 25, 25, 0)"
-                          >
-                            <img
-                              width="300"
-                              height="300"
-                              src="/assets/img/product-page/guarantee-300x300.png"
-                              class="attachment-medium size-medium"
-                              alt=""
-                              decoding="async"
-                              loading="lazy"
-                              srcset="
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/guarantee-300x300.png 300w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/guarantee-150x150.png 150w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/guarantee-100x100.png 100w,
-                                https://kinhbacfurniture.com/wp-content/uploads/2023/08/guarantee.png         512w
-                              "
-                              sizes="auto, (max-width: 300px) 100vw, 300px"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="icon-box-text last-reset">
-                        <div id="text-43393873" class="text">
-                          <h3>Bảo hành 1 năm phụ kiện</h3>
-
-                          <style>
-                            #text-43393873 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-43393873 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-
-                        <div id="text-3011383930" class="text">
-                          <p>Luôn sử dụng những phụ kiện chất lượng nhất.</p>
-                          <div
-                            class="ddict_btn"
-                            style="top: 15px; left: 529.45px"
-                          >
-                            <img
-                              src="chrome-extension://bpggmmljdiliancllaapiggllnkbjocb/logo/48.png"
-                            />
-                          </div>
-
-                          <style>
-                            #text-3011383930 {
-                              color: rgb(255, 255, 255);
-                            }
-
-                            #text-3011383930 > * {
-                              color: rgb(255, 255, 255);
-                            }
-                          </style>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <style>
-        #section_1397174845 {
-          padding-top: 30px;
-          padding-bottom: 30px;
-        }
-
-        #section_1397174845 .section-bg-overlay {
-          background-color: rgba(0, 0, 0, 0.703);
-        }
-
-        #section_1397174845 .section-bg.bg-loaded {
-          background-image: url(https://kinhbacfurniture.com/wp-content/uploads/2023/07/ban-an.jpeg);
-        }
-      </style>
-    </section>
   </div>
 </main>

@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NewsPageComponent } from './news-page/news-page.component';
-import { ProjectPageComponent } from './project-page/project-page.component';
 import { IntroPageComponent } from './intro-page/intro-page.component';
 import { PricePageComponent } from './price-page/price-page.component';
 import { DesignPageComponent } from './design-page/design-page.component';
+import { ProductPageLayoutComponent } from './product-page/product-page-layout/product-page-layout.component';
+import { ProductDetailPageComponent } from './product-detail-page/product-detail-page.component';
+import { ProjectPageComponent } from './project-page/project-page.component';
 
 const routes: Routes = [
   {
@@ -29,9 +31,18 @@ const routes: Routes = [
     component: IntroPageComponent,
   },
   {
-    path: 'cua-hang',
-    loadChildren: () =>
-      import('./product-page/product-page.module').then((m) => m.ProductPageModule),
+    path: 'san-pham',
+    component: ProductPageLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./product-page/product-page.module').then(m=>m.ProductPageModule)
+      }
+    ]
+  },
+  {
+    path: 'detail/:productUrl',
+    component: ProductDetailPageComponent,
   },
   {
     path: 'bao-gia',

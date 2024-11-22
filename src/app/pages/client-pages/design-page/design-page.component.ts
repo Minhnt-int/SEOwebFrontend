@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 
 @Component({
@@ -12,6 +13,17 @@ export class DesignPageComponent {
 
   
   @ViewChild('carousel', { static: true }) carousel!: NzCarouselComponent;
+
+  constructor(private meta: Meta, private title: Title) {}
+
+  ngOnInit() {
+    this.title.setTitle("Thiết kế thi công nội thất");
+    this.meta.updateTag({ 
+      name: 'description',
+      content: 'Thiết kế và thi công nội thất trọn gói'
+    });
+  }
+
 
   previous(): void {
     this.carousel.pre();
