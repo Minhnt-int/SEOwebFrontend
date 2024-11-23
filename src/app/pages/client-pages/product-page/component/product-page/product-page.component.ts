@@ -10,7 +10,9 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class ProductPageComponent {
   data: Product[] = [];
-
+  PageIndex=1;
+  PageSize=10;
+  pageData: Product[] = [];
 
   truncateString(str: string, maxLength: number): string {
     return str.length > maxLength ? str.slice(0, maxLength) + "..." : str;
@@ -26,6 +28,7 @@ export class ProductPageComponent {
       name: 'description',
       content: 'Danh sách sản phẩm của cửa hàng SEOweb, miễn phí lắp đặt và thi công'
     });
+    this.onPageIndexChange();
   }
   typeText(text : string) : String {
     switch (text) {
@@ -38,5 +41,19 @@ export class ProductPageComponent {
       default:
         return "Cửa gỗ nhựa Composite";
     }
+    
+  }
+
+  onPageIndexChange() {
+    this.pageData = this.data.slice((this.PageIndex-1)*(this.PageSize), (this.PageIndex)*(this.PageSize));
+  }
+
+
+  indexChange($event : number){
+    this.PageIndex = $event;
+    this.onPageIndexChange();
+  }
+  pageSizeChange($event : number){
+    this.PageSize = $event;
   }
 }

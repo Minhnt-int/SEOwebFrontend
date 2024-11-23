@@ -7,7 +7,7 @@
           class="products row row-small large-columns-4 medium-columns-3 small-columns-2"
         >
           <div
-            *ngFor="let product of data"
+            *ngFor="let product of pageData"
             class="product-small col has-hover product type-product post-647 status-publish first instock product_cat-cua-go-nhua-composite product_tag-cua-go-nhua product_tag-cua-go-nhua-composite product_tag-cua-phong-tam product_tag-cua-thong-phong has-post-thumbnail shipping-taxable purchasable product-type-simple"
           >
             <div class="col-inner">
@@ -147,27 +147,14 @@
         </div>
         <!-- row -->
         <div class="container">
-          <nav class="woocommerce-pagination">
-            <ul class="page-numbers nav-pagination links text-center">
-              <li>
-                <span aria-current="page" class="page-number current">1</span>
-              </li>
-              <li>
-                <a
-                  class="page-number"
-                  href="https://kinhbacfurniture.com/cua-hang/page/2/"
-                  >2</a
-                >
-              </li>
-              <li>
-                <a
-                  class="next page-number"
-                  href="https://kinhbacfurniture.com/cua-hang/page/2/"
-                  ><i class="icon-angle-right"></i
-                ></a>
-              </li>
-            </ul>
-          </nav>
+          <nz-pagination
+            [(nzPageIndex)]="PageIndex"
+            [nzPageSize]="PageSize"
+            (nzPageIndexChange)="indexChange($event)"
+            [nzTotal]="data.length"
+            [nzShowSizeChanger]="true"
+            (nzPageSizeChange)="pageSizeChange($event)"
+          ></nz-pagination>
         </div>
         <div
           id="gap-1330399530"
