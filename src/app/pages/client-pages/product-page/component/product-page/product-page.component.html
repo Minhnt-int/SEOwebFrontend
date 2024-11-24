@@ -31,6 +31,7 @@
                         fetchpriority="high"
                         sizes="(max-width: 300px) 100vw, 300px"
                       /><img
+                        *ngIf="product.hovPic != ''"
                         width="300"
                         height="300"
                         [src]="product.hovPic"
@@ -40,58 +41,6 @@
                         sizes="(max-width: 300px) 100vw, 300px"
                       />
                     </a>
-                  </div>
-                  <div class="image-tools is-small top right show-on-hover">
-                    <div class="wishlist-icon">
-                      <button
-                        class="wishlist-button button is-outline circle icon"
-                        aria-label="Wishlist"
-                      >
-                        <i class="icon-heart"></i>
-                      </button>
-                      <div class="wishlist-popup dark">
-                        <div
-                          class="yith-wcwl-add-to-wishlist add-to-wishlist-647 wishlist-fragment on-first-load"
-                          data-fragment-ref="647"
-                          data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":false,"show_exists":false,"product_id":647,"parent_product_id":647,"product_type":"simple","show_view":false,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"after_add_to_cart","item":"add_to_wishlist"}'
-                        >
-                          <!-- ADD TO WISHLIST -->
-
-                          <div class="yith-wcwl-add-button">
-                            <a
-                              [href]="product.productUrl"
-                              class="add_to_wishlist single_add_to_wishlist"
-                              data-product-id="647"
-                              data-product-type="simple"
-                              data-original-product-id="647"
-                              data-title="Add to wishlist"
-                              rel="nofollow"
-                            >
-                              <i
-                                class="yith-wcwl-icon fa fa-heart-o"
-                                aria-hidden="true"
-                              ></i>
-                              <span>Add to wishlist</span>
-                            </a>
-                          </div>
-
-                          <!-- COUNT TEXT -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="image-tools is-small hide-for-small bottom left show-on-hover"
-                  ></div>
-                  <div
-                    class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover"
-                  >
-                    <a
-                      class="quick-view quick-view-added"
-                      data-prod="647"
-                      href="https://kinhbacfurniture.com/cua-hang/#quick-view"
-                      >Quick View</a
-                    >
                   </div>
                 </div>
 
@@ -215,58 +164,9 @@
                           />
                         </a>
                       </div>
-                      <div class="image-tools is-small top right show-on-hover">
-                        <div class="wishlist-icon">
-                          <button
-                            class="wishlist-button button is-outline circle icon"
-                            aria-label="Wishlist"
-                          >
-                            <i class="icon-heart"></i>
-                          </button>
-                          <div class="wishlist-popup dark">
-                            <div
-                              class="yith-wcwl-add-to-wishlist add-to-wishlist-629 wishlist-fragment on-first-load"
-                              data-fragment-ref="629"
-                              data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":false,"show_exists":false,"product_id":629,"parent_product_id":629,"product_type":"simple","show_view":false,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"after_add_to_cart","item":"add_to_wishlist"}'
-                            >
-                              <!-- ADD TO WISHLIST -->
-
-                              <div class="yith-wcwl-add-button">
-                                <a
-                                  href="https://kinhbacfurniture.com/cua-hang/?add_to_wishlist=629&amp;_wpnonce=d1483e73b5"
-                                  class="add_to_wishlist single_add_to_wishlist"
-                                  data-product-id="629"
-                                  data-product-type="simple"
-                                  data-original-product-id="629"
-                                  data-title="Add to wishlist"
-                                  rel="nofollow"
-                                >
-                                  <i
-                                    class="yith-wcwl-icon fa fa-heart-o"
-                                    aria-hidden="true"
-                                  ></i>
-                                  <span>Add to wishlist</span>
-                                </a>
-                              </div>
-
-                              <!-- COUNT TEXT -->
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                       <div
                         class="image-tools is-small hide-for-small bottom left show-on-hover"
                       ></div>
-                      <div
-                        class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover"
-                      >
-                        <a
-                          class="quick-view quick-view-added"
-                          data-prod="629"
-                          href="https://kinhbacfurniture.com/cua-hang/#quick-view"
-                          >Quick View</a
-                        >
-                      </div>
                     </div>
 
                     <div

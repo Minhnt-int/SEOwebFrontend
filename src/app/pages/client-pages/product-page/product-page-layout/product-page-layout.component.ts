@@ -13,7 +13,6 @@ export class ProductPageLayoutComponent {
   constructor(private route: ActivatedRoute) { }
   ngOnInit() {
     this.productType = this.route.snapshot.paramMap.get('productType');
-    console.log(this.productType);
     
   }
 

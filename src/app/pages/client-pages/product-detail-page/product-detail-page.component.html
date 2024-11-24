@@ -41,48 +41,6 @@
                     ></div>
 
                     <div
-                      class="image-tools absolute top show-on-hover right z-3"
-                    >
-                      <div class="wishlist-icon">
-                        <button
-                          class="wishlist-button button is-outline circle icon"
-                          aria-label="Wishlist"
-                        >
-                          <i class="icon-heart"></i>
-                        </button>
-                        <div class="wishlist-popup dark">
-                          <div
-                            class="yith-wcwl-add-to-wishlist add-to-wishlist-615 wishlist-fragment on-first-load"
-                            data-fragment-ref="615"
-                            data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":true,"show_exists":false,"product_id":615,"parent_product_id":615,"product_type":"simple","show_view":true,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"after_add_to_cart","item":"add_to_wishlist"}'
-                          >
-                            <!-- ADD TO WISHLIST -->
-
-                            <div class="yith-wcwl-add-button">
-                              <a
-                                href="/san-pham/cua-cong-nghiep-mau-01/?add_to_wishlist=615&amp;_wpnonce=b935546ccf"
-                                class="add_to_wishlist single_add_to_wishlist"
-                                data-product-id="615"
-                                data-product-type="simple"
-                                data-original-product-id="615"
-                                data-title="Add to wishlist"
-                                rel="nofollow"
-                              >
-                                <i
-                                  class="yith-wcwl-icon fa fa-heart-o"
-                                  aria-hidden="true"
-                                ></i>
-                                <span>Add to wishlist</span>
-                              </a>
-                            </div>
-
-                            <!-- COUNT TEXT -->
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
                       class="woocommerce-product-gallery__wrapper product-gallery-slider slider slider-nav-small mb-0 flickity-enabled"
                       data-flickity-options='{
                 "cellAlign": "center",
@@ -115,7 +73,7 @@
                               ><img
                                 width="600"
                                 height="600"
-                                src="/assets/img/product-page/KB-01-2-01-600x600.jpg"
+                                [src]="detail?.pic"
                                 class="wp-post-image skip-lazy"
                                 alt=""
                                 title="KB 01 2-01"
@@ -376,11 +334,14 @@
                     >
                       <div
                         class="flickity-slider"
-                        style="left: 0px; transform: translateX(-125%)"
+                        [style]="
+                          'left: 0px; transform: translateX(-' + 0 + '%)'
+                        "
                       >
                         <div
-                          class="product-small col has-hover product type-product post-638 status-publish instock product_cat-cua-go-nhua-composite product_tag-cua-go-nhua product_tag-cua-go-nhua-composite product_tag-cua-phong-tam product_tag-cua-thong-phong has-post-thumbnail shipping-taxable purchasable product-type-simple is-selected"
-                          style="position: absolute; left: 125%"
+                          *ngFor="let product of slideData; let i = index"
+                          class="product-small col has-hover product type-product post-615 status-publish first instock product_cat-cua-go-nhua-composite product_tag-cua-2-canh product_tag-cua-chinh product_tag-cua-go-nhua-composite has-post-thumbnail shipping-taxable purchasable product-type-simple is-selected"
+                          [style]="'position: absolute; left:' + i * 25 + '%'"
                         >
                           <div class="col-inner">
                             <div
@@ -390,81 +351,22 @@
                               <div class="box-image">
                                 <div class="image-fade_in_back">
                                   <a
-                                    href="/san-pham/cua-composite-mau-03/"
-                                    aria-label="Cửa Composite KB_04 PA"
+                                    [href]="'/detail/' + product.url"
+                                    [attr.aria-label]="
+                                      'Xem chi tiết về ' + product.productName
+                                    "
                                   >
                                     <img
                                       width="300"
                                       height="300"
-                                      src="/assets/img/product-page/KB-04-PA-01-300x300.jpg"
+                                      [src]="product.pic"
                                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                       alt=""
                                       decoding="async"
-                                      sizes="(max-width: 300px) 100vw, 300px"
-                                    /><img
-                                      width="300"
-                                      height="300"
-                                      src="/assets/img/product-page/1-01-300x300.jpg"
-                                      class="show-on-hover absolute fill hide-for-small back-image"
-                                      alt=""
-                                      decoding="async"
-                                      sizes="(max-width: 300px) 100vw, 300px"
+                                      loading="lazy"
+                                      sizes="auto, (max-width: 300px) 100vw, 300px"
                                     />
                                   </a>
-                                </div>
-                                <div
-                                  class="image-tools is-small top right show-on-hover"
-                                >
-                                  <div class="wishlist-icon">
-                                    <button
-                                      class="wishlist-button button is-outline circle icon"
-                                      aria-label="Wishlist"
-                                    >
-                                      <i class="icon-heart"></i>
-                                    </button>
-                                    <div class="wishlist-popup dark">
-                                      <div
-                                        class="yith-wcwl-add-to-wishlist add-to-wishlist-638 wishlist-fragment on-first-load"
-                                        data-fragment-ref="638"
-                                        data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":true,"show_exists":false,"product_id":638,"parent_product_id":638,"product_type":"simple","show_view":true,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"after_add_to_cart","item":"add_to_wishlist"}'
-                                      >
-                                        <!-- ADD TO WISHLIST -->
-
-                                        <div class="yith-wcwl-add-button">
-                                          <a
-                                            href="/san-pham/cua-cong-nghiep-mau-01/?add_to_wishlist=638&amp;_wpnonce=b935546ccf"
-                                            class="add_to_wishlist single_add_to_wishlist"
-                                            data-product-id="638"
-                                            data-product-type="simple"
-                                            data-original-product-id="638"
-                                            data-title="Add to wishlist"
-                                            rel="nofollow"
-                                          >
-                                            <i
-                                              class="yith-wcwl-icon fa fa-heart-o"
-                                              aria-hidden="true"
-                                            ></i>
-                                            <span>Add to wishlist</span>
-                                          </a>
-                                        </div>
-
-                                        <!-- COUNT TEXT -->
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="image-tools is-small hide-for-small bottom left show-on-hover"
-                                ></div>
-                                <div
-                                  class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover"
-                                >
-                                  <a
-                                    class="quick-view quick-view-added"
-                                    data-prod="638"
-                                    href="/san-pham/cua-cong-nghiep-mau-01/#quick-view"
-                                    >Quick View</a
-                                  >
                                 </div>
                               </div>
 
@@ -475,15 +377,15 @@
                                   <p
                                     class="category uppercase is-smaller no-text-overflow product-cat op-7"
                                   >
-                                    Cửa gỗ nhựa Composite
+                                    {{ typeText(product.productType) }}
                                   </p>
                                   <p
                                     class="name product-title woocommerce-loop-product__title"
                                   >
                                     <a
-                                      href="/san-pham/cua-composite-mau-03/"
+                                      [href]="product.url"
                                       class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                                      >Cửa Composite KB_04 PA</a
+                                      >{{ product.productName }}</a
                                     >
                                   </p>
                                 </div>
@@ -492,590 +394,15 @@
                                     ><span
                                       class="woocommerce-Price-amount amount"
                                       ><bdi
-                                        >3,350,000&nbsp;<span
+                                        >{{
+                                          product.productPrice
+                                            | number : "1.0-0"
+                                        }}&nbsp;<span
                                           class="woocommerce-Price-currencySymbol"
                                           >₫</span
                                         ></bdi
                                       ></span
                                     ></span
-                                  >
-                                </div>
-                                <div class="add-to-cart-button">
-                                  <a
-                                    href="/san-pham/cua-cong-nghiep-mau-01/?add-to-cart=638"
-                                    data-quantity="1"
-                                    class="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-                                    data-product_id="638"
-                                    data-product_sku=""
-                                    aria-label="Add “Cửa Composite KB_04 PA” to your cart"
-                                    aria-describedby=""
-                                    rel="nofollow"
-                                    >Add to cart</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="product-small col has-hover product type-product post-629 status-publish instock product_cat-cua-go-nhua-composite product_tag-cua-go-nhua product_tag-cua-go-nhua-composite product_tag-cua-phong-tam product_tag-cua-thong-phong has-post-thumbnail shipping-taxable purchasable product-type-simple is-selected"
-                          style="position: absolute; left: 150%"
-                        >
-                          <div class="col-inner">
-                            <div
-                              class="badge-container absolute left top z-1"
-                            ></div>
-                            <div class="product-small box">
-                              <div class="box-image">
-                                <div class="image-fade_in_back">
-                                  <a
-                                    href="/san-pham/cua-cong-nghiep-mau-04/"
-                                    aria-label="Cửa Composite KB_10 SA"
-                                  >
-                                    <img
-                                      width="300"
-                                      height="300"
-                                      src="/assets/img/product-page/KB-10-SA-01-300x300.jpg"
-                                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                      alt=""
-                                      decoding="async"
-                                      loading="lazy"
-                                      sizes="auto, (max-width: 300px) 100vw, 300px"
-                                    /><img
-                                      width="300"
-                                      height="300"
-                                      src="/assets/img/product-page/1-01-300x300.jpg"
-                                      class="show-on-hover absolute fill hide-for-small back-image"
-                                      alt=""
-                                      decoding="async"
-                                      loading="lazy"
-                                      sizes="auto, (max-width: 300px) 100vw, 300px"
-                                    />
-                                  </a>
-                                </div>
-                                <div
-                                  class="image-tools is-small top right show-on-hover"
-                                >
-                                  <div class="wishlist-icon">
-                                    <button
-                                      class="wishlist-button button is-outline circle icon"
-                                      aria-label="Wishlist"
-                                    >
-                                      <i class="icon-heart"></i>
-                                    </button>
-                                    <div class="wishlist-popup dark">
-                                      <div
-                                        class="yith-wcwl-add-to-wishlist add-to-wishlist-629 wishlist-fragment on-first-load"
-                                        data-fragment-ref="629"
-                                        data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":true,"show_exists":false,"product_id":629,"parent_product_id":629,"product_type":"simple","show_view":true,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"after_add_to_cart","item":"add_to_wishlist"}'
-                                      >
-                                        <!-- ADD TO WISHLIST -->
-
-                                        <div class="yith-wcwl-add-button">
-                                          <a
-                                            href="/san-pham/cua-cong-nghiep-mau-01/?add_to_wishlist=629&amp;_wpnonce=b935546ccf"
-                                            class="add_to_wishlist single_add_to_wishlist"
-                                            data-product-id="629"
-                                            data-product-type="simple"
-                                            data-original-product-id="629"
-                                            data-title="Add to wishlist"
-                                            rel="nofollow"
-                                          >
-                                            <i
-                                              class="yith-wcwl-icon fa fa-heart-o"
-                                              aria-hidden="true"
-                                            ></i>
-                                            <span>Add to wishlist</span>
-                                          </a>
-                                        </div>
-
-                                        <!-- COUNT TEXT -->
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="image-tools is-small hide-for-small bottom left show-on-hover"
-                                ></div>
-                                <div
-                                  class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover"
-                                >
-                                  <a
-                                    class="quick-view quick-view-added"
-                                    data-prod="629"
-                                    href="/san-pham/cua-cong-nghiep-mau-01/#quick-view"
-                                    >Quick View</a
-                                  >
-                                </div>
-                              </div>
-
-                              <div
-                                class="box-text box-text-products flex-row align-top grid-style-3 flex-wrap"
-                              >
-                                <div class="title-wrapper">
-                                  <p
-                                    class="category uppercase is-smaller no-text-overflow product-cat op-7"
-                                  >
-                                    Cửa gỗ nhựa Composite
-                                  </p>
-                                  <p
-                                    class="name product-title woocommerce-loop-product__title"
-                                  >
-                                    <a
-                                      href="/san-pham/cua-cong-nghiep-mau-04/"
-                                      class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                                      >Cửa Composite KB_10 SA</a
-                                    >
-                                  </p>
-                                </div>
-                                <div class="price-wrapper">
-                                  <span class="price"
-                                    ><span
-                                      class="woocommerce-Price-amount amount"
-                                      ><bdi
-                                        >3,250,000&nbsp;<span
-                                          class="woocommerce-Price-currencySymbol"
-                                          >₫</span
-                                        ></bdi
-                                      ></span
-                                    ></span
-                                  >
-                                </div>
-                                <div class="add-to-cart-button">
-                                  <a
-                                    href="/san-pham/cua-cong-nghiep-mau-01/?add-to-cart=629"
-                                    data-quantity="1"
-                                    class="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-                                    data-product_id="629"
-                                    data-product_sku=""
-                                    aria-label="Add “Cửa Composite KB_10 SA” to your cart"
-                                    aria-describedby=""
-                                    rel="nofollow"
-                                    >Add to cart</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="product-small col has-hover product type-product post-645 status-publish last instock product_cat-cua-go-nhua-composite product_tag-cua-go-nhua product_tag-cua-go-nhua-composite product_tag-cua-phong-tam product_tag-cua-thong-phong has-post-thumbnail shipping-taxable purchasable product-type-simple is-selected"
-                          style="position: absolute; left: 175%"
-                        >
-                          <div class="col-inner">
-                            <div
-                              class="badge-container absolute left top z-1"
-                            ></div>
-                            <div class="product-small box">
-                              <div class="box-image">
-                                <div class="image-fade_in_back">
-                                  <a
-                                    href="/san-pham/cua-composite-kb_01-ss/"
-                                    aria-label="Cửa Composite KB_01 SS"
-                                  >
-                                    <img
-                                      width="300"
-                                      height="300"
-                                      src="/assets/img/product-page/KB-01-SS-01-300x300.jpg"
-                                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                      alt=""
-                                      decoding="async"
-                                      loading="lazy"
-                                      sizes="auto, (max-width: 300px) 100vw, 300px"
-                                    /><img
-                                      width="300"
-                                      height="300"
-                                      src="/assets/img/product-page/1-01-300x300.jpg"
-                                      class="show-on-hover absolute fill hide-for-small back-image"
-                                      alt=""
-                                      decoding="async"
-                                      loading="lazy"
-                                      sizes="auto, (max-width: 300px) 100vw, 300px"
-                                    />
-                                  </a>
-                                </div>
-                                <div
-                                  class="image-tools is-small top right show-on-hover"
-                                >
-                                  <div class="wishlist-icon">
-                                    <button
-                                      class="wishlist-button button is-outline circle icon"
-                                      aria-label="Wishlist"
-                                    >
-                                      <i class="icon-heart"></i>
-                                    </button>
-                                    <div class="wishlist-popup dark">
-                                      <div
-                                        class="yith-wcwl-add-to-wishlist add-to-wishlist-645 wishlist-fragment on-first-load"
-                                        data-fragment-ref="645"
-                                        data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":true,"show_exists":false,"product_id":645,"parent_product_id":645,"product_type":"simple","show_view":true,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"after_add_to_cart","item":"add_to_wishlist"}'
-                                      >
-                                        <!-- ADD TO WISHLIST -->
-
-                                        <div class="yith-wcwl-add-button">
-                                          <a
-                                            href="/san-pham/cua-cong-nghiep-mau-01/?add_to_wishlist=645&amp;_wpnonce=b935546ccf"
-                                            class="add_to_wishlist single_add_to_wishlist"
-                                            data-product-id="645"
-                                            data-product-type="simple"
-                                            data-original-product-id="645"
-                                            data-title="Add to wishlist"
-                                            rel="nofollow"
-                                          >
-                                            <i
-                                              class="yith-wcwl-icon fa fa-heart-o"
-                                              aria-hidden="true"
-                                            ></i>
-                                            <span>Add to wishlist</span>
-                                          </a>
-                                        </div>
-
-                                        <!-- COUNT TEXT -->
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="image-tools is-small hide-for-small bottom left show-on-hover"
-                                ></div>
-                                <div
-                                  class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover"
-                                >
-                                  <a
-                                    class="quick-view quick-view-added"
-                                    data-prod="645"
-                                    href="/san-pham/cua-cong-nghiep-mau-01/#quick-view"
-                                    >Quick View</a
-                                  >
-                                </div>
-                              </div>
-
-                              <div
-                                class="box-text box-text-products flex-row align-top grid-style-3 flex-wrap"
-                              >
-                                <div class="title-wrapper">
-                                  <p
-                                    class="category uppercase is-smaller no-text-overflow product-cat op-7"
-                                  >
-                                    Cửa gỗ nhựa Composite
-                                  </p>
-                                  <p
-                                    class="name product-title woocommerce-loop-product__title"
-                                  >
-                                    <a
-                                      href="/san-pham/cua-composite-kb_01-ss/"
-                                      class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                                      >Cửa Composite KB_01 SS</a
-                                    >
-                                  </p>
-                                </div>
-                                <div class="price-wrapper">
-                                  <span class="price"
-                                    ><span
-                                      class="woocommerce-Price-amount amount"
-                                      ><bdi
-                                        >3,250,000&nbsp;<span
-                                          class="woocommerce-Price-currencySymbol"
-                                          >₫</span
-                                        ></bdi
-                                      ></span
-                                    ></span
-                                  >
-                                </div>
-                                <div class="add-to-cart-button">
-                                  <a
-                                    href="/san-pham/cua-cong-nghiep-mau-01/?add-to-cart=645"
-                                    data-quantity="1"
-                                    class="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-                                    data-product_id="645"
-                                    data-product_sku="KB 01 SS"
-                                    aria-label="Add “Cửa Composite KB_01 SS” to your cart"
-                                    aria-describedby=""
-                                    rel="nofollow"
-                                    >Add to cart</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="product-small col has-hover product type-product post-627 status-publish first instock product_cat-cua-go-nhua-composite product_tag-cua-go-nhua product_tag-cua-go-nhua-composite product_tag-cua-phong-tam product_tag-cua-thong-phong has-post-thumbnail shipping-taxable purchasable product-type-simple is-selected"
-                          style="position: absolute; left: 200%"
-                        >
-                          <div class="col-inner">
-                            <div
-                              class="badge-container absolute left top z-1"
-                            ></div>
-                            <div class="product-small box">
-                              <div class="box-image">
-                                <div class="image-fade_in_back">
-                                  <a
-                                    href="/san-pham/cua-cong-nghiep-mau-02/"
-                                    aria-label="Cửa Composite KB_W 03"
-                                  >
-                                    <img
-                                      width="300"
-                                      height="300"
-                                      src="/assets/img/product-page/KB-W-03-01-300x300.jpg"
-                                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                      alt=""
-                                      decoding="async"
-                                      loading="lazy"
-                                      sizes="auto, (max-width: 300px) 100vw, 300px"
-                                    /><img
-                                      width="300"
-                                      height="300"
-                                      src="/assets/img/product-page/1-01-300x300.jpg"
-                                      class="show-on-hover absolute fill hide-for-small back-image"
-                                      alt=""
-                                      decoding="async"
-                                      loading="lazy"
-                                      sizes="auto, (max-width: 300px) 100vw, 300px"
-                                    />
-                                  </a>
-                                </div>
-                                <div
-                                  class="image-tools is-small top right show-on-hover"
-                                >
-                                  <div class="wishlist-icon">
-                                    <button
-                                      class="wishlist-button button is-outline circle icon"
-                                      aria-label="Wishlist"
-                                    >
-                                      <i class="icon-heart"></i>
-                                    </button>
-                                    <div class="wishlist-popup dark">
-                                      <div
-                                        class="yith-wcwl-add-to-wishlist add-to-wishlist-627 wishlist-fragment on-first-load"
-                                        data-fragment-ref="627"
-                                        data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":true,"show_exists":false,"product_id":627,"parent_product_id":627,"product_type":"simple","show_view":true,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"after_add_to_cart","item":"add_to_wishlist"}'
-                                      >
-                                        <!-- ADD TO WISHLIST -->
-
-                                        <div class="yith-wcwl-add-button">
-                                          <a
-                                            href="/san-pham/cua-cong-nghiep-mau-01/?add_to_wishlist=627&amp;_wpnonce=b935546ccf"
-                                            class="add_to_wishlist single_add_to_wishlist"
-                                            data-product-id="627"
-                                            data-product-type="simple"
-                                            data-original-product-id="627"
-                                            data-title="Add to wishlist"
-                                            rel="nofollow"
-                                          >
-                                            <i
-                                              class="yith-wcwl-icon fa fa-heart-o"
-                                              aria-hidden="true"
-                                            ></i>
-                                            <span>Add to wishlist</span>
-                                          </a>
-                                        </div>
-
-                                        <!-- COUNT TEXT -->
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="image-tools is-small hide-for-small bottom left show-on-hover"
-                                ></div>
-                                <div
-                                  class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover"
-                                >
-                                  <a
-                                    class="quick-view quick-view-added"
-                                    data-prod="627"
-                                    href="/san-pham/cua-cong-nghiep-mau-01/#quick-view"
-                                    >Quick View</a
-                                  >
-                                </div>
-                              </div>
-
-                              <div
-                                class="box-text box-text-products flex-row align-top grid-style-3 flex-wrap"
-                              >
-                                <div class="title-wrapper">
-                                  <p
-                                    class="category uppercase is-smaller no-text-overflow product-cat op-7"
-                                  >
-                                    Cửa gỗ nhựa Composite
-                                  </p>
-                                  <p
-                                    class="name product-title woocommerce-loop-product__title"
-                                  >
-                                    <a
-                                      href="/san-pham/cua-cong-nghiep-mau-02/"
-                                      class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                                      >Cửa Composite KB_W 03</a
-                                    >
-                                  </p>
-                                </div>
-                                <div class="price-wrapper">
-                                  <span class="price"
-                                    ><span
-                                      class="woocommerce-Price-amount amount"
-                                      ><bdi
-                                        >3,650,000&nbsp;<span
-                                          class="woocommerce-Price-currencySymbol"
-                                          >₫</span
-                                        ></bdi
-                                      ></span
-                                    ></span
-                                  >
-                                </div>
-                                <div class="add-to-cart-button">
-                                  <a
-                                    href="/san-pham/cua-cong-nghiep-mau-01/?add-to-cart=627"
-                                    data-quantity="1"
-                                    class="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-                                    data-product_id="627"
-                                    data-product_sku=""
-                                    aria-label="Add “Cửa Composite KB_W 03” to your cart"
-                                    aria-describedby=""
-                                    rel="nofollow"
-                                    >Add to cart</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="product-small col has-hover product type-product post-710 status-publish instock product_cat-cua-go-nhua-composite product_tag-cua-go-nhua product_tag-cua-go-nhua-composite product_tag-cua-phong-tam product_tag-cua-thong-phong has-post-thumbnail shipping-taxable purchasable product-type-simple"
-                          aria-hidden="true"
-                          style="position: absolute; left: 100%"
-                        >
-                          <div class="col-inner">
-                            <div
-                              class="badge-container absolute left top z-1"
-                            ></div>
-                            <div class="product-small box">
-                              <div class="box-image">
-                                <div class="image-fade_in_back">
-                                  <a
-                                    href="/san-pham/cua-composite-kb_w-06/"
-                                    aria-label="Cửa Composite KB_W 06"
-                                  >
-                                    <img
-                                      width="300"
-                                      height="300"
-                                      src="/assets/img/product-page/KB-W6-01-300x300.jpg"
-                                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                      alt=""
-                                      decoding="async"
-                                      loading="lazy"
-                                      sizes="auto, (max-width: 300px) 100vw, 300px"
-                                    /><img
-                                      width="300"
-                                      height="300"
-                                      src="/assets/img/product-page/1-01-300x300.jpg"
-                                      class="show-on-hover absolute fill hide-for-small back-image"
-                                      alt=""
-                                      decoding="async"
-                                      loading="lazy"
-                                      sizes="auto, (max-width: 300px) 100vw, 300px"
-                                    />
-                                  </a>
-                                </div>
-                                <div
-                                  class="image-tools is-small top right show-on-hover"
-                                >
-                                  <div class="wishlist-icon">
-                                    <button
-                                      class="wishlist-button button is-outline circle icon"
-                                      aria-label="Wishlist"
-                                    >
-                                      <i class="icon-heart"></i>
-                                    </button>
-                                    <div class="wishlist-popup dark">
-                                      <div
-                                        class="yith-wcwl-add-to-wishlist add-to-wishlist-710 wishlist-fragment on-first-load"
-                                        data-fragment-ref="710"
-                                        data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":true,"show_exists":false,"product_id":710,"parent_product_id":710,"product_type":"simple","show_view":true,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"after_add_to_cart","item":"add_to_wishlist"}'
-                                      >
-                                        <!-- ADD TO WISHLIST -->
-
-                                        <div class="yith-wcwl-add-button">
-                                          <a
-                                            href="/san-pham/cua-cong-nghiep-mau-01/?add_to_wishlist=710&amp;_wpnonce=b935546ccf"
-                                            class="add_to_wishlist single_add_to_wishlist"
-                                            data-product-id="710"
-                                            data-product-type="simple"
-                                            data-original-product-id="710"
-                                            data-title="Add to wishlist"
-                                            rel="nofollow"
-                                          >
-                                            <i
-                                              class="yith-wcwl-icon fa fa-heart-o"
-                                              aria-hidden="true"
-                                            ></i>
-                                            <span>Add to wishlist</span>
-                                          </a>
-                                        </div>
-
-                                        <!-- COUNT TEXT -->
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="image-tools is-small hide-for-small bottom left show-on-hover"
-                                ></div>
-                                <div
-                                  class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover"
-                                >
-                                  <a
-                                    class="quick-view quick-view-added"
-                                    data-prod="710"
-                                    href="/san-pham/cua-cong-nghiep-mau-01/#quick-view"
-                                    >Quick View</a
-                                  >
-                                </div>
-                              </div>
-
-                              <div
-                                class="box-text box-text-products flex-row align-top grid-style-3 flex-wrap"
-                              >
-                                <div class="title-wrapper">
-                                  <p
-                                    class="category uppercase is-smaller no-text-overflow product-cat op-7"
-                                  >
-                                    Cửa gỗ nhựa Composite
-                                  </p>
-                                  <p
-                                    class="name product-title woocommerce-loop-product__title"
-                                  >
-                                    <a
-                                      href="/san-pham/cua-composite-kb_w-06/"
-                                      class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                                      >Cửa Composite KB_W 06</a
-                                    >
-                                  </p>
-                                </div>
-                                <div class="price-wrapper">
-                                  <span class="price"
-                                    ><span
-                                      class="woocommerce-Price-amount amount"
-                                      ><bdi
-                                        >3,350,000&nbsp;<span
-                                          class="woocommerce-Price-currencySymbol"
-                                          >₫</span
-                                        ></bdi
-                                      ></span
-                                    ></span
-                                  >
-                                </div>
-                                <div class="add-to-cart-button">
-                                  <a
-                                    href="/san-pham/cua-cong-nghiep-mau-01/?add-to-cart=710"
-                                    data-quantity="1"
-                                    class="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
-                                    data-product_id="710"
-                                    data-product_sku="KB W 06"
-                                    aria-label="Add “Cửa Composite KB_W 06” to your cart"
-                                    aria-describedby=""
-                                    rel="nofollow"
-                                    >Add to cart</a
                                   >
                                 </div>
                               </div>
@@ -1088,6 +415,7 @@
                       class="flickity-button flickity-prev-next-button previous"
                       type="button"
                       aria-label="Previous"
+                      (click)="prevSlide()"
                     >
                       <svg class="flickity-button-icon" viewBox="0 0 100 100">
                         <path
@@ -1099,6 +427,7 @@
                       class="flickity-button flickity-prev-next-button next"
                       type="button"
                       aria-label="Next"
+                      (click)="nextSlide()"
                     >
                       <svg class="flickity-button-icon" viewBox="0 0 100 100">
                         <path
@@ -1171,60 +500,6 @@
                                       sizes="auto, (max-width: 300px) 100vw, 300px"
                                     />
                                   </a>
-                                </div>
-                                <div
-                                  class="image-tools is-small top right show-on-hover"
-                                >
-                                  <div class="wishlist-icon">
-                                    <button
-                                      class="wishlist-button button is-outline circle icon"
-                                      aria-label="Wishlist"
-                                    >
-                                      <i class="icon-heart"></i>
-                                    </button>
-                                    <div class="wishlist-popup dark">
-                                      <div
-                                        class="yith-wcwl-add-to-wishlist add-to-wishlist-640 wishlist-fragment on-first-load"
-                                        data-fragment-ref="640"
-                                        data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":true,"show_exists":false,"product_id":640,"parent_product_id":640,"product_type":"simple","show_view":true,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"after_add_to_cart","item":"add_to_wishlist"}'
-                                      >
-                                        <!-- ADD TO WISHLIST -->
-
-                                        <div class="yith-wcwl-add-button">
-                                          <a
-                                            href="/san-pham/cua-cong-nghiep-mau-01/?add_to_wishlist=640&amp;_wpnonce=b935546ccf"
-                                            class="add_to_wishlist single_add_to_wishlist"
-                                            data-product-id="640"
-                                            data-product-type="simple"
-                                            data-original-product-id="640"
-                                            data-title="Add to wishlist"
-                                            rel="nofollow"
-                                          >
-                                            <i
-                                              class="yith-wcwl-icon fa fa-heart-o"
-                                              aria-hidden="true"
-                                            ></i>
-                                            <span>Add to wishlist</span>
-                                          </a>
-                                        </div>
-
-                                        <!-- COUNT TEXT -->
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="image-tools is-small hide-for-small bottom left show-on-hover"
-                                ></div>
-                                <div
-                                  class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover"
-                                >
-                                  <a
-                                    class="quick-view quick-view-added"
-                                    data-prod="640"
-                                    href="/san-pham/cua-cong-nghiep-mau-01/#quick-view"
-                                    >Quick View</a
-                                  >
                                 </div>
                               </div>
 
@@ -1312,60 +587,6 @@
                                       sizes="auto, (max-width: 300px) 100vw, 300px"
                                     />
                                   </a>
-                                </div>
-                                <div
-                                  class="image-tools is-small top right show-on-hover"
-                                >
-                                  <div class="wishlist-icon">
-                                    <button
-                                      class="wishlist-button button is-outline circle icon"
-                                      aria-label="Wishlist"
-                                    >
-                                      <i class="icon-heart"></i>
-                                    </button>
-                                    <div class="wishlist-popup dark">
-                                      <div
-                                        class="yith-wcwl-add-to-wishlist add-to-wishlist-629 wishlist-fragment on-first-load"
-                                        data-fragment-ref="629"
-                                        data-fragment-options='{"base_url":"","in_default_wishlist":false,"is_single":true,"show_exists":false,"product_id":629,"parent_product_id":629,"product_type":"simple","show_view":true,"browse_wishlist_text":"Browse wishlist","already_in_wishslist_text":"The product is already in your wishlist!","product_added_text":"Product added!","heading_icon":"fa-heart-o","available_multi_wishlist":false,"disable_wishlist":false,"show_count":false,"ajax_loading":false,"loop_position":"after_add_to_cart","item":"add_to_wishlist"}'
-                                      >
-                                        <!-- ADD TO WISHLIST -->
-
-                                        <div class="yith-wcwl-add-button">
-                                          <a
-                                            href="/san-pham/cua-cong-nghiep-mau-01/?add_to_wishlist=629&amp;_wpnonce=b935546ccf"
-                                            class="add_to_wishlist single_add_to_wishlist"
-                                            data-product-id="629"
-                                            data-product-type="simple"
-                                            data-original-product-id="629"
-                                            data-title="Add to wishlist"
-                                            rel="nofollow"
-                                          >
-                                            <i
-                                              class="yith-wcwl-icon fa fa-heart-o"
-                                              aria-hidden="true"
-                                            ></i>
-                                            <span>Add to wishlist</span>
-                                          </a>
-                                        </div>
-
-                                        <!-- COUNT TEXT -->
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="image-tools is-small hide-for-small bottom left show-on-hover"
-                                ></div>
-                                <div
-                                  class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover"
-                                >
-                                  <a
-                                    class="quick-view quick-view-added"
-                                    data-prod="629"
-                                    href="/san-pham/cua-cong-nghiep-mau-01/#quick-view"
-                                    >Quick View</a
-                                  >
                                 </div>
                               </div>
 

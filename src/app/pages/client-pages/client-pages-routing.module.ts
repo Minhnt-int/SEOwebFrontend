@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
-import { NewsPageComponent } from './news-page/news-page.component';
 import { IntroPageComponent } from './intro-page/intro-page.component';
 import { PricePageComponent } from './price-page/price-page.component';
 import { DesignPageComponent } from './design-page/design-page.component';
 import { ProductPageLayoutComponent } from './product-page/product-page-layout/product-page-layout.component';
 import { ProductDetailPageComponent } from './product-detail-page/product-detail-page.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
+import { NewsPageLayoutComponent } from './news-page-module/news-page-layout/news-page-layout.component';
 
 const routes: Routes = [
   {
@@ -16,7 +16,13 @@ const routes: Routes = [
   },
   {
     path: 'blog',
-    component: NewsPageComponent,
+    component: NewsPageLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./news-page-module/news-page-module.module').then(m=>m.NewsPageModuleModule)
+      }
+    ]
   },
   {
     path: 'du-an',

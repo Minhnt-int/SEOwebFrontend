@@ -11,10 +11,17 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class ProducttypePageComponent {
   data: Product[] = [];
+  PageIndex=1;
+  PageSize=10;
+  slideIndex=1;
+  slideSize=4;
+  pageData: Product[] = [];
+  slideData: Product[] = [];
   productType !: string | null;
   constructor(private productService: ProductService, private route: ActivatedRoute, private meta: Meta, private title: Title) { }
   ngOnInit() {
     this.productType = this.route.snapshot.paramMap.get('productType');
+    
     this.data = this.productService.findProductbyType(this.productType);
     // this.data = this.productService.getProducts();
 
@@ -23,8 +30,38 @@ export class ProducttypePageComponent {
       name: 'description',
       content: this.pageTitle(this.productType)
     });
+    this.onPageIndexChange();
+    this.onSlideChange();
   }
 
+  onPageIndexChange() {
+    this.pageData = this.data.slice((this.PageIndex-1)*(this.PageSize), (this.PageIndex)*(this.PageSize));
+  }
+  onSlideChange() {
+    this.slideData = this.data.slice((this.slideIndex-1)*(this.slideSize), (this.slideIndex)*(this.slideSize));
+    
+  }
+  nextSlide(){
+
+    if(this.slideIndex>=1&&this.slideIndex<(this.data.length/this.slideSize))
+    this.slideIndex++;
+    this.onSlideChange()
+  }
+  prevSlide(){
+    
+    if(this.slideIndex>=1&&this.slideIndex<(this.data.length/this.slideSize))
+    this.slideIndex--;
+    this.onSlideChange()
+  }
+
+
+  indexChange($event : number){
+    this.PageIndex = $event;
+    this.onPageIndexChange();
+  }
+  pageSizeChange($event : number){
+    this.PageSize = $event;
+  }
 
 
   pageTitle(text : string|null) : string  {
