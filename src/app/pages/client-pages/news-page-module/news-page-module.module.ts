@@ -8,6 +8,7 @@ import { NewPageComponent } from './component/new-page/new-page.component';
 import { ProductService } from '../../../service/product.service';
 import { ActivatedRoute } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { Meta, Title } from '@angular/platform-browser';
   ],
   imports: [
     CommonModule,
-    NewsPageModuleRoutingModule
+    NewsPageModuleRoutingModule,
+    NzIconModule
   ]
 })
 export class NewsPageModuleModule { 

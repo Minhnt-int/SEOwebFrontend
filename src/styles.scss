@@ -13,6 +13,11 @@
 @import url('./assets/Trang chủ - Kinh Bắc Furniture_files/font-awesome.min.css');
 @import url('./assets/Trang chủ - Kinh Bắc Furniture_files/826a7e3dce.css');
 
+
+#wrapper .post-date .badge-inner {
+    background-color: #fff ;
+}
+
 .header-top {
     background-color: #ec8b37;
 }
@@ -1362,28 +1367,6 @@ Product list filter
     color: #fff;
     text-decoration: none
 }
-
-
-
-// .header-nav li.custom-has-dropdown {
-//     position: relative;
-// }
-
-// .custom-nav-dropdown {
-//     position: absolute;
-//     visibility: hidden;
-//     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-//     min-width: 160px;
-//     list-style: none;
-//     padding: 0;
-//     margin: 0;
-//     z-index: 100;
-// }
-
-// .header-nav .custom-has-dropdown:hover>.custom-nav-dropdown {
-//     visibility: visible !important;
-// }
-
 
 html,
 body {
