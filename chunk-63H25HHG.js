@@ -1,4 +1,4 @@
-import{a as o}from"./chunk-IPZYQXYY.js";import{ea as e,ja as n}from"./chunk-EZPQYZVI.js";var h=[{url:"cua-composite-canh-phang",pic:"assets/img/product-page/KB-01-01-300x300.jpg",productName:"C\u1EEDa Composite KB_01",productPrice:31e5,height:220,width:90,type:"cua-go-nhua-composite",material:"G\u1ED7 nh\u1EF1a Composite nguy\xEAn t\u1EA5m ph\u1EE7 film PVC",desc:`C\xE1nh c\u1EEDa b\u1EB1ng d\u1EA1ng Panel nguy\xEAn t\u1EA5m.
+import{a as o}from"./chunk-UUOUOXDA.js";import{ea as e,ja as n}from"./chunk-LHN2HLTH.js";var h=[{url:"cua-composite-canh-phang",pic:"assets/img/product-page/KB-01-01-300x300.jpg",productName:"C\u1EEDa Composite KB_01",productPrice:31e5,height:220,width:90,type:"cua-go-nhua-composite",material:"G\u1ED7 nh\u1EF1a Composite nguy\xEAn t\u1EA5m ph\u1EE7 film PVC",desc:`C\xE1nh c\u1EEDa b\u1EB1ng d\u1EA1ng Panel nguy\xEAn t\u1EA5m.
 
 Ch\u1EA5t li\u1EC7u: G\u1ED7 nh\u1EF1a Composite ph\u1EE7 film PVC
 K\xEDch th\u01B0\u1EDBc ti\xEAu chu\u1EA9n: 900 x 2200 x 40 ( mm )
