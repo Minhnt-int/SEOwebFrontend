@@ -15,7 +15,7 @@ export const productDetails: productDetail[] = [
 
     {
         url: "cua-composite-canh-phang",
-        pic: "/assets/img/product-page/KB-01-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-01-01-300x300.jpg",
         productName: "Cửa Composite KB_01",
         productPrice: 3100000,
         height: 220,
@@ -35,7 +35,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-cong-nghiep-mau-01",
-        pic: "/assets/img/product-page/KB-01-2-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-01-2-01-300x300.jpg",
         height: 220,
         width: 135,
         type: "cua-go-nhua-composite",
@@ -53,7 +53,7 @@ Nẹp: 30 x 55 ( mm ) hoặc 50 x 55 (mm )`
     },
     {
         url: "cua-composite-kb_01-sa",
-        pic: "/assets/img/product-page/KB-01-SA-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-01-SA-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -74,7 +74,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-composite-kb_01-ss",
-        pic: "/assets/img/product-page/KB-01-SS-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-01-SS-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -95,7 +95,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-composite-mau-01",
-        pic: "/assets/img/product-page/KB-01-2-CD-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-01-2-CD-01-300x300.jpg",
         height: 220,
         width: 135,
                 type: "cua-go-nhua-composite",
@@ -113,7 +113,7 @@ Nẹp: 30 x 55 ( mm ) hoặc 50 x 55 (mm )`
     },
     {
         url: "cua-composite-kb_02-cn",
-        pic: "/assets/img/product-page/KB-02-CN-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-02-CN-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -134,7 +134,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-composite-kb_02-pa",
-        pic: "/assets/img/product-page/KB-02-PA-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-02-PA-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -155,7 +155,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-composite-kb_02-pn-2",
-        pic: "/assets/img/product-page/KB-02-1-PN-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-02-1-PN-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -176,7 +176,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-composite-kb_02-pn",
-        pic: "/assets/img/product-page/KB-02-PN-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-02-PN-01-300x300.jpg",
         height: 220,
         width: 135,
                 type: "cua-go-nhua-composite",
@@ -196,7 +196,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-composite-mau-06",
-        pic: "/assets/img/product-page/KB-02-SA-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-02-SA-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -217,7 +217,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-composite-mau-05",
-        pic: "/assets/img/product-page/KB-03-K-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-03-K-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -239,7 +239,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-composite-mau-04",
-        pic: "/assets/img/product-page/KB-03-PN-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-03-PN-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -260,7 +260,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-composite-kb_04-2pa",
-        pic: "/assets/img/product-page/KB-04-2PA-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-04-2PA-01-300x300.jpg",
         height: 220,
         width: 135,
                 type: "cua-go-nhua-composite",
@@ -281,7 +281,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-composite-mau-03",
-        pic: "/assets/img/product-page/KB-04-PA-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-04-PA-01-300x300.jpg",
         height: 220,
         width: 135,
                 type: "cua-go-nhua-composite",
@@ -302,7 +302,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-composite-mau-02",
-        pic: "/assets/img/product-page/KB-05-KPN-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-05-KPN-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -323,7 +323,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-chong-chay-mau-06",
-        pic: "/assets/img/product-page/KB-05-SA-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-05-SA-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -344,7 +344,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-chong-chay-mau-05",
-        pic: "/assets/img/product-page/KB-06-CD-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-06-CD-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -365,7 +365,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-chong-chay-mau-04",
-        pic: "/assets/img/product-page/KB-06-KD-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-06-KD-01-300x300.jpg",
         height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -386,7 +386,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-chong-chay-mau-03",
-        pic: "/assets/img/product-page/KB-06-SA-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-06-SA-01-300x300.jpg",
                 height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -407,7 +407,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-chong-chay-mau-2",
-        pic: "/assets/img/product-page/KB-06-SOK-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-06-SOK-01-300x300.jpg",
                 height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -429,7 +429,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-cong-nghiep-mau-06",
-        pic: "/assets/img/product-page/KB-08-SA-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-08-SA-01-300x300.jpg",
                 height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -450,7 +450,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-cong-nghiep-mau-05",
-        pic: "/assets/img/product-page/KB-09-SA-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-09-SA-01-300x300.jpg",
                 height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -468,7 +468,7 @@ Nẹp: 30 x 55 ( mm ) hoặc 50 x 55 (mm )`
     },
     {
         url: "cua-cong-nghiep-mau-04",
-        pic: "/assets/img/product-page/KB-10-SA-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-10-SA-01-300x300.jpg",
                 height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",
@@ -489,7 +489,7 @@ Phát sinh chi phí khi kích thước thực tế vượt kích thước tiêu 
     },
     {
         url: "cua-cong-nghiep-mau-03",
-        pic: "/assets/img/product-page/KB-W-02-01-300x300.jpg",
+        pic: "assets/img/product-page/KB-W-02-01-300x300.jpg",
                 height: 220,
         width: 90,
                 type: "cua-go-nhua-composite",

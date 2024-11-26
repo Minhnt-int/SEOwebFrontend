@@ -10,8 +10,8 @@ import { News } from '../models/news';
 })
 export class ProductService {
 
-  private ProductjsonUrl = './assets/data/products.json';
-  private NewsjsonUrl = './assets/data/news.json';
+  private ProductjsonUrl = 'assets/data/products.json';
+  private NewsjsonUrl = 'assets/data/news.json';
 
   constructor(private http: HttpClient) { }
 

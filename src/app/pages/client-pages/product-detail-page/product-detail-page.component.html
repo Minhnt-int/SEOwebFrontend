@@ -63,7 +63,7 @@
                           style="left: 0px; transform: translateX(0%)"
                         >
                           <div
-                            data-thumb="/assets/img/product-page/KB-01-2-01-100x100.jpg"
+                            data-thumb="assets/img/product-page/KB-01-2-01-100x100.jpg"
                             data-thumb-alt=""
                             class="woocommerce-product-gallery__image slide first is-selected"
                             style="position: absolute; left: 0%"
@@ -77,8 +77,8 @@
                                 alt=""
                                 title="KB 01 2-01"
                                 data-caption=""
-                                data-src="/assets/img/product-page/KB-01-2-01.jpg"
-                                data-large_image="/assets/img/product-page/KB-01-2-01.jpg"
+                                data-src="assets/img/product-page/KB-01-2-01.jpg"
+                                data-large_image="assets/img/product-page/KB-01-2-01.jpg"
                                 data-large_image_width="2501"
                                 data-large_image_height="2501"
                                 decoding="async"
@@ -202,10 +202,10 @@
               </div>
 
               <div>
-                <nz-tabset>
-                  <nz-tab nzTitle="Mô tả">
+                <nz-tabset [nzType]="'card'">
+                  <nz-tab *ngIf="detail" nzTitle="Mô tả">
                     <div>
-                      <p [innerText]="detail?.desc"></p>
+                      <p [innerText]="detail!.desc"></p>
                     </div>
                   </nz-tab>
                   <nz-tab nzTitle="Bảo hành">
@@ -471,7 +471,7 @@
                                     <img
                                       width="300"
                                       height="300"
-                                      src="/assets/img/product-page/KB-03-K-01-300x300.jpg"
+                                      src="assets/img/product-page/KB-03-K-01-300x300.jpg"
                                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                       alt=""
                                       decoding="async"
@@ -480,7 +480,7 @@
                                     /><img
                                       width="300"
                                       height="300"
-                                      src="/assets/img/product-page/1-01-300x300.jpg"
+                                      src="assets/img/product-page/1-01-300x300.jpg"
                                       class="show-on-hover absolute fill hide-for-small back-image"
                                       alt=""
                                       decoding="async"
@@ -558,7 +558,7 @@
                                     <img
                                       width="300"
                                       height="300"
-                                      src="/assets/img/product-page/KB-10-SA-01-300x300.jpg"
+                                      src="assets/img/product-page/KB-10-SA-01-300x300.jpg"
                                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                       alt=""
                                       decoding="async"
@@ -567,7 +567,7 @@
                                     /><img
                                       width="300"
                                       height="300"
-                                      src="/assets/img/product-page/1-01-300x300.jpg"
+                                      src="assets/img/product-page/1-01-300x300.jpg"
                                       class="show-on-hover absolute fill hide-for-small back-image"
                                       alt=""
                                       decoding="async"

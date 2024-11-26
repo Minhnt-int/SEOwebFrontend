@@ -41,7 +41,7 @@ export class ProductDetailPageComponent {
     this.details =  this.productService.findProductDetailbyUrl(this.productName);
     this.detail = this.details[0];
     this.data = this.productService.getProducts();
-    this.onSlideChange()
+    this.onSlideChange();
     this.title.setTitle("Thông tin chi tiết " + this.detail.productName);
     this.meta.updateTag({ 
       name: 'description',
