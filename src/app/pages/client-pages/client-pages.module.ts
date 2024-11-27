@@ -9,6 +9,8 @@ import { DesignPageComponent } from './design-page/design-page.component';
 import { ProductPageLayoutComponent } from './product-page/product-page-layout/product-page-layout.component';
 import { ProductDetailPageComponent } from './product-detail-page/product-detail-page.component';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { IntroPageComponent } from './intro-page/intro-page.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,17 @@ import { NzTabsModule } from 'ng-zorro-antd/tabs';
     HomePageComponent,
     DesignPageComponent,
     ProductPageLayoutComponent,
-    ProductDetailPageComponent
+    ProductDetailPageComponent,
+    IntroPageComponent
   ],
   imports: [
     CommonModule,
     ClientPagesRoutingModule,
     NzCarouselModule,
     NzTabsModule,
+  ],
+  providers: [
+    CookieService
   ]
 })
 export class ClientPagesModule { }

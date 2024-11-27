@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-product-page-layout',
@@ -8,24 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductPageLayoutComponent {
 
-  productType !: string | null;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor() { }
   ngOnInit() {
-    this.productType = this.route.snapshot.paramMap.get('productType');
-    
+
   }
 
-  typeText(text : string | null) : string {
-    switch (text) {
-      case "cua-go-nhua-composite":
-        return  "Cửa gỗ nhựa Composite";
-      case "cua-go-cong-nghiep":
-        return  "Cửa gỗ công nghiệp";
-      case "cua-chong-chay":
-        return  "Cửa chống cháy";
-      default:
-        return "Cửa gỗ nhựa Composite";
-    }
-  }
 }

@@ -5,12 +5,12 @@
     <div id="yith-wcwl-message"></div>
   </div>
 
-  <a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+  <a class="skip-link screen-reader-text" routerLink="#main">Skip to content</a>
 
   <div id="wrapper">
     <header id="header" class="header has-sticky sticky-jump" style="">
       <div class="header-wrapper">
-        <div
+        <!-- <div
           id="top-bar"
           class="header-top hide-for-sticky nav-dark hide-for-medium"
         >
@@ -74,7 +74,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div id="masthead" class="header-main">
           <div
             class="header-inner flex-row container logo-left medium-logo-center"
@@ -84,7 +84,7 @@
             <div id="logo" class="flex-col logo">
               <!-- Header logo -->
               <a
-                href="/"
+                routerLink="/"
                 title="Kinh Bắc Furniture - Tô điểm ngôi nhà của bạn"
                 rel="home"
               >
@@ -117,7 +117,7 @@
                     aria-controls="main-menu"
                     aria-expanded="false"
                   >
-                    <i class="icon-menu"></i>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
                   </a>
                 </li>
               </ul>
@@ -132,7 +132,7 @@
                   id="menu-item-131"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131 menu-item-design-default"
                 >
-                  <a href="/gioi-thieu/" class="nav-top-link">Giới thiệu</a>
+                  <a routerLink="gioi-thieu" class="nav-top-link">Giới thiệu</a>
                 </li>
                 <li
                   id="menu-item-247"
@@ -141,24 +141,26 @@
                   nzPlacement="bottomCenter"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-247 menu-item-design-default"
                 >
-                  <a href="/san-pham" class="nav-top-link"
+                  <a routerLink="san-pham" class="nav-top-link"
                     >Sản phẩm<span nz-icon nzType="down"></span
                   ></a>
                   <nz-dropdown-menu #menu="nzDropdownMenu">
                     <ul>
                       <ul nz-menu nzSelectable>
                         <li nz-menu-item id="menu-item-612">
-                          <a href="san-pham/cua-go-nhua-composite/"
+                          <a routerLink="san-pham/cua-go-nhua-composite"
                             >Cửa gỗ nhựa Composite</a
                           >
                         </li>
                         <li nz-menu-item id="menu-item-613">
-                          <a href="san-pham/cua-go-cong-nghiep/"
+                          <a routerLink="san-pham/cua-go-cong-nghiep/"
                             >Cửa gỗ công nghiệp</a
                           >
                         </li>
                         <li nz-menu-item id="menu-item-611">
-                          <a href="san-pham/cua-chong-chay/">Cửa chống cháy</a>
+                          <a routerLink="san-pham/cua-chong-chay/"
+                            >Cửa chống cháy</a
+                          >
                         </li>
                       </ul>
                     </ul>
@@ -168,25 +170,27 @@
                   id="menu-item-133"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133 menu-item-design-default"
                 >
-                  <a href="/du-an" class="nav-top-link">Dự án</a>
+                  <a routerLink="du-an" class="nav-top-link">Dự án</a>
                 </li>
                 <li
                   id="menu-item-134"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134 menu-item-design-default"
                 >
-                  <a href="/bao-gia" class="nav-top-link">Bảng báo giá</a>
+                  <a routerLink="bao-gia" class="nav-top-link">Bảng báo giá</a>
                 </li>
                 <li
                   id="menu-item-135"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135 menu-item-design-default"
                 >
-                  <a href="/blog" class="nav-top-link">Tin tức</a>
+                  <a routerLink="blog" class="nav-top-link">Tin tức</a>
                 </li>
                 <li
                   id="menu-item-136"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136 menu-item-design-default"
                 >
-                  <a href="/thiet-ke-thi-cong-noi-that" class="nav-top-link"
+                  <a
+                    routerLink="thiet-ke-thi-cong-noi-that"
+                    class="nav-top-link"
                     >Thiết kế thi công nội thất</a
                   >
                 </li>
@@ -194,29 +198,20 @@
             </div>
 
             <!-- Right Elements -->
-            <div class="flex-col hide-for-medium flex-right">
+            <!-- <div class="flex-col hide-for-medium flex-right">
               <ul
                 class="header-nav header-nav-main nav nav-right nav-size-medium nav-spacing-medium nav-uppercase"
               ></ul>
-            </div>
+            </div> -->
 
             <!-- Mobile Right Elements -->
-            <div class="flex-col show-for-medium flex-right">
+            <!-- <div class="flex-col show-for-medium flex-right">
               <ul class="mobile-nav nav nav-right">
                 <li class="cart-item has-icon">
-                  <a
-                    href="cart/"
-                    class="header-cart-link off-canvas-toggle nav-top-link is-small"
-                    data-open="#cart-popup"
-                    data-class="off-canvas-cart"
-                    title="Giỏ hàng"
-                    data-pos="right"
-                  >
-                    <i class="icon-shopping-basket" data-icon-label="0"> </i>
-                  </a>
+
                 </li>
               </ul>
-            </div>
+            </div> -->
           </div>
 
           <div class="container">
@@ -250,7 +245,6 @@
                   <div
                     class="ux-logo-link block image-"
                     title=""
-                    href=""
                     style="padding: 15px"
                   >
                     <img
@@ -293,7 +287,7 @@
                   style="font-size: 110%"
                 >
                   <a
-                    href="https://www.facebook.com/thedinofa"
+                    routerLink="https://www.facebook.com/thedinofa"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                     data-label="Facebook"
@@ -304,7 +298,7 @@
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                   </a>
                   <a
-                    href="https://www.facebook.com/thedinofa"
+                    routerLink="https://www.facebook.com/thedinofa"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                     data-label="Instagram"
@@ -315,7 +309,7 @@
                     <i class="fa fa-instagram" aria-hidden="true"> </i>
                   </a>
                   <a
-                    href="https://www.facebook.com/thedinofa"
+                    routerLink="https://www.facebook.com/thedinofa"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                     data-label="TikTok"
@@ -337,7 +331,7 @@
                     </svg>
                   </a>
                   <a
-                    href="mailto:https://www.facebook.com/thedinofa"
+                    routerLink="mailto:https://www.facebook.com/thedinofa"
                     data-label="E-mail"
                     target="_blank"
                     rel="nofollow"
@@ -348,7 +342,7 @@
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                   </a>
                   <a
-                    href="tel:https://www.facebook.com/thedinofa"
+                    routerLink="tel:https://www.facebook.com/thedinofa"
                     data-label="Phone"
                     target="_blank"
                     rel="nofollow"
@@ -359,7 +353,7 @@
                     <i class="fa fa-phone" aria-hidden="true"></i>
                   </a>
                   <a
-                    href="https://www.facebook.com/thedinofa"
+                    routerLink="https://www.facebook.com/thedinofa"
                     data-label="YouTube"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
@@ -532,7 +526,7 @@
                   class="ux-menu stack stack-col justify-start ux-menu--divider-solid"
                 >
                   <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="gioi-thieu/">
+                    <a class="ux-menu-link__link flex" routerLink="gioi-thieu">
                       <span class="ux-menu-link__text">
                         Chính sách giao hàng &amp; lắp đặt
                       </span>
@@ -540,7 +534,7 @@
                   </div>
 
                   <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="">
+                    <a class="ux-menu-link__link flex" routerLink="">
                       <span class="ux-menu-link__text">
                         Chính sách đổi trả
                       </span>
@@ -548,7 +542,7 @@
                   </div>
 
                   <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="">
+                    <a class="ux-menu-link__link flex" routerLink="">
                       <span class="ux-menu-link__text">
                         Chính sách bảo hành &amp; bảo trì
                       </span>
@@ -556,7 +550,7 @@
                   </div>
 
                   <div class="ux-menu-link flex menu-item">
-                    <a class="ux-menu-link__link flex" href="">
+                    <a class="ux-menu-link__link flex" routerLink="">
                       <span class="ux-menu-link__text">
                         Chính sách bảo mật thông tin khách hàng
                       </span>
@@ -588,11 +582,11 @@
       </div>
 
       <a
-        href="#top"
+        routerLink="#top"
         class="back-to-top button icon invert plain fixed bottom z-1 is-outline hide-for-medium circle"
         id="top-link"
         aria-label="Go to top"
-        ><i class="icon-angle-up"></i
+        ><i class="fa fa-angle-up" aria-hidden="true"></i
       ></a>
     </footer>
   </div>
@@ -629,7 +623,7 @@
                       class="ux-search-submit submit-button secondary button icon mb-0"
                       aria-label="Submit"
                     >
-                      <i class="icon-search"></i>
+                      <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
                   </div>
                 </div>
@@ -651,58 +645,62 @@
         <li
           class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"
         >
-          <a href="gioi-thieu/">Giới thiệu</a>
+          <a routerLink="gioi-thieu">Giới thiệu</a>
         </li>
         <li
           class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-247 has-child"
           aria-expanded="false"
         >
-          <a href="san-pham/">Sản phẩm</a>
+          <a routerLink="san-pham">Sản phẩm</a>
           <button class="toggle" aria-label="Toggle">
-            <i class="icon-angle-down"></i>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
           </button>
           <ul class="sub-menu nav-sidebar-ul children">
             <li
               class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-612"
             >
-              <a href="san-pham/cua-go-nhua-composite/"
+              <a routerLink="san-pham/cua-go-nhua-composite/"
                 >Cửa gỗ nhựa Composite</a
               >
             </li>
             <li
               class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-613"
             >
-              <a href="san-pham/cua-go-cong-nghiep/">Cửa gỗ công nghiệp</a>
+              <a routerLink="san-pham/cua-go-cong-nghiep/"
+                >Cửa gỗ công nghiệp</a
+              >
             </li>
             <li
               class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-611"
             >
-              <a href="san-pham/cua-chong-chay/">Cửa chống cháy</a>
+              <a routerLink="san-pham/cua-chong-chay/">Cửa chống cháy</a>
             </li>
           </ul>
         </li>
         <li
           class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133"
         >
-          <a href="du-an/">Dự án</a>
+          <a routerLink="du-an">Dự án</a>
         </li>
         <li
           class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"
         >
-          <a href="bao-gia/">Bảng báo giá</a>
+          <a routerLink="bao-gia">Bảng báo giá</a>
         </li>
         <li
           class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135"
         >
-          <a href="blog/">Tin tức</a>
+          <a routerLink="blog">Tin tức</a>
         </li>
         <li
           class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"
         >
-          <a href="thiet-ke-thi-cong-noi-that/">Thiết kế thi công nội thất</a>
+          <a routerLink="thiet-ke-thi-cong-noi-that"
+            >Thiết kế thi công nội thất</a
+          >
         </li>
         <!-- <li class="account-item has-icon menu-item">
-          <a href="my-account/" class="nav-top-link nav-top-not-logged-in">
+          <a routerLink="my-account/" class="nav-top-link nav-top-not-logged-in">
             <span class="header-account-title">
               Đăng nhập </span>
           </a>
@@ -713,7 +711,7 @@
             class="tooltip"
             title="Sign up for Newsletter"
           >
-            <i class="icon-envelop"></i>
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
             <span class="header-newsletter-title"> Newsletter </span>
           </a>
         </li>
@@ -727,7 +725,7 @@
               class="icon plain facebook tooltip"
               title="Follow on Facebook"
               aria-label="Follow on Facebook"
-              ><i class="icon-facebook"></i></a
+              ><i class="fa fa-facebook" aria-hidden="true"></i></a
             ><a
               href="http://url/"
               target="_blank"
@@ -736,7 +734,7 @@
               class="icon plain instagram tooltip"
               title="Follow on Instagram"
               aria-label="Follow on Instagram"
-              ><i class="icon-instagram"></i></a
+              ><i class="fa fa-instagram" aria-hidden="true"></i></a
             ><a
               href="http://url/"
               data-label="Twitter"
@@ -745,16 +743,16 @@
               class="icon plain twitter tooltip"
               title="Follow on Twitter"
               aria-label="Follow on Twitter"
-              ><i class="icon-twitter"></i></a
+              ><i class="fa fa-twitter" aria-hidden="true"></i></a
             ><a
-              href="mailto:your@email"
+              routerLink="mailto:your@email"
               data-label="E-mail"
               target="_blank"
               rel="nofollow"
               class="icon plain email tooltip"
               title="Send us an email"
               aria-label="Send us an email"
-              ><i class="icon-envelop"></i
+              ><i class="fa fa-envelope-o" aria-hidden="true"></i
             ></a>
           </div>
         </li>

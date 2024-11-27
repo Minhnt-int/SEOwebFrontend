@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { Product } from '../../../../../models/product';
 import { ProductService } from '../../../../../service/product.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-producttype-page',
@@ -18,20 +19,46 @@ export class ProducttypePageComponent {
   pageData: Product[] = [];
   slideData: Product[] = [];
   productType !: string | null;
-  constructor(private productService: ProductService, private route: ActivatedRoute, private meta: Meta, private title: Title) { }
+  constructor(private productService: ProductService, private route: ActivatedRoute, private meta: Meta, private title: Title, private router: Router) {
+
+   }
   ngOnInit() {
-    this.productType = this.route.snapshot.paramMap.get('productType');
-    
-    this.data = this.productService.findProductbyType(this.productType);
+    this.getProductType();
     // this.data = this.productService.getProducts();
 
+    this.setMeta()
+    this.onPageIndexChange();
+    this.onSlideChange();
+
+
+    this.router.events
+    .pipe(filter(event => event instanceof NavigationEnd))  
+    .subscribe((event: NavigationEnd) => {
+      this.getProductType()
+      this.onPageIndexChange();
+      this.onSlideChange();
+    this.setMeta()
+
+      // console.log(event);
+    window.scrollTo(0,0);
+      
+      // code goes here...
+    });
+    
+  }
+
+  setMeta() {
     this.title.setTitle(this.typeText(this.productType));
     this.meta.updateTag({ 
       name: 'description',
       content: this.pageTitle(this.productType)
     });
-    this.onPageIndexChange();
-    this.onSlideChange();
+  }
+
+  getProductType() {
+    this.productType = this.route.snapshot.paramMap.get('productType');
+    this.data = this.productService.findProductbyType(this.productType);
+    
   }
 
   onPageIndexChange() {

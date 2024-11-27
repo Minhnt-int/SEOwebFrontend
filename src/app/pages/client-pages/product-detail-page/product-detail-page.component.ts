@@ -1,9 +1,11 @@
 import { Component} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { ProductService } from '../../../service/product.service';
 import { productDetail } from '../../../models/product-detail';
 import { Meta, Title } from '@angular/platform-browser';
 import { Product } from '../../../models/product';
+import { filter } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-product-detail-page',
@@ -12,40 +14,107 @@ import { Product } from '../../../models/product';
 })
 export class ProductDetailPageComponent {
   data: Product[] = [];
-  slideIndex=1;
+  recentSlideIndex=1;
+  recommendSlideIndex=1;
   slideSize=4;
+  cookie: Product[] = [];
   slideData: Product[] = [];
 
-  onSlideChange() {
-    this.slideData = this.data.slice((this.slideIndex-1)*(this.slideSize), (this.slideIndex)*(this.slideSize));
+  onRecentSlideChange() {
+    this.slideData = this.cookie.slice((this.recentSlideIndex-1)*(this.slideSize), (this.recentSlideIndex)*(this.slideSize));
   }
-  nextSlide(){
+  onRecommendSlideChange() {
+    this.slideData = this.cookie.slice((this.recommendSlideIndex-1)*(this.slideSize), (this.recommendSlideIndex)*(this.slideSize));
+  }
+  nextSlide($event : Event){
 
-    if(this.slideIndex>=1&&this.slideIndex<(this.data.length/this.slideSize))
-    this.slideIndex++;
-    this.onSlideChange()
+    if(this.recentSlideIndex<(this.cookie.length/this.slideSize))
+        this.recentSlideIndex++;
+        this.onRecentSlideChange()
+
+    // const target = $event.target as HTMLElement;
+    // if (target.classList.contains('recent-view')) {
+    //   if(this.recentSlideIndex<(this.cookie.length/this.slideSize))
+    //     this.recentSlideIndex++;
+    //     this.onRecentSlideChange()
+    // } else if (target.classList.contains('recommend')) {
+    //   if(this.recommendSlideIndex<(this.cookie.length/this.slideSize))
+    //     this.recommendSlideIndex++;
+    //     this.onRecommendSlideChange()
+    // }
+
   }
-  prevSlide(){
-    
-    if(this.slideIndex>=1&&this.slideIndex<(this.data.length/this.slideSize))
-    this.slideIndex--;
-    this.onSlideChange()
+
+  prevSlide($event : Event){
+    if(this.recentSlideIndex>1)
+      this.recentSlideIndex--;
+      this.onRecentSlideChange()
+
+    // const target = $event.target as HTMLElement;
+    // if (target.classList.contains('recent-view')) {
+    //   if(this.recentSlideIndex>1)
+    //     this.recentSlideIndex--;
+    //     this.onRecentSlideChange()
+    // } else if (target.classList.contains('recommend')) {
+    //   if(this.recommendSlideIndex>1)
+    //     this.recommendSlideIndex--;
+    //     this.onRecommendSlideChange()
+    // }
+
   }
+
+  viewDetail : string[] = [];
+
 
   details : productDetail[]  = [];
   detail : productDetail | null  = null;
   productName: string | null = null;
-  constructor(private route: ActivatedRoute, private productService: ProductService, private meta: Meta, private title: Title) {}
+  constructor(private route: ActivatedRoute, private productService: ProductService, private meta: Meta, private title: Title, private router: Router, private cookieService: CookieService) {}
   ngOnInit(): void {
+    this.getProductDetail()
+    this.getSlideData()
+    this.onRecentSlideChange();
+    this.onRecommendSlideChange();
+    this.setMeta();
+    this.router.events
+    .pipe(filter(event => event instanceof NavigationEnd))  
+    .subscribe((event: NavigationEnd) => {
+      this.getProductDetail()
+      this.productService.saveCookie(this.productName!);
+      this.getSlideData()
+      this.onRecentSlideChange();
+      this.onRecommendSlideChange();
+      this.recentSlideIndex=1;
+      this.recommendSlideIndex=1;
+      this.setMeta();
+      window.scrollTo(0,0);
+    });
+
+
+
+
+  }
+
+  getSlideData() {
+    this.cookie = this.productService.findProductsbyNames(this.productService.getCookie())
+    
+  }
+
+
+  getProductDetail() {
     this.productName = this.route.snapshot.paramMap.get('productUrl');
     this.details =  this.productService.findProductDetailbyUrl(this.productName);
     this.detail = this.details[0];
     this.data = this.productService.getProducts();
-    this.onSlideChange();
-    this.title.setTitle("Thông tin chi tiết " + this.detail.productName);
+
+  }
+
+  setMeta() {
+
+    this.title.setTitle(this.detail!.productName);
     this.meta.updateTag({ 
       name: 'description',
-      content: `${this.truncateString(this.detail.desc , 50)}`
+      content: `${this.truncateString(this.detail!.desc , 50)}`
     });
   }
 

@@ -18,7 +18,7 @@ export class NewsPageComponent {
     this.title.setTitle("Tin mới hôm nay " + date + "/" + month + "/" + year);
     this.meta.updateTag({ 
       name: 'description',
-      content: `Thông tin mới nhất thiết kế thi công cửa gỗ nhựa hôm nay + ${date} + "/" + ${month} + "/" + ${year}`
+      content: `Thông tin mới nhất thiết kế thi công cửa gỗ nhựa hôm nay ${date}/${month}/${year}`
     });
   }
 }

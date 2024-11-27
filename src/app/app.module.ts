@@ -32,7 +32,7 @@ registerLocaleData(en);
     provideClientHydration(),
     provideHttpClient(),
     { provide: NZ_I18N, useValue: en_US },
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })
