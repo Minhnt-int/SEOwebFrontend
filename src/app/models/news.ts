@@ -1,19 +1,22 @@
 export interface News {
-	name: string;
-    title: string;
-    date: string;
-    desc: string;
-    innerHtml: string;
-
+  name: string;
+  title: string;
+  img: string;
+  date: string;
+  month: string;
+  desc: string;
+  innerHtml: string;
 }
 
 export const NEWS: News[] = [
-    {
-		name: "cong-trinh-duong-van-be-hoang-mai",
-        title: "Công trình lắp đặt cửa gỗ nhựa Composite tại phố Dương Văn Bé",
-        date: "16 Tháng 5, 2024",
-        desc: "Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh chỉ sơn tại phố Dương Văn Bé",
-        innerHtml: `<article
+  {
+    name: 'cong-trinh-duong-van-be-hoang-mai',
+    title: 'CÔNG TRÌNH DƯƠNG VĂN BÉ – HOÀNG MAI',
+    img: '441312691_320492447738928_5030056107160077507_n-769x1024.jpg',
+    month: '5',
+    date: '16',
+    desc: 'Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh chỉ sơn tại phố Dương Văn Bé',
+    innerHtml: `<article
   id="post-1285"
   class="post-1285 post type-post status-publish format-standard has-post-thumbnail hentry category-can-ho-cao-cap category-nha-o tag-cua-composite-chi-son tag-cua-go-composite tag-cua-go-nhua tag-cua-thong-phong tag-cua-ve-sinh"
 >
@@ -256,17 +259,17 @@ export const NEWS: News[] = [
             data-action="share/whatsapp/share"
             class="icon button circle is-outline tooltip whatsapp show-for-medium"
             title="Share on WhatsApp"
-            aria-label="Share on WhatsApp"
+            aria-title="Share on WhatsApp"
             ><i aria-hidden=true class='fa fa-whatsapp'></i></a
           ><a
             routerLink="https://www.facebook.com/sharer.php?u=/blog/cong-trinh-duong-van-be-hoang-mai/"
-            data-label="Facebook"
+            data-title="Facebook"
             onclick="window.open(this.href,this.title,&#39;width=500,height=500,top=300px,left=300px&#39;); return false;"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="icon button circle is-outline tooltip facebook"
             title="Share on Facebook"
-            aria-label="Share on Facebook"
+            aria-title="Share on Facebook"
             ><i class="bi bi-facebook"></i></a
           ><a
             routerLink="https://twitter.com/share?url=/blog/cong-trinh-duong-van-be-hoang-mai/"
@@ -275,14 +278,14 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip twitter"
             title="Share on Twitter"
-            aria-label="Share on Twitter"
+            aria-title="Share on Twitter"
             ><i class="fa fa-twitter" aria-hidden="true"></i></a
           ><a
             routerLink="mailto:?subject=C%C3%94NG%20TR%C3%8CNH%20D%C6%AF%C6%A0NG%20V%C4%82N%20B%C3%89%20%26%238211%3B%20HO%C3%80NG%20MAI&amp;body=Check%20this%20out%3A%20https%3A%2F%2Fkinhbacfurniture.com%2F2024%2F05%2F16%2Fcong-trinh-duong-van-be-hoang-mai%2F"
             rel="nofollow"
             class="icon button circle is-outline tooltip email"
             title="Email to a Friend"
-            aria-label="Email to a Friend"
+            aria-title="Email to a Friend"
             ><i class='fa fa-envelope-o' aria-hidden='true'></i></a
           ><a
             routerLink="https://pinterest.com/pin/create/button?url=/blog/cong-trinh-duong-van-be-hoang-mai/&amp;media=/wp-content/uploads/2024/05/441312691_320492447738928_5030056107160077507_n-1153x1536.jpg&amp;description=C%C3%94NG%20TR%C3%8CNH%20D%C6%AF%C6%A0NG%20V%C4%82N%20B%C3%89%20%26%238211%3B%20HO%C3%80NG%20MAI"
@@ -291,7 +294,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip pinterest"
             title="Pin on Pinterest"
-            aria-label="Pin on Pinterest"
+            aria-title="Pin on Pinterest"
             ><i class='fa fa-pinterest-p' aria-hidden='true'></i></a
           ><a
             routerLink="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/cong-trinh-duong-van-be-hoang-mai/&amp;title=C%C3%94NG%20TR%C3%8CNH%20D%C6%AF%C6%A0NG%20V%C4%82N%20B%C3%89%20%26%238211%3B%20HO%C3%80NG%20MAI"
@@ -300,7 +303,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip linkedin"
             title="Share on LinkedIn"
-            aria-label="Share on LinkedIn"
+            aria-title="Share on LinkedIn"
             ><i class='fa fa-linkedin' aria-hidden='true'></i></a>
         </div>
       </div>
@@ -355,15 +358,16 @@ export const NEWS: News[] = [
     </nav>
   </div>
 </article>
-`
-    },
-    {
-		name: "ly-do-nen-chon-cua-go-composite",
-
-        title: "LÝ DO NÊN CHỌN CỬA GỖ COMPOSITE",
-        date: "8 Tháng 5, 2024",
-        desc: "TRỞ THÀNH NGƯỜI TIÊU DÙNG THÔNG THÁI BẰNG VIỆC LỰA CHỌN CỬA GỖ NHỰA COMPOSITE",
-        innerHtml: `<article
+`,
+  },
+  {
+    name: 'ly-do-nen-chon-cua-go-composite',
+    title: 'LÝ DO NÊN CHỌN CỬA GỖ COMPOSITE',
+    img: '386067336_187252144396293_425490963523801210_n-1024x1024.jpg',
+    month: '5',
+    date: '8',
+    desc: 'TRỞ THÀNH NGƯỜI TIÊU DÙNG THÔNG THÁI BẰNG VIỆC LỰA CHỌN CỬA GỖ NHỰA COMPOSITE',
+    innerHtml: `<article
   id="post-1275"
   class="post-1275 post type-post status-publish format-standard has-post-thumbnail hentry category-kien-thuc tag-cua-go-composite tag-cua-go-nhua tag-cua-thong-phong tag-cua-van-phong tag-cua-ve-sinh"
 >
@@ -516,17 +520,17 @@ export const NEWS: News[] = [
             data-action="share/whatsapp/share"
             class="icon button circle is-outline tooltip whatsapp show-for-medium"
             title="Share on WhatsApp"
-            aria-label="Share on WhatsApp"
+            aria-title="Share on WhatsApp"
             ><i aria-hidden=true class='fa fa-whatsapp'></i></a
           ><a
             routerLink="https://www.facebook.com/sharer.php?u=/blog/ly-do-nen-chon-cua-go-composite/"
-            data-label="Facebook"
+            data-title="Facebook"
             onclick="window.open(this.href,this.title,&#39;width=500,height=500,top=300px,left=300px&#39;); return false;"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="icon button circle is-outline tooltip facebook"
             title="Share on Facebook"
-            aria-label="Share on Facebook"
+            aria-title="Share on Facebook"
             ><i class="bi bi-facebook"></i></a
           ><a
             routerLink="https://twitter.com/share?url=/blog/ly-do-nen-chon-cua-go-composite/"
@@ -535,14 +539,14 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip twitter"
             title="Share on Twitter"
-            aria-label="Share on Twitter"
+            aria-title="Share on Twitter"
             ><i class="fa fa-twitter" aria-hidden="true"></i></a
           ><a
             routerLink="mailto:?subject=L%C3%9D%20DO%20N%C3%8AN%20CH%E1%BB%8CN%20C%E1%BB%ACA%20G%E1%BB%96%20COMPOSITE&amp;body=Check%20this%20out%3A%20https%3A%2F%2Fkinhbacfurniture.com%2F2024%2F05%2F08%2Fly-do-nen-chon-cua-go-composite%2F"
             rel="nofollow"
             class="icon button circle is-outline tooltip email"
             title="Email to a Friend"
-            aria-label="Email to a Friend"
+            aria-title="Email to a Friend"
             ><i class='fa fa-envelope-o' aria-hidden='true'></i></a
           ><a
             routerLink="https://pinterest.com/pin/create/button?url=/blog/ly-do-nen-chon-cua-go-composite/&amp;media=/wp-content/uploads/2024/03/386067336_187252144396293_425490963523801210_n-1536x1536.jpg&amp;description=L%C3%9D%20DO%20N%C3%8AN%20CH%E1%BB%8CN%20C%E1%BB%ACA%20G%E1%BB%96%20COMPOSITE"
@@ -551,7 +555,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip pinterest"
             title="Pin on Pinterest"
-            aria-label="Pin on Pinterest"
+            aria-title="Pin on Pinterest"
             ><i class='fa fa-pinterest-p' aria-hidden='true'></i></a
           ><a
             routerLink="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/ly-do-nen-chon-cua-go-composite/&amp;title=L%C3%9D%20DO%20N%C3%8AN%20CH%E1%BB%8CN%20C%E1%BB%ACA%20G%E1%BB%96%20COMPOSITE"
@@ -560,7 +564,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip linkedin"
             title="Share on LinkedIn"
-            aria-label="Share on LinkedIn"
+            aria-title="Share on LinkedIn"
             ><i class='fa fa-linkedin' aria-hidden='true'></i></a>
         </div>
       </div>
@@ -624,14 +628,16 @@ export const NEWS: News[] = [
     </nav>
   </div>
 </article>
-`
-    },
-    {
-		name: "nhung-dieu-can-biet-ve-cua-go-nhua-composite",
-        title: "NHỮNG ĐIỀU CẦN BIẾT VỀ CỬA GỖ NHỰA COMPOSITE",
-        date: "23 Tháng 4, 2024",
-        desc: "được sản xuất với 2 nguyên liệu chính là bột gỗ và bột nhựa, kết hợp với chất phụ gia.Một bộ cửa gỗ nhựa Composite gồm có cánh cửa, khuôn cửa và nẹp",
-        innerHtml: `<article
+`,
+  },
+  {
+    name: 'nhung-dieu-can-biet-ve-cua-go-nhua-composite',
+    title: 'NHỮNG ĐIỀU CẦN BIẾT VỀ CỬA GỖ NHỰA COMPOSITE',
+    img: '433622897_291488830639290_1165563850270327400_n-1024x883.jpg',
+    month: '4',
+    date: '23',
+    desc: 'được sản xuất với 2 nguyên liệu chính là bột gỗ và bột nhựa, kết hợp với chất phụ gia.Một bộ cửa gỗ nhựa Composite gồm có cánh cửa, khuôn cửa và nẹp',
+    innerHtml: `<article
   id="post-1262"
   class="post-1262 post type-post status-publish format-standard has-post-thumbnail hentry category-kien-thuc tag-cua-cnc-am tag-cua-composite-canh-phang tag-cua-composite-chi-nhom tag-cua-go-composite tag-cua-go-nhua tag-cua-go-nhua-canh-phang tag-cua-o-kinh tag-cua-thong-phong tag-cua-van-phong tag-cua-ve-sinh"
 >
@@ -988,17 +994,17 @@ export const NEWS: News[] = [
             data-action="share/whatsapp/share"
             class="icon button circle is-outline tooltip whatsapp show-for-medium"
             title="Share on WhatsApp"
-            aria-label="Share on WhatsApp"
+            aria-title="Share on WhatsApp"
             ><i aria-hidden=true class='fa fa-whatsapp'></i></a
           ><a
             routerLink="https://www.facebook.com/sharer.php?u=/blog/nhung-dieu-can-biet-ve-cua-go-nhua-composite/"
-            data-label="Facebook"
+            data-title="Facebook"
             onclick="window.open(this.href,this.title,&#39;width=500,height=500,top=300px,left=300px&#39;); return false;"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="icon button circle is-outline tooltip facebook"
             title="Share on Facebook"
-            aria-label="Share on Facebook"
+            aria-title="Share on Facebook"
             ><i class="bi bi-facebook"></i></a
           ><a
             routerLink="https://twitter.com/share?url=/blog/nhung-dieu-can-biet-ve-cua-go-nhua-composite/"
@@ -1007,14 +1013,14 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip twitter"
             title="Share on Twitter"
-            aria-label="Share on Twitter"
+            aria-title="Share on Twitter"
             ><i class="fa fa-twitter" aria-hidden="true"></i></a
           ><a
             routerLink="mailto:?subject=NH%E1%BB%AENG%20%C4%90I%E1%BB%80U%20C%E1%BA%A6N%20BI%E1%BA%BET%20V%E1%BB%80%20C%E1%BB%ACA%20G%E1%BB%96%20NH%E1%BB%B0A%20COMPOSITE&amp;body=Check%20this%20out%3A%20https%3A%2F%2Fkinhbacfurniture.com%2F2024%2F04%2F23%2Fnhung-dieu-can-biet-ve-cua-go-nhua-composite%2F"
             rel="nofollow"
             class="icon button circle is-outline tooltip email"
             title="Email to a Friend"
-            aria-label="Email to a Friend"
+            aria-title="Email to a Friend"
             ><i class='fa fa-envelope-o' aria-hidden='true'></i></a
           ><a
             routerLink="https://pinterest.com/pin/create/button?url=/blog/nhung-dieu-can-biet-ve-cua-go-nhua-composite/&amp;media=/wp-content/uploads/2024/04/433622897_291488830639290_1165563850270327400_n-1024x883.jpg&amp;description=NH%E1%BB%AENG%20%C4%90I%E1%BB%80U%20C%E1%BA%A6N%20BI%E1%BA%BET%20V%E1%BB%80%20C%E1%BB%ACA%20G%E1%BB%96%20NH%E1%BB%B0A%20COMPOSITE"
@@ -1023,7 +1029,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip pinterest"
             title="Pin on Pinterest"
-            aria-label="Pin on Pinterest"
+            aria-title="Pin on Pinterest"
             ><i class='fa fa-pinterest-p' aria-hidden='true'></i></a
           ><a
             routerLink="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/nhung-dieu-can-biet-ve-cua-go-nhua-composite/&amp;title=NH%E1%BB%AENG%20%C4%90I%E1%BB%80U%20C%E1%BA%A6N%20BI%E1%BA%BET%20V%E1%BB%80%20C%E1%BB%ACA%20G%E1%BB%96%20NH%E1%BB%B0A%20COMPOSITE"
@@ -1032,7 +1038,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip linkedin"
             title="Share on LinkedIn"
-            aria-label="Share on LinkedIn"
+            aria-title="Share on LinkedIn"
             ><i class='fa fa-linkedin' aria-hidden='true'></i></a>
         </div>
       </div>
@@ -1101,14 +1107,16 @@ export const NEWS: News[] = [
     </nav>
   </div>
 </article>
-`
-    },
-    {
-		name: "cong-trinh-bac-giang",
-        title: "CÔNG TRÌNH BẮC GIANG",
-        date: "19 Tháng 4, 2024",
-        desc: "Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp đặt tại Bắc Giang",
-        innerHtml: `<article
+`,
+  },
+  {
+    name: 'cong-trinh-bac-giang',
+    img: '401588885_211921415262699_1755972951023720929_n-1024x1024.jpg',
+    title: 'CÔNG TRÌNH BẮC GIANG',
+    month: '4',
+    date: '19',
+    desc: 'Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp đặt tại Bắc Giang',
+    innerHtml: `<article
   id="post-1253"
   class="post-1253 post type-post status-publish format-standard has-post-thumbnail hentry category-nha-o tag-cua-composite-canh-phang tag-cua-go-composite tag-cua-go-nhua tag-cua-thong-phong tag-cua-ve-sinh"
 >
@@ -1263,17 +1271,17 @@ export const NEWS: News[] = [
             data-action="share/whatsapp/share"
             class="icon button circle is-outline tooltip whatsapp show-for-medium"
             title="Share on WhatsApp"
-            aria-label="Share on WhatsApp"
+            aria-title="Share on WhatsApp"
             ><i aria-hidden=true class='fa fa-whatsapp'></i></a
           ><a
             routerLink="https://www.facebook.com/sharer.php?u=/blog/cong-trinh-bac-giang/"
-            data-label="Facebook"
+            data-title="Facebook"
             onclick="window.open(this.href,this.title,&#39;width=500,height=500,top=300px,left=300px&#39;); return false;"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="icon button circle is-outline tooltip facebook"
             title="Share on Facebook"
-            aria-label="Share on Facebook"
+            aria-title="Share on Facebook"
             ><i class="bi bi-facebook"></i></a
           ><a
             routerLink="https://twitter.com/share?url=/blog/cong-trinh-bac-giang/"
@@ -1282,14 +1290,14 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip twitter"
             title="Share on Twitter"
-            aria-label="Share on Twitter"
+            aria-title="Share on Twitter"
             ><i class="fa fa-twitter" aria-hidden="true"></i></a
           ><a
             routerLink="mailto:?subject=C%C3%94NG%20TR%C3%8CNH%20B%E1%BA%AEC%20GIANG&amp;body=Check%20this%20out%3A%20https%3A%2F%2Fkinhbacfurniture.com%2F2024%2F04%2F19%2Fcong-trinh-bac-giang%2F"
             rel="nofollow"
             class="icon button circle is-outline tooltip email"
             title="Email to a Friend"
-            aria-label="Email to a Friend"
+            aria-title="Email to a Friend"
             ><i class='fa fa-envelope-o' aria-hidden='true'></i></a
           ><a
             routerLink="https://pinterest.com/pin/create/button?url=/blog/cong-trinh-bac-giang/&amp;media=/wp-content/uploads/2024/04/401588885_211921415262699_1755972951023720929_n-1024x1024.jpg&amp;description=C%C3%94NG%20TR%C3%8CNH%20B%E1%BA%AEC%20GIANG"
@@ -1298,7 +1306,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip pinterest"
             title="Pin on Pinterest"
-            aria-label="Pin on Pinterest"
+            aria-title="Pin on Pinterest"
             ><i class='fa fa-pinterest-p' aria-hidden='true'></i></a
           ><a
             routerLink="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/cong-trinh-bac-giang/&amp;title=C%C3%94NG%20TR%C3%8CNH%20B%E1%BA%AEC%20GIANG"
@@ -1307,7 +1315,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip linkedin"
             title="Share on LinkedIn"
-            aria-label="Share on LinkedIn"
+            aria-title="Share on LinkedIn"
             ><i class='fa fa-linkedin' aria-hidden='true'></i></a>
         </div>
       </div>
@@ -1372,14 +1380,16 @@ export const NEWS: News[] = [
     </nav>
   </div>
 </article>
-`
-    },
-    {
-		name: "cong-trinh-hoai-duc",
-        title: "CÔNG TRÌNH HOÀI ĐỨC",
-        date: "16 Tháng 4, 2024",
-        desc: "Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp đặt tại Hoài Đức",
-        innerHtml: `<article
+`,
+  },
+  {
+    name: 'cong-trinh-hoai-duc',
+    img: '421220494_253437127777794_5091502003108169300_n-768x1024.jpg',
+    title: 'CÔNG TRÌNH HOÀI ĐỨC',
+    month: '4',
+    date: '16',
+    desc: 'Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp đặt tại Hoài Đức',
+    innerHtml: `<article
   id="post-1239"
   class="post-1239 post type-post status-publish format-standard has-post-thumbnail hentry category-nha-o tag-cua-cnc-am tag-cua-go-composite tag-cua-go-nhua tag-cua-go-nhua-canh-phang tag-cua-o-kinh tag-cua-thong-phong tag-cua-ve-sinh"
 >
@@ -1574,17 +1584,17 @@ export const NEWS: News[] = [
             data-action="share/whatsapp/share"
             class="icon button circle is-outline tooltip whatsapp show-for-medium"
             title="Share on WhatsApp"
-            aria-label="Share on WhatsApp"
+            aria-title="Share on WhatsApp"
             ><i aria-hidden=true class='fa fa-whatsapp'></i></a
           ><a
             routerLink="https://www.facebook.com/sharer.php?u=/blog/cong-trinh-hoai-duc/"
-            data-label="Facebook"
+            data-title="Facebook"
             onclick="window.open(this.href,this.title,&#39;width=500,height=500,top=300px,left=300px&#39;); return false;"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="icon button circle is-outline tooltip facebook"
             title="Share on Facebook"
-            aria-label="Share on Facebook"
+            aria-title="Share on Facebook"
             ><i class="bi bi-facebook"></i></a
           ><a
             routerLink="https://twitter.com/share?url=/blog/cong-trinh-hoai-duc/"
@@ -1593,14 +1603,14 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip twitter"
             title="Share on Twitter"
-            aria-label="Share on Twitter"
+            aria-title="Share on Twitter"
             ><i class="fa fa-twitter" aria-hidden="true"></i></a
           ><a
             routerLink="mailto:?subject=C%C3%94NG%20TR%C3%8CNH%20HO%C3%80I%20%C4%90%E1%BB%A8C&amp;body=Check%20this%20out%3A%20https%3A%2F%2Fkinhbacfurniture.com%2F2024%2F04%2F16%2Fcong-trinh-hoai-duc%2F"
             rel="nofollow"
             class="icon button circle is-outline tooltip email"
             title="Email to a Friend"
-            aria-label="Email to a Friend"
+            aria-title="Email to a Friend"
             ><i class='fa fa-envelope-o' aria-hidden='true'></i></a
           ><a
             routerLink="https://pinterest.com/pin/create/button?url=/blog/cong-trinh-hoai-duc/&amp;media=/wp-content/uploads/2024/04/421220494_253437127777794_5091502003108169300_n-768x1024.jpg&amp;description=C%C3%94NG%20TR%C3%8CNH%20HO%C3%80I%20%C4%90%E1%BB%A8C"
@@ -1609,7 +1619,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip pinterest"
             title="Pin on Pinterest"
-            aria-label="Pin on Pinterest"
+            aria-title="Pin on Pinterest"
             ><i class='fa fa-pinterest-p' aria-hidden='true'></i></a
           ><a
             routerLink="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/cong-trinh-hoai-duc/&amp;title=C%C3%94NG%20TR%C3%8CNH%20HO%C3%80I%20%C4%90%E1%BB%A8C"
@@ -1618,7 +1628,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip linkedin"
             title="Share on LinkedIn"
-            aria-label="Share on LinkedIn"
+            aria-title="Share on LinkedIn"
             ><i class='fa fa-linkedin' aria-hidden='true'></i></a>
         </div>
       </div>
@@ -1682,14 +1692,16 @@ export const NEWS: News[] = [
     </nav>
   </div>
 </article>
-`
-    },
-    {
-		name: "cong-trinh-trinh-van-bo-my-dinh",
-        title: "CÔNG TRÌNH TRỊNH VĂN BÔ – MỸ ĐÌNH",
-        date: "12 Tháng 4, 2024",
-        desc: "Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp đặt tại Mỹ Đình",
-        innerHtml: `<article
+`,
+  },
+  {
+    name: 'cong-trinh-trinh-van-bo-my-dinh',
+    img: '378675301_175661242222050_7579627838630473744_n-1024x1024.jpg',
+    title: 'CÔNG TRÌNH TRỊNH VĂN BÔ – MỸ ĐÌNH',
+    month: '4',
+    date: '12',
+    desc: 'Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp đặt tại Mỹ Đình',
+    innerHtml: `<article
   id="post-1225"
   class="post-1225 post type-post status-publish format-standard has-post-thumbnail hentry category-nha-o tag-cua-composite-chi-nhom tag-cua-go-composite tag-cua-go-nhua tag-cua-thong-phong tag-cua-ve-sinh"
 >
@@ -1848,17 +1860,17 @@ export const NEWS: News[] = [
             data-action="share/whatsapp/share"
             class="icon button circle is-outline tooltip whatsapp show-for-medium"
             title="Share on WhatsApp"
-            aria-label="Share on WhatsApp"
+            aria-title="Share on WhatsApp"
             ><i aria-hidden=true class='fa fa-whatsapp'></i></a
           ><a
             routerLink="https://www.facebook.com/sharer.php?u=/blog/cong-trinh-trinh-van-bo-my-dinh/"
-            data-label="Facebook"
+            data-title="Facebook"
             onclick="window.open(this.href,this.title,&#39;width=500,height=500,top=300px,left=300px&#39;); return false;"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="icon button circle is-outline tooltip facebook"
             title="Share on Facebook"
-            aria-label="Share on Facebook"
+            aria-title="Share on Facebook"
             ><i class="bi bi-facebook"></i></a
           ><a
             routerLink="https://twitter.com/share?url=/blog/cong-trinh-trinh-van-bo-my-dinh/"
@@ -1867,14 +1879,14 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip twitter"
             title="Share on Twitter"
-            aria-label="Share on Twitter"
+            aria-title="Share on Twitter"
             ><i class="fa fa-twitter" aria-hidden="true"></i></a
           ><a
             routerLink="mailto:?subject=C%C3%94NG%20TR%C3%8CNH%20TR%E1%BB%8ANH%20V%C4%82N%20B%C3%94%20%26%238211%3B%20M%E1%BB%B8%20%C4%90%C3%8CNH&amp;body=Check%20this%20out%3A%20https%3A%2F%2Fkinhbacfurniture.com%2F2024%2F04%2F12%2Fcong-trinh-trinh-van-bo-my-dinh%2F"
             rel="nofollow"
             class="icon button circle is-outline tooltip email"
             title="Email to a Friend"
-            aria-label="Email to a Friend"
+            aria-title="Email to a Friend"
             ><i class='fa fa-envelope-o' aria-hidden='true'></i></a
           ><a
             routerLink="https://pinterest.com/pin/create/button?url=/blog/cong-trinh-trinh-van-bo-my-dinh/&amp;media=/wp-content/uploads/2024/04/378675301_175661242222050_7579627838630473744_n-1024x1024.jpg&amp;description=C%C3%94NG%20TR%C3%8CNH%20TR%E1%BB%8ANH%20V%C4%82N%20B%C3%94%20%26%238211%3B%20M%E1%BB%B8%20%C4%90%C3%8CNH"
@@ -1883,7 +1895,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip pinterest"
             title="Pin on Pinterest"
-            aria-label="Pin on Pinterest"
+            aria-title="Pin on Pinterest"
             ><i class='fa fa-pinterest-p' aria-hidden='true'></i></a
           ><a
             routerLink="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/cong-trinh-trinh-van-bo-my-dinh/&amp;title=C%C3%94NG%20TR%C3%8CNH%20TR%E1%BB%8ANH%20V%C4%82N%20B%C3%94%20%26%238211%3B%20M%E1%BB%B8%20%C4%90%C3%8CNH"
@@ -1892,7 +1904,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip linkedin"
             title="Share on LinkedIn"
-            aria-label="Share on LinkedIn"
+            aria-title="Share on LinkedIn"
             ><i class='fa fa-linkedin' aria-hidden='true'></i></a>
         </div>
       </div>
@@ -1954,14 +1966,16 @@ export const NEWS: News[] = [
     </nav>
   </div>
 </article>
-`
-    },
-    {
-		name: "cong-trinh-nguyen-co-thach-my-dinh",
-        title: "CÔNG TRÌNH NGUYỄN CƠ THẠCH – MỸ ĐÌNH",
-        date: "11 Tháng 4, 2024",
-        desc: "Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door CN âm lắp đặt Mỹ Đình",
-        innerHtml: `<article
+`,
+  },
+  {
+    name: 'cong-trinh-nguyen-co-thach-my-dinh',
+    img: '412493720_234083843046456_4614229372694491664_n-1024x1024.jpg',
+    title: 'CÔNG TRÌNH NGUYỄN CƠ THẠCH – MỸ ĐÌNH',
+    month: '4',
+    date: '11',
+    desc: 'Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door CN âm lắp đặt Mỹ Đình',
+    innerHtml: `<article
   id="post-1208"
   class="post-1208 post type-post status-publish format-standard has-post-thumbnail hentry category-nha-o tag-cua-cnc-am tag-cua-go-nhua tag-cua-thong-phong tag-cua-ve-sinh"
 >
@@ -2176,17 +2190,17 @@ export const NEWS: News[] = [
             data-action="share/whatsapp/share"
             class="icon button circle is-outline tooltip whatsapp show-for-medium"
             title="Share on WhatsApp"
-            aria-label="Share on WhatsApp"
+            aria-title="Share on WhatsApp"
             ><i aria-hidden=true class='fa fa-whatsapp'></i></a
           ><a
             routerLink="https://www.facebook.com/sharer.php?u=/blog/cong-trinh-nguyen-co-thach-my-dinh/"
-            data-label="Facebook"
+            data-title="Facebook"
             onclick="window.open(this.href,this.title,&#39;width=500,height=500,top=300px,left=300px&#39;); return false;"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="icon button circle is-outline tooltip facebook"
             title="Share on Facebook"
-            aria-label="Share on Facebook"
+            aria-title="Share on Facebook"
             ><i class="bi bi-facebook"></i></a
           ><a
             routerLink="https://twitter.com/share?url=/blog/cong-trinh-nguyen-co-thach-my-dinh/"
@@ -2195,14 +2209,14 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip twitter"
             title="Share on Twitter"
-            aria-label="Share on Twitter"
+            aria-title="Share on Twitter"
             ><i class="fa fa-twitter" aria-hidden="true"></i></a
           ><a
             routerLink="mailto:?subject=C%C3%94NG%20TR%C3%8CNH%20NGUY%E1%BB%84N%20C%C6%A0%20TH%E1%BA%A0CH%20%26%238211%3B%20M%E1%BB%B8%20%C4%90%C3%8CNH&amp;body=Check%20this%20out%3A%20https%3A%2F%2Fkinhbacfurniture.com%2F2024%2F04%2F11%2Fcong-trinh-nguyen-co-thach-my-dinh%2F"
             rel="nofollow"
             class="icon button circle is-outline tooltip email"
             title="Email to a Friend"
-            aria-label="Email to a Friend"
+            aria-title="Email to a Friend"
             ><i class='fa fa-envelope-o' aria-hidden='true'></i></a
           ><a
             routerLink="https://pinterest.com/pin/create/button?url=/blog/cong-trinh-nguyen-co-thach-my-dinh/&amp;media=/wp-content/uploads/2024/04/412493720_234083843046456_4614229372694491664_n-1536x1536.jpg&amp;description=C%C3%94NG%20TR%C3%8CNH%20NGUY%E1%BB%84N%20C%C6%A0%20TH%E1%BA%A0CH%20%26%238211%3B%20M%E1%BB%B8%20%C4%90%C3%8CNH"
@@ -2211,7 +2225,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip pinterest"
             title="Pin on Pinterest"
-            aria-label="Pin on Pinterest"
+            aria-title="Pin on Pinterest"
             ><i class='fa fa-pinterest-p' aria-hidden='true'></i></a
           ><a
             routerLink="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/cong-trinh-nguyen-co-thach-my-dinh/&amp;title=C%C3%94NG%20TR%C3%8CNH%20NGUY%E1%BB%84N%20C%C6%A0%20TH%E1%BA%A0CH%20%26%238211%3B%20M%E1%BB%B8%20%C4%90%C3%8CNH"
@@ -2220,7 +2234,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip linkedin"
             title="Share on LinkedIn"
-            aria-label="Share on LinkedIn"
+            aria-title="Share on LinkedIn"
             ><i class='fa fa-linkedin' aria-hidden='true'></i></a>
         </div>
       </div>
@@ -2282,14 +2296,16 @@ export const NEWS: News[] = [
   </div>
 </article>
 
-`
-    },
-    {
-		name: "cong-trinh-mai-dong-hoang-mai-ha-noi-2",
-        title: "CÔNG TRÌNH MAI ĐỘNG – HOÀNG MAI -HÀ NỘI",
-        date: "10 Tháng 4, 2024",
-        desc: "Nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp đặt tại Mai Động – Hoàng Mai – Hà Nội",
-        innerHtml: `<article
+`,
+  },
+  {
+    name: 'cong-trinh-mai-dong-hoang-mai-ha-noi-2',
+    img: '419474292_247804471674393_1819937790699113300_n-1024x1024.jpg',
+    title: 'CÔNG TRÌNH MAI ĐỘNG – HOÀNG MAI -HÀ NỘI',
+    month: '4',
+    date: '10',
+    desc: 'Nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp đặt tại Mai Động – Hoàng Mai – Hà Nội',
+    innerHtml: `<article
   id="post-1197"
   class="post-1197 post type-post status-publish format-standard has-post-thumbnail hentry category-nha-o tag-cua-composite-canh-phang tag-cua-go-composite tag-cua-go-nhua tag-cua-thong-phong tag-cua-ve-sinh"
 >
@@ -2458,17 +2474,17 @@ export const NEWS: News[] = [
             data-action="share/whatsapp/share"
             class="icon button circle is-outline tooltip whatsapp show-for-medium"
             title="Share on WhatsApp"
-            aria-label="Share on WhatsApp"
+            aria-title="Share on WhatsApp"
             ><i aria-hidden=true class='fa fa-whatsapp'></i></a
           ><a
             routerLink="https://www.facebook.com/sharer.php?u=/blog/cong-trinh-mai-dong-hoang-mai-ha-noi-2/"
-            data-label="Facebook"
+            data-title="Facebook"
             onclick="window.open(this.href,this.title,&#39;width=500,height=500,top=300px,left=300px&#39;); return false;"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="icon button circle is-outline tooltip facebook"
             title="Share on Facebook"
-            aria-label="Share on Facebook"
+            aria-title="Share on Facebook"
             ><i class="bi bi-facebook"></i></a
           ><a
             routerLink="https://twitter.com/share?url=/blog/cong-trinh-mai-dong-hoang-mai-ha-noi-2/"
@@ -2477,14 +2493,14 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip twitter"
             title="Share on Twitter"
-            aria-label="Share on Twitter"
+            aria-title="Share on Twitter"
             ><i class="fa fa-twitter" aria-hidden="true"></i></a
           ><a
             routerLink="mailto:?subject=C%C3%94NG%20TR%C3%8CNH%20MAI%20%C4%90%E1%BB%98NG%20%E2%80%93%20HO%C3%80NG%20MAI%20-H%C3%80%20N%E1%BB%98I&amp;body=Check%20this%20out%3A%20https%3A%2F%2Fkinhbacfurniture.com%2F2024%2F04%2F10%2Fcong-trinh-mai-dong-hoang-mai-ha-noi-2%2F"
             rel="nofollow"
             class="icon button circle is-outline tooltip email"
             title="Email to a Friend"
-            aria-label="Email to a Friend"
+            aria-title="Email to a Friend"
             ><i class='fa fa-envelope-o' aria-hidden='true'></i></a
           ><a
             routerLink="https://pinterest.com/pin/create/button?url=/blog/cong-trinh-mai-dong-hoang-mai-ha-noi-2/&amp;media=/wp-content/uploads/2024/04/419474292_247804471674393_1819937790699113300_n-1536x1536.jpg&amp;description=C%C3%94NG%20TR%C3%8CNH%20MAI%20%C4%90%E1%BB%98NG%20%E2%80%93%20HO%C3%80NG%20MAI%20-H%C3%80%20N%E1%BB%98I"
@@ -2493,7 +2509,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip pinterest"
             title="Pin on Pinterest"
-            aria-label="Pin on Pinterest"
+            aria-title="Pin on Pinterest"
             ><i class='fa fa-pinterest-p' aria-hidden='true'></i></a
           ><a
             routerLink="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/cong-trinh-mai-dong-hoang-mai-ha-noi-2/&amp;title=C%C3%94NG%20TR%C3%8CNH%20MAI%20%C4%90%E1%BB%98NG%20%E2%80%93%20HO%C3%80NG%20MAI%20-H%C3%80%20N%E1%BB%98I"
@@ -2502,7 +2518,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip linkedin"
             title="Share on LinkedIn"
-            aria-label="Share on LinkedIn"
+            aria-title="Share on LinkedIn"
             ><i class='fa fa-linkedin' aria-hidden='true'></i></a>
         </div>
       </div>
@@ -2565,14 +2581,16 @@ export const NEWS: News[] = [
     </nav>
   </div>
 </article>
-`
-    },
-    {
-		name: "cong-trinh-hoang-dao-thuy",
-        title: "CÔNG TRÌNH 17T5 HOÀNG ĐẠO THÚY – HÀ NỘI",
-        date: "3 Tháng 4, 2024",
-        desc: "Nghiệm thu sản phẩm cửa Composite KB Door chỉ nhôm và ô kính lắp đặt tại 17T5 Hoàng Đạo Thúy",
-        innerHtml: `<article
+`,
+  },
+  {
+    name: 'cong-trinh-hoang-dao-thuy',
+    img: 'post-FB-Cua-1-03-1024x1024.jpg',
+    title: 'CÔNG TRÌNH 17T5 HOÀNG ĐẠO THÚY – HÀ NỘI',
+    month: '4',
+    date: '3',
+    desc: 'Nghiệm thu sản phẩm cửa Composite KB Door chỉ nhôm và ô kính lắp đặt tại 17T5 Hoàng Đạo Thúy',
+    innerHtml: `<article
   id="post-1185"
   class="post-1185 post type-post status-publish format-standard has-post-thumbnail hentry category-can-ho-cao-cap tag-cua-chi-nhom tag-cua-go-composite tag-cua-go-nhua tag-cua-o-kinh tag-cua-thong-phong tag-cua-ve-sinh"
 >
@@ -2770,17 +2788,17 @@ export const NEWS: News[] = [
             data-action="share/whatsapp/share"
             class="icon button circle is-outline tooltip whatsapp show-for-medium"
             title="Share on WhatsApp"
-            aria-label="Share on WhatsApp"
+            aria-title="Share on WhatsApp"
             ><i aria-hidden=true class='fa fa-whatsapp'></i></a
           ><a
             routerLink="https://www.facebook.com/sharer.php?u=/blog/cong-trinh-hoang-dao-thuy/"
-            data-label="Facebook"
+            data-title="Facebook"
             onclick="window.open(this.href,this.title,&#39;width=500,height=500,top=300px,left=300px&#39;); return false;"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="icon button circle is-outline tooltip facebook"
             title="Share on Facebook"
-            aria-label="Share on Facebook"
+            aria-title="Share on Facebook"
             ><i class="bi bi-facebook"></i></a
           ><a
             routerLink="https://twitter.com/share?url=/blog/cong-trinh-hoang-dao-thuy/"
@@ -2789,14 +2807,14 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip twitter"
             title="Share on Twitter"
-            aria-label="Share on Twitter"
+            aria-title="Share on Twitter"
             ><i class="fa fa-twitter" aria-hidden="true"></i></a
           ><a
             routerLink="mailto:?subject=C%C3%94NG%20TR%C3%8CNH%2017T5%20HO%C3%80NG%20%C4%90%E1%BA%A0O%20TH%C3%9AY%20%26%238211%3B%20H%C3%80%20N%E1%BB%98I&amp;body=Check%20this%20out%3A%20https%3A%2F%2Fkinhbacfurniture.com%2F2024%2F04%2F03%2Fcong-trinh-hoang-dao-thuy%2F"
             rel="nofollow"
             class="icon button circle is-outline tooltip email"
             title="Email to a Friend"
-            aria-label="Email to a Friend"
+            aria-title="Email to a Friend"
             ><i class='fa fa-envelope-o' aria-hidden='true'></i></a
           ><a
             routerLink="https://pinterest.com/pin/create/button?url=/blog/cong-trinh-hoang-dao-thuy/&amp;media=/wp-content/uploads/2024/04/post-FB-Cua-1-03-1536x1536.jpg&amp;description=C%C3%94NG%20TR%C3%8CNH%2017T5%20HO%C3%80NG%20%C4%90%E1%BA%A0O%20TH%C3%9AY%20%26%238211%3B%20H%C3%80%20N%E1%BB%98I"
@@ -2805,7 +2823,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip pinterest"
             title="Pin on Pinterest"
-            aria-label="Pin on Pinterest"
+            aria-title="Pin on Pinterest"
             ><i class='fa fa-pinterest-p' aria-hidden='true'></i></a
           ><a
             routerLink="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/cong-trinh-hoang-dao-thuy/&amp;title=C%C3%94NG%20TR%C3%8CNH%2017T5%20HO%C3%80NG%20%C4%90%E1%BA%A0O%20TH%C3%9AY%20%26%238211%3B%20H%C3%80%20N%E1%BB%98I"
@@ -2814,7 +2832,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip linkedin"
             title="Share on LinkedIn"
-            aria-label="Share on LinkedIn"
+            aria-title="Share on LinkedIn"
             ><i class='fa fa-linkedin' aria-hidden='true'></i></a>
         </div>
       </div>
@@ -2877,14 +2895,16 @@ export const NEWS: News[] = [
     </nav>
   </div>
 </article>
-`
-    },
-    {
-		name: "cong-trinh-lang-son",
-        title: "CÔNG TRÌNH LẠNG SƠN",
-        date: "27 Tháng 3, 2024",
-        desc: "Nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp đặt tại Lạng Sơn",
-        innerHtml: `<article
+`,
+  },
+  {
+    name: 'cong-trinh-lang-son',
+    img: '433460615_288004804321026_8007460511073407141_n-1024x1024.jpg',
+    title: 'CÔNG TRÌNH LẠNG SƠN',
+    month: '3',
+    date: '27',
+    desc: 'Nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp đặt tại Lạng Sơn',
+    innerHtml: `<article
   id="post-1170"
   class="post-1170 post type-post status-publish format-standard has-post-thumbnail hentry category-nha-o tag-cua-composite-canh-phang tag-cua-go-composite tag-cua-go-nhua tag-cua-thong-phong tag-cua-ve-sinh"
 >
@@ -3058,17 +3078,17 @@ export const NEWS: News[] = [
             data-action="share/whatsapp/share"
             class="icon button circle is-outline tooltip whatsapp show-for-medium"
             title="Share on WhatsApp"
-            aria-label="Share on WhatsApp"
+            aria-title="Share on WhatsApp"
             ><i aria-hidden=true class='fa fa-whatsapp'></i></a
           ><a
             routerLink="https://www.facebook.com/sharer.php?u=/blog/cong-trinh-lang-son/"
-            data-label="Facebook"
+            data-title="Facebook"
             onclick="window.open(this.href,this.title,&#39;width=500,height=500,top=300px,left=300px&#39;); return false;"
             rel="noopener noreferrer nofollow"
             target="_blank"
             class="icon button circle is-outline tooltip facebook"
             title="Share on Facebook"
-            aria-label="Share on Facebook"
+            aria-title="Share on Facebook"
             ><i class="bi bi-facebook"></i></a
           ><a
             routerLink="https://twitter.com/share?url=/blog/cong-trinh-lang-son/"
@@ -3077,14 +3097,14 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip twitter"
             title="Share on Twitter"
-            aria-label="Share on Twitter"
+            aria-title="Share on Twitter"
             ><i class="fa fa-twitter" aria-hidden="true"></i></a
           ><a
             routerLink="mailto:?subject=C%C3%94NG%20TR%C3%8CNH%20L%E1%BA%A0NG%20S%C6%A0N&amp;body=Check%20this%20out%3A%20https%3A%2F%2Fkinhbacfurniture.com%2F2024%2F03%2F27%2Fcong-trinh-lang-son%2F"
             rel="nofollow"
             class="icon button circle is-outline tooltip email"
             title="Email to a Friend"
-            aria-label="Email to a Friend"
+            aria-title="Email to a Friend"
             ><i class='fa fa-envelope-o' aria-hidden='true'></i></a
           ><a
             routerLink="https://pinterest.com/pin/create/button?url=/blog/cong-trinh-lang-son/&amp;media=/wp-content/uploads/2024/03/433460615_288004804321026_8007460511073407141_n-1536x1536.jpg&amp;description=C%C3%94NG%20TR%C3%8CNH%20L%E1%BA%A0NG%20S%C6%A0N"
@@ -3093,7 +3113,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip pinterest"
             title="Pin on Pinterest"
-            aria-label="Pin on Pinterest"
+            aria-title="Pin on Pinterest"
             ><i class='fa fa-pinterest-p' aria-hidden='true'></i></a
           ><a
             routerLink="https://www.linkedin.com/shareArticle?mini=true&amp;url=/blog/cong-trinh-lang-son/&amp;title=C%C3%94NG%20TR%C3%8CNH%20L%E1%BA%A0NG%20S%C6%A0N"
@@ -3102,7 +3122,7 @@ export const NEWS: News[] = [
             target="_blank"
             class="icon button circle is-outline tooltip linkedin"
             title="Share on LinkedIn"
-            aria-label="Share on LinkedIn"
+            aria-title="Share on LinkedIn"
             ><i class='fa fa-linkedin' aria-hidden='true'></i></a>
         </div>
       </div>
@@ -3165,7 +3185,6 @@ export const NEWS: News[] = [
     </nav>
   </div>
 </article>
-`
-    },
-    
-]
+`,
+  },
+];

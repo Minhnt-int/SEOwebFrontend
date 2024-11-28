@@ -9,22 +9,22 @@
   </p>
 
   <div class="row large-columns-1 medium-columns-1 small-columns-1">
-    <div class="col post-item">
+    <div *ngIf="data" class="col post-item">
       <div class="col-inner">
         <div class="box box-shade dark box-text-bottom box-blog-post has-hover">
           <div class="box-image">
             <div class="image-cover" style="padding-top: 56.25%">
               <a
-                routerLink="/blog/cong-trinh-duong-van-be-hoang-mai/"
+                [routerLink]="'/blog/' + data[0].name"
                 class="plain"
-                aria-label="CÔNG TRÌNH DƯƠNG VĂN BÉ – HOÀNG MAI"
+                [attr.aria-label]="data[0].title"
               >
                 <img
                   fetchpriority="high"
                   decoding="async"
                   width="769"
                   height="1024"
-                  src="assets/img/news-page/441312691_320492447738928_5030056107160077507_n-769x1024.jpg"
+                  [src]="'assets/img/news-page/' + data[0].img"
                   class="attachment-large size-large wp-post-image"
                   alt=""
                   sizes="(max-width: 769px) 100vw, 769px"
@@ -36,17 +36,16 @@
           <div class="box-text text-left">
             <div class="box-text-inner blog-post-inner">
               <h5 class="post-title is-large">
-                <a
-                  routerLink="/cong-trinh-duong-van-be-hoang-mai/"
-                  class="plain"
-                  >CÔNG TRÌNH DƯƠNG VĂN BÉ – HOÀNG MAI</a
-                >
+                <a [routerLink]="data[0].name" class="plain">{{
+                  data[0].title
+                }}</a>
               </h5>
-              <div class="post-meta is-small op-8">16 Tháng năm, 2024</div>
+              <div class="post-meta is-small op-8">
+                {{ data[0].date }} Tháng {{ data[0].month }}, 2024
+              </div>
               <div class="is-divider"></div>
               <p class="from_the_blog_excerpt">
-                Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh chỉ
-                sơn tại [...]
+                {{ truncateWithWordBoundary(data[0].desc, 50) }}
               </p>
             </div>
           </div>
@@ -55,23 +54,26 @@
     </div>
   </div>
 
-  <div class="row large-columns-2 medium-columns-1 small-columns-1">
-    <div class="col post-item">
+  <div
+    *ngIf="data"
+    class="row large-columns-2 medium-columns-1 small-columns-1"
+  >
+    <div *ngFor="let news of data" class="col post-item">
       <div class="col-inner">
         <div class="box box-normal box-text-bottom box-blog-post has-hover">
           <div class="box-image">
             <div class="image-cover" style="padding-top: 56.25%">
               <a
-                routerLink="/blog/cong-trinh-duong-van-be-hoang-mai/"
+                [routerLink]="'/blog/' + news.name"
                 class="plain"
-                aria-label="CÔNG TRÌNH DƯƠNG VĂN BÉ – HOÀNG MAI"
+                [attr.aria-label]="news.title"
               >
                 <img
                   fetchpriority="high"
                   decoding="async"
                   width="769"
                   height="1024"
-                  src="assets/img/news-page/441312691_320492447738928_5030056107160077507_n-769x1024.jpg"
+                  [src]="'assets/img/news-page/' + news.img"
                   class="attachment-large size-large wp-post-image"
                   alt=""
                   sizes="(max-width: 769px) 100vw, 769px"
@@ -82,441 +84,19 @@
           <div class="box-text text-center">
             <div class="box-text-inner blog-post-inner">
               <h5 class="post-title is-large">
-                <a
-                  routerLink="/cong-trinh-duong-van-be-hoang-mai/"
-                  class="plain"
-                  >CÔNG TRÌNH DƯƠNG VĂN BÉ – HOÀNG MAI</a
-                >
+                <a [routerLink]="news.name" class="plain">{{ news.title }}</a>
               </h5>
               <div class="is-divider"></div>
               <p class="from_the_blog_excerpt">
-                Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh chỉ
-                sơn tại [...]
+                {{ truncateWithWordBoundary(news.desc, 50) }}
               </p>
             </div>
           </div>
           <div class="badge absolute top post-date badge-outline">
             <div class="badge-inner">
-              <span class="post-date-day">16</span><br />
-              <span class="post-date-month is-xsmall">Th5</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col post-item">
-      <div class="col-inner">
-        <div class="box box-normal box-text-bottom box-blog-post has-hover">
-          <div class="box-image">
-            <div class="image-cover" style="padding-top: 56.25%">
-              <a
-                routerLink="/blog/ly-do-nen-chon-cua-go-composite/"
-                class="plain"
-                aria-label="LÝ DO NÊN CHỌN CỬA GỖ COMPOSITE"
-              >
-                <img
-                  decoding="async"
-                  width="1020"
-                  height="1020"
-                  src="assets/img/news-page/386067336_187252144396293_425490963523801210_n-1024x1024.jpg"
-                  class="attachment-large size-large wp-post-image"
-                  alt=""
-                  sizes="(max-width: 1020px) 100vw, 1020px"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="box-text text-center">
-            <div class="box-text-inner blog-post-inner">
-              <h5 class="post-title is-large">
-                <a routerLink="/ly-do-nen-chon-cua-go-composite/" class="plain"
-                  >LÝ DO NÊN CHỌN CỬA GỖ COMPOSITE</a
-                >
-              </h5>
-              <div class="is-divider"></div>
-              <p class="from_the_blog_excerpt">
-                Trở thành sản phẩm được ưa chuộng để lắp đặt cho cửa thông phòng
-                và [...]
-              </p>
-            </div>
-          </div>
-          <div class="badge absolute top post-date badge-outline">
-            <div class="badge-inner">
-              <span class="post-date-day">08</span><br />
-              <span class="post-date-month is-xsmall">Th5</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col post-item">
-      <div class="col-inner">
-        <div class="box box-normal box-text-bottom box-blog-post has-hover">
-          <div class="box-image">
-            <div class="image-cover" style="padding-top: 56.25%">
-              <a
-                routerLink="/blog/nhung-dieu-can-biet-ve-cua-go-nhua-composite/"
-                class="plain"
-                aria-label="NHỮNG ĐIỀU CẦN BIẾT VỀ CỬA GỖ NHỰA COMPOSITE"
-              >
-                <img
-                  decoding="async"
-                  width="1020"
-                  height="880"
-                  src="assets/img/news-page/433622897_291488830639290_1165563850270327400_n-1024x883.jpg"
-                  class="attachment-large size-large wp-post-image"
-                  alt=""
-                  sizes="(max-width: 1020px) 100vw, 1020px"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="box-text text-center">
-            <div class="box-text-inner blog-post-inner">
-              <h5 class="post-title is-large">
-                <a
-                  routerLink="/nhung-dieu-can-biet-ve-cua-go-nhua-composite/"
-                  class="plain"
-                  >NHỮNG ĐIỀU CẦN BIẾT VỀ CỬA GỖ NHỰA COMPOSITE</a
-                >
-              </h5>
-              <div class="is-divider"></div>
-              <p class="from_the_blog_excerpt">
-                Được sản xuất với 2 nguyên liệu chính là bột gỗ và bột nhựa, kết
-                [...]
-              </p>
-            </div>
-          </div>
-          <div class="badge absolute top post-date badge-outline">
-            <div class="badge-inner">
-              <span class="post-date-day">23</span><br />
-              <span class="post-date-month is-xsmall">Th4</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col post-item">
-      <div class="col-inner">
-        <div class="box box-normal box-text-bottom box-blog-post has-hover">
-          <div class="box-image">
-            <div class="image-cover" style="padding-top: 56.25%">
-              <a
-                routerLink="/blog/cong-trinh-bac-giang/"
-                class="plain"
-                aria-label="CÔNG TRÌNH BẮC GIANG"
-              >
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="1020"
-                  height="1020"
-                  src="assets/img/news-page/401588885_211921415262699_1755972951023720929_n-1024x1024.jpg"
-                  class="attachment-large size-large wp-post-image"
-                  alt=""
-                  sizes="(max-width: 1020px) 100vw, 1020px"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="box-text text-center">
-            <div class="box-text-inner blog-post-inner">
-              <h5 class="post-title is-large">
-                <a routerLink="/cong-trinh-bac-giang/" class="plain"
-                  >CÔNG TRÌNH BẮC GIANG</a
-                >
-              </h5>
-              <div class="is-divider"></div>
-              <p class="from_the_blog_excerpt">
-                Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh trơn
-                phẳng lắp [...]
-              </p>
-            </div>
-          </div>
-          <div class="badge absolute top post-date badge-outline">
-            <div class="badge-inner">
-              <span class="post-date-day">19</span><br />
-              <span class="post-date-month is-xsmall">Th4</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col post-item">
-      <div class="col-inner">
-        <div class="box box-normal box-text-bottom box-blog-post has-hover">
-          <div class="box-image">
-            <div class="image-cover" style="padding-top: 56.25%">
-              <a
-                routerLink="/blog/cong-trinh-hoai-duc/"
-                class="plain"
-                aria-label="CÔNG TRÌNH HOÀI ĐỨC"
-              >
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="768"
-                  height="1024"
-                  src="assets/img/news-page/421220494_253437127777794_5091502003108169300_n-768x1024.jpg"
-                  class="attachment-large size-large wp-post-image"
-                  alt=""
-                  sizes="(max-width: 768px) 100vw, 768px"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="box-text text-center">
-            <div class="box-text-inner blog-post-inner">
-              <h5 class="post-title is-large">
-                <a routerLink="/cong-trinh-hoai-duc/" class="plain"
-                  >CÔNG TRÌNH HOÀI ĐỨC</a
-                >
-              </h5>
-              <div class="is-divider"></div>
-              <p class="from_the_blog_excerpt">
-                Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh trơn
-                phẳng lắp [...]
-              </p>
-            </div>
-          </div>
-          <div class="badge absolute top post-date badge-outline">
-            <div class="badge-inner">
-              <span class="post-date-day">16</span><br />
-              <span class="post-date-month is-xsmall">Th4</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col post-item">
-      <div class="col-inner">
-        <div class="box box-normal box-text-bottom box-blog-post has-hover">
-          <div class="box-image">
-            <div class="image-cover" style="padding-top: 56.25%">
-              <a
-                routerLink="/blog/cong-trinh-trinh-van-bo-my-dinh/"
-                class="plain"
-                aria-label="CÔNG TRÌNH TRỊNH VĂN BÔ – MỸ ĐÌNH"
-              >
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="1020"
-                  height="1020"
-                  src="assets/img/news-page/378675301_175661242222050_7579627838630473744_n-1024x1024.jpg"
-                  class="attachment-large size-large wp-post-image"
-                  alt=""
-                  sizes="(max-width: 1020px) 100vw, 1020px"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="box-text text-center">
-            <div class="box-text-inner blog-post-inner">
-              <h5 class="post-title is-large">
-                <a routerLink="/cong-trinh-trinh-van-bo-my-dinh/" class="plain"
-                  >CÔNG TRÌNH TRỊNH VĂN BÔ – MỸ ĐÌNH</a
-                >
-              </h5>
-              <div class="is-divider"></div>
-              <p class="from_the_blog_excerpt">
-                Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door cánh trơn
-                phẳng lắp [...]
-              </p>
-            </div>
-          </div>
-          <div class="badge absolute top post-date badge-outline">
-            <div class="badge-inner">
-              <span class="post-date-day">12</span><br />
-              <span class="post-date-month is-xsmall">Th4</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col post-item">
-      <div class="col-inner">
-        <div class="box box-normal box-text-bottom box-blog-post has-hover">
-          <div class="box-image">
-            <div class="image-cover" style="padding-top: 56.25%">
-              <a
-                routerLink="/blog/cong-trinh-nguyen-co-thach-my-dinh/"
-                class="plain"
-                aria-label="CÔNG TRÌNH NGUYỄN CƠ THẠCH – MỸ ĐÌNH"
-              >
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="1020"
-                  height="1020"
-                  src="assets/img/news-page/412493720_234083843046456_4614229372694491664_n-1024x1024.jpg"
-                  class="attachment-large size-large wp-post-image"
-                  alt=""
-                  sizes="(max-width: 1020px) 100vw, 1020px"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="box-text text-center">
-            <div class="box-text-inner blog-post-inner">
-              <h5 class="post-title is-large">
-                <a
-                  routerLink="/cong-trinh-nguyen-co-thach-my-dinh/"
-                  class="plain"
-                  >CÔNG TRÌNH NGUYỄN CƠ THẠCH – MỸ ĐÌNH</a
-                >
-              </h5>
-              <div class="is-divider"></div>
-              <p class="from_the_blog_excerpt">
-                Lắp đặt và nghiệm thu sản phẩm cửa Composite KB Door CN âm lắp
-                đặt [...]
-              </p>
-            </div>
-          </div>
-          <div class="badge absolute top post-date badge-outline">
-            <div class="badge-inner">
-              <span class="post-date-day">11</span><br />
-              <span class="post-date-month is-xsmall">Th4</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col post-item">
-      <div class="col-inner">
-        <div class="box box-normal box-text-bottom box-blog-post has-hover">
-          <div class="box-image">
-            <div class="image-cover" style="padding-top: 56.25%">
-              <a
-                routerLink="/blog/cong-trinh-mai-dong-hoang-mai-ha-noi-2/"
-                class="plain"
-                aria-label="CÔNG TRÌNH MAI ĐỘNG – HOÀNG MAI -HÀ NỘI"
-              >
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="1020"
-                  height="1020"
-                  src="assets/img/news-page/419474292_247804471674393_1819937790699113300_n-1024x1024.jpg"
-                  class="attachment-large size-large wp-post-image"
-                  alt=""
-                  sizes="(max-width: 1020px) 100vw, 1020px"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="box-text text-center">
-            <div class="box-text-inner blog-post-inner">
-              <h5 class="post-title is-large">
-                <a
-                  routerLink="/cong-trinh-mai-dong-hoang-mai-ha-noi-2/"
-                  class="plain"
-                  >CÔNG TRÌNH MAI ĐỘNG – HOÀNG MAI -HÀ NỘI</a
-                >
-              </h5>
-              <div class="is-divider"></div>
-              <p class="from_the_blog_excerpt">
-                Nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp
-                đặt tại Mai [...]
-              </p>
-            </div>
-          </div>
-          <div class="badge absolute top post-date badge-outline">
-            <div class="badge-inner">
-              <span class="post-date-day">10</span><br />
-              <span class="post-date-month is-xsmall">Th4</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col post-item">
-      <div class="col-inner">
-        <div class="box box-normal box-text-bottom box-blog-post has-hover">
-          <div class="box-image">
-            <div class="image-cover" style="padding-top: 56.25%">
-              <a
-                routerLink="/blog/cong-trinh-hoang-dao-thuy/"
-                class="plain"
-                aria-label="CÔNG TRÌNH 17T5 HOÀNG ĐẠO THÚY – HÀ NỘI"
-              >
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="1020"
-                  height="1020"
-                  src="assets/img/news-page/post-FB-Cua-1-03-1024x1024.jpg"
-                  class="attachment-large size-large wp-post-image"
-                  alt=""
-                  sizes="(max-width: 1020px) 100vw, 1020px"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="box-text text-center">
-            <div class="box-text-inner blog-post-inner">
-              <h5 class="post-title is-large">
-                <a routerLink="/cong-trinh-hoang-dao-thuy/" class="plain"
-                  >CÔNG TRÌNH 17T5 HOÀNG ĐẠO THÚY – HÀ NỘI</a
-                >
-              </h5>
-              <div class="is-divider"></div>
-              <p class="from_the_blog_excerpt">
-                Nghiệm thu sản phẩm cửa Composite KB Door chỉ nhôm và ô kính lắp
-                đặt [...]
-              </p>
-            </div>
-          </div>
-          <div class="badge absolute top post-date badge-outline">
-            <div class="badge-inner">
-              <span class="post-date-day">03</span><br />
-              <span class="post-date-month is-xsmall">Th4</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col post-item">
-      <div class="col-inner">
-        <div class="box box-normal box-text-bottom box-blog-post has-hover">
-          <div class="box-image">
-            <div class="image-cover" style="padding-top: 56.25%">
-              <a
-                routerLink="/blog/cong-trinh-lang-son/"
-                class="plain"
-                aria-label="CÔNG TRÌNH LẠNG SƠN"
-              >
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width="1020"
-                  height="1020"
-                  src="assets/img/news-page/433460615_288004804321026_8007460511073407141_n-1024x1024.jpg"
-                  class="attachment-large size-large wp-post-image"
-                  alt=""
-                  sizes="(max-width: 1020px) 100vw, 1020px"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="box-text text-center">
-            <div class="box-text-inner blog-post-inner">
-              <h5 class="post-title is-large">
-                <a routerLink="/cong-trinh-lang-son/" class="plain"
-                  >CÔNG TRÌNH LẠNG SƠN</a
-                >
-              </h5>
-              <div class="is-divider"></div>
-              <p class="from_the_blog_excerpt">
-                Nghiệm thu sản phẩm cửa Composite KB Door cánh trơn phẳng lắp
-                đặt tại Lạng [...]
-              </p>
-            </div>
-          </div>
-          <div class="badge absolute top post-date badge-outline">
-            <div class="badge-inner">
-              <span class="post-date-day">27</span><br />
-              <span class="post-date-month is-xsmall">Th3</span>
+              <span class="post-date-day">{{ news.date }}</span
+              ><br />
+              <span class="post-date-month is-xsmall">Th{{ news.month }}</span>
             </div>
           </div>
         </div>

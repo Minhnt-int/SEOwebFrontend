@@ -11,7 +11,7 @@ import { Meta, Title } from '@angular/platform-browser';
 export class ProductPageComponent {
   data: Product[] = [];
   PageIndex=1;
-  PageSize=10;
+  PageSize=12;
   pageData: Product[] = [];
 
   truncateString(str: string, maxLength: number): string {
@@ -22,7 +22,8 @@ export class ProductPageComponent {
   ngOnInit() {
     this.data = this.productService.getProducts();
     // this.data = this.productService.getProducts();
-
+    this.getSlideData()
+    this.onRecentSlideChange();
     this.title.setTitle("Danh sách sản phẩm của cửa hàng SEOweb");
     this.meta.updateTag({ 
       name: 'description',
@@ -30,6 +31,12 @@ export class ProductPageComponent {
     });
     this.onPageIndexChange();
   }
+
+  getSlideData() {
+    this.cookie = this.productService.findProductsbyNames(this.productService.getCookie())
+    
+  }
+
   typeText(text : string) : String {
     switch (text) {
       case "cua-go-nhua-composite":
@@ -55,5 +62,26 @@ export class ProductPageComponent {
   }
   pageSizeChange($event : number){
     this.PageSize = $event;
+  }
+
+  recentSlideIndex=1;
+  cookie: Product[] = [];
+  slideData: Product[] = [];
+  slideSize=4;
+  onRecentSlideChange() {
+    this.slideData = this.cookie.slice((this.recentSlideIndex-1)*(this.slideSize), (this.recentSlideIndex)*(this.slideSize));
+  }
+  nextSlide($event : Event){
+
+    if(this.recentSlideIndex<(this.cookie.length/this.slideSize))
+        this.recentSlideIndex++;
+        this.onRecentSlideChange()
+  }
+
+  prevSlide($event : Event){
+    if(this.recentSlideIndex>1)
+      this.recentSlideIndex--;
+      this.onRecentSlideChange()
+
   }
 }

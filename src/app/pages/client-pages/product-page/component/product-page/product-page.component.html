@@ -104,6 +104,7 @@
           </style>
         </div>
 
+        <p></p>
         <div class="container section-title-container">
           <h3 class="section-title section-title-center">
             <b></b><span class="section-title-main">Sản phẩm vừa xem</span
@@ -115,82 +116,113 @@
         <div id="cpd-recently--wrap">
           <div class="cpd-container">
             <div
-              class="row large-columns-4 medium-columns-3 small-columns-2 row-small slider row-slider slider-nav-reveal slider-nav-push"
+              class="row large-columns-4 medium-columns-3 small-columns-2 row-small slider row-slider slider-nav-reveal slider-nav-push is-draggable flickity-enabled"
               data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'
+              tabindex="0"
             >
               <div
-                class="product-small col has-hover product type-product post-629 status-publish first instock product_cat-cua-go-nhua-composite product_tag-cua-go-nhua product_tag-cua-go-nhua-composite product_tag-cua-phong-tam product_tag-cua-thong-phong has-post-thumbnail shipping-taxable purchasable product-type-simple"
+                class="flickity-viewport"
+                style="height: 430.938px; touch-action: pan-y"
               >
-                <div class="col-inner">
-                  <div class="badge-container absolute left top z-1"></div>
-                  <div class="product-small box">
-                    <div class="box-image">
-                      <div class="image-fade_in_back">
-                        <a
-                          routerLink="detail/cua-cong-nghiep-mau-04/"
-                          aria-label="Cửa Composite KB_10 SA"
-                        >
-                          <img
-                            width="300"
-                            height="300"
-                            src="assets/img/product-page/KB-10-SA-01-300x300.jpg"
-                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                            alt=""
-                            decoding="async"
-                            loading="lazy"
-                            sizes="(max-width: 300px) 100vw, 300px"
-                          /><img
-                            width="300"
-                            height="300"
-                            src="assets/img/product-page/1-01-300x300.jpg"
-                            class="show-on-hover absolute fill hide-for-small back-image"
-                            alt=""
-                            decoding="async"
-                            loading="lazy"
-                            sizes="(max-width: 300px) 100vw, 300px"
-                          />
-                        </a>
-                      </div>
-                      <div
-                        class="image-tools is-small hide-for-small bottom left show-on-hover"
-                      ></div>
-                    </div>
+                <div
+                  class="flickity-slider"
+                  [style]="'left: 0px; transform: translateX(-' + 0 + '%)'"
+                >
+                  <div
+                    *ngFor="let product of slideData; let i = index"
+                    class="product-small col has-hover product type-product post-615 status-publish first instock product_cat-cua-go-nhua-composite product_tag-cua-2-canh product_tag-cua-chinh product_tag-cua-go-nhua-composite has-post-thumbnail shipping-taxable purchasable product-type-simple is-selected"
+                    [style]="'position: absolute; left:' + i * 25 + '%'"
+                  >
+                    <div class="col-inner">
+                      <div class="badge-container absolute left top z-1"></div>
+                      <div class="product-small box">
+                        <div class="box-image">
+                          <div class="image-fade_in_back">
+                            <a
+                              [routerLink]="'/detail/' + product.url"
+                              [attr.aria-label]="
+                                'Xem chi tiết về ' + product.productName
+                              "
+                            >
+                              <img
+                                width="300"
+                                height="300"
+                                [src]="product.pic"
+                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                alt=""
+                                decoding="async"
+                                loading="lazy"
+                                sizes="auto, (max-width: 300px) 100vw, 300px"
+                              />
+                            </a>
+                          </div>
+                        </div>
 
-                    <div
-                      class="box-text box-text-products flex-row align-top grid-style-3 flex-wrap"
-                    >
-                      <div class="title-wrapper">
-                        <p
-                          class="category uppercase is-smaller no-text-overflow product-cat op-7"
+                        <div
+                          class="box-text box-text-products flex-row align-top grid-style-3 flex-wrap"
                         >
-                          Cửa gỗ nhựa Composite
-                        </p>
-                        <p
-                          class="name product-title woocommerce-loop-product__title"
-                        >
-                          <a
-                            routerLink="detail/cua-cong-nghiep-mau-04/"
-                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
-                            >Cửa Composite KB_10 SA</a
-                          >
-                        </p>
-                      </div>
-                      <div class="price-wrapper">
-                        <span class="price"
-                          ><span class="woocommerce-Price-amount amount"
-                            ><bdi
-                              >3,250,000&nbsp;<span
-                                class="woocommerce-Price-currencySymbol"
-                                >₫</span
-                              ></bdi
-                            ></span
-                          ></span
-                        >
+                          <div class="title-wrapper">
+                            <p
+                              class="category uppercase is-smaller no-text-overflow product-cat op-7"
+                            >
+                              {{ typeText(product.productType) }}
+                            </p>
+                            <p
+                              class="name product-title woocommerce-loop-product__title"
+                            >
+                              <a
+                                [routerLink]="product.url"
+                                class="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                >{{ product.productName }}</a
+                              >
+                            </p>
+                          </div>
+                          <div class="price-wrapper">
+                            <span class="price"
+                              ><span class="woocommerce-Price-amount amount"
+                                ><bdi
+                                  >{{
+                                    product.productPrice | number : "1.0-0"
+                                  }}&nbsp;<span
+                                    class="woocommerce-Price-currencySymbol"
+                                    >₫</span
+                                  ></bdi
+                                ></span
+                              ></span
+                            >
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <button
+                class="flickity-button flickity-prev-next-button previous recent-view"
+                type="button"
+                aria-label="Previous"
+                (click)="prevSlide($event)"
+              >
+                <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                  <path
+                    d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                    class="arrow"
+                  ></path>
+                </svg></button
+              ><button
+                class="flickity-button flickity-prev-next-button next recent-view"
+                type="button"
+                aria-label="Next"
+                (click)="nextSlide($event)"
+              >
+                <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                  <path
+                    d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                    class="arrow"
+                    transform="translate(100, 100) rotate(180) "
+                  ></path>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
