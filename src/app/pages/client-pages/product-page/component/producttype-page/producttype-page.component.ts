@@ -14,7 +14,7 @@ import { SEOService } from '../../../../../service/seo.service';
 export class ProducttypePageComponent {
   data: Product[] = [];
   PageIndex = 1;
-  PageSize = 10;
+  PageSize = 12;
   slideIndex = 1;
   slideSize = 4;
   pageData: Product[] = [];
