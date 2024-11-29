@@ -1,23 +1,25 @@
 import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { SEOService } from '../../../service/seo.service';
 
 @Component({
   selector: 'app-price-page',
   templateUrl: './price-page.component.html',
-  styleUrl: './price-page.component.scss'
+  styleUrl: './price-page.component.scss',
 })
 export class PricePageComponent {
-  constructor(private meta: Meta, private title: Title) {}
+  constructor(private SEOservice: SEOService) {}
 
   ngOnInit() {
     const today = new Date();
     const year = today.getFullYear();
     const month = today.getMonth() + 1;
     const date = today.getDate();
-    this.title.setTitle("Báo giá mới nhất" + date + "/" + month + "/" + year);
-    this.meta.updateTag({ 
-      name: 'description',
-      content: `Báo giá thiết kế thi công cửa gỗ nhựa ngày + ${date} + "/" + ${month} + "/" + ${year}`
-    });
+    this.SEOservice.updateTitle(
+      'Báo giá mới nhất' + date + '/' + month + '/' + year
+    );
+    this.SEOservice.updateDescription(
+      `Báo giá thiết kế thi công cửa gỗ nhựa ngày + ${date} + "/" + ${month} + "/" + ${year}`
+    );
   }
 }

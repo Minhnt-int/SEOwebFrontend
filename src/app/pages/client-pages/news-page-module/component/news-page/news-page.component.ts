@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ProductService } from '../../../../../service/product.service';
 import { News } from '../../../../../models/news';
+import { SEOService } from '../../../../../service/seo.service';
 
 @Component({
   selector: 'app-news-page',
@@ -11,8 +12,7 @@ import { News } from '../../../../../models/news';
 })
 export class NewsPageComponent {
   constructor(
-    private meta: Meta,
-    private title: Title,
+    private SEOservice: SEOService,
     private service: ProductService
   ) {}
   data: News[] = [];
@@ -23,11 +23,12 @@ export class NewsPageComponent {
     const year = today.getFullYear();
     const month = today.getMonth() + 1;
     const date = today.getDate();
-    this.title.setTitle('Tin mới hôm nay ' + date + '/' + month + '/' + year);
-    this.meta.updateTag({
-      name: 'description',
-      content: `Thông tin mới nhất thiết kế thi công cửa gỗ nhựa hôm nay ${date}/${month}/${year}`,
-    });
+    this.SEOservice.updateTitle(
+      'Tin mới hôm nay ' + date + '/' + month + '/' + year
+    );
+    this.SEOservice.updateDescription(
+      `Thông tin mới nhất thiết kế thi công cửa gỗ nhựa hôm nay ${date}/${month}/${year}`
+    );
   }
 
   truncateWithWordBoundary(text: string, limit: number): string {

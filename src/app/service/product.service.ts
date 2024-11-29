@@ -85,7 +85,8 @@ export class ProductService {
   getCookie() {
     const productDetailCookie = this.cookieService.get('productDetail');
     try {
-      this.cookieData = JSON.parse(productDetailCookie);
+      if (productDetailCookie)
+        this.cookieData = JSON.parse(productDetailCookie);
     } catch (error) {
       console.error('Invalid JSON in cookie:', error);
       this.cookieData = []; // Gán giá trị mặc định nếu lỗi
