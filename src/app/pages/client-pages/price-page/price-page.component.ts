@@ -15,11 +15,13 @@ export class PricePageComponent {
     const year = today.getFullYear();
     const month = today.getMonth() + 1;
     const date = today.getDate();
-    this.SEOservice.updateTitle(
-      'Báo giá mới nhất' + date + '/' + month + '/' + year
-    );
-    this.SEOservice.updateDescription(
-      `Báo giá thiết kế thi công cửa gỗ nhựa ngày + ${date} + "/" + ${month} + "/" + ${year}`
+
+    this.SEOservice.defaultSetup(
+      'Báo giá mới nhất' + date + '/' + month + '/' + year,
+      `Báo giá thiết kế thi công cửa gỗ nhựa ngày + ${date} + "/" + ${month} + "/" + ${year}`,
+      'https://cuanhuago.vn/bao-gia',
+      '',
+      Date.now().toString()
     );
   }
 }

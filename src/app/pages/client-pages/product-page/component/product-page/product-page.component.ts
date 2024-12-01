@@ -25,14 +25,20 @@ export class ProductPageComponent {
   ) {}
   ngOnInit() {
     this.data = this.productService.getProducts();
-    // this.data = this.productService.getProducts();
     this.getSlideData();
+    this.setMeta();
     this.onRecentSlideChange();
-    this.SEOservice.updateTitle('Danh sách sản phẩm của cửa hàng SEOweb');
-    this.SEOservice.updateDescription(
-      'Danh sách sản phẩm của cửa hàng SEOweb, miễn phí lắp đặt và thi công'
-    );
     this.onPageIndexChange();
+  }
+
+  setMeta() {
+    this.SEOservice.defaultSetup(
+      'Danh sách sản phẩm của cửa hàng Cửa gỗ nhựa Kinh Bắc',
+      'Danh sách sản phẩm của cửa hàng Cửa gỗ nhựa Kinh Bắc, miễn phí lắp đặt và thi công',
+      'https://cuanhuago.vn/san-pham',
+      'assets/img/layout-page/ban-an.png',
+      Date.now().toString()
+    );
   }
 
   getSlideData() {

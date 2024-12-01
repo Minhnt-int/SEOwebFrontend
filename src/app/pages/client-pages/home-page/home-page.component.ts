@@ -16,8 +16,13 @@ export class HomePageComponent {
   constructor(private SEOservice: SEOService) {}
 
   ngOnInit() {
-    this.SEOservice.updateTitle('Trang chủ SEOweb');
-    this.SEOservice.updateDescription('Cửa hàng kinh doanh cửa gỗ nhựa');
+    this.SEOservice.defaultSetup(
+      'Trang chủ Cửa gỗ nhựa Kinh Bắc',
+      'Cửa hàng kinh doanh cửa gỗ nhựa',
+      'https://cuanhuago.vn/',
+      '',
+      Date.now().toString()
+    );
   }
   previous(): void {
     this.carousel.pre();

@@ -1,10 +1,105 @@
-
-
 [nzOverlayStyle] {
     width: 400px;
     line-height: 160px
-} 
+}
 
 .wp-float-social-sharing svg path {
     fill: #0068ff;
+}
+
+.overlay-contain {
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+}
+
+.mobile-bar {
+    background-color: rgb(245, 245, 245);
+    padding: 45px 0;
+    display: none;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1003;
+
+    ul {
+        background-color: rgb(245, 245, 245);
+
+        li {
+            margin: 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            .social-icons {
+                padding: 0 15px;
+
+                i {
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+
+    ul li:hover {
+        background-color: rgb(235, 235, 235);
+    }
+
+    .submenu {
+
+        ul {
+            background-color: rgb(245, 245, 245);
+
+        }
+
+        li:hover a {
+            font-weight: 500;
+        }
+
+    }
+
+
+
+    .submenu:hover ul {
+        background-color: rgb(235, 235, 235);
+
+    }
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title>.ant-menu-title-content {
+    flex: none !important;
+}
+
+.overlay {
+    position: fixed;
+    pointer-events: initial;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Màu đen mờ */
+    z-index: 1002;
+}
+
+
+
+
+@media screen and (max-width: 849px) {
+    #masthead {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        .header-inner {
+            background-color: rgba(255, 255, 255, 0.9);
+
+        }
+    }
+
+    .mobile-bar {
+        display: initial;
+    }
 }

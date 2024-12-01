@@ -117,9 +117,12 @@ export class ProductDetailPageComponent {
   }
 
   setMeta() {
-    this.SEOservice.updateTitle(this.detail!.productName);
-    this.SEOservice.updateDescription(
-      this.truncateString(this.detail!.desc, 50)
+    this.SEOservice.defaultSetup(
+      this.detail!.productName,
+      this.truncateString(this.detail!.desc, 50),
+      'https://cuanhuago.vn/detail/' + this.detail?.url,
+      this.detail!.pic,
+      Date.now().toString()
     );
   }
 

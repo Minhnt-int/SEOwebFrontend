@@ -12,9 +12,12 @@ export class IntroPageComponent {
   constructor(private SEOservice: SEOService) {}
 
   ngOnInit() {
-    this.SEOservice.updateTitle('Cửa Gỗ SEOweb');
-    this.SEOservice.updateDescription(
-      'Công ty Cổ phần Đầu tư Sản xuất nội thất Kinh Bắc'
+    this.SEOservice.defaultSetup(
+      'Cửa gỗ nhựa Kinh Bắc',
+      'Công ty Cổ phần Đầu tư Sản xuất nội thất Kinh Bắc',
+      'https://cuanhuago.vn/gioi-thieu',
+      '',
+      Date.now().toString()
     );
   }
 }

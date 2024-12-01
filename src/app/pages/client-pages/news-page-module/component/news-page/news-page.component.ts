@@ -23,11 +23,12 @@ export class NewsPageComponent {
     const year = today.getFullYear();
     const month = today.getMonth() + 1;
     const date = today.getDate();
-    this.SEOservice.updateTitle(
-      'Tin mới hôm nay ' + date + '/' + month + '/' + year
-    );
-    this.SEOservice.updateDescription(
-      `Thông tin mới nhất thiết kế thi công cửa gỗ nhựa hôm nay ${date}/${month}/${year}`
+    this.SEOservice.defaultSetup(
+      'Tin mới hôm nay ' + date + '/' + month + '/' + year,
+      `Thông tin mới nhất thiết kế thi công cửa gỗ nhựa hôm nay ${date}/${month}/${year}`,
+      'https://cuanhuago.vn/blog',
+      '',
+      Date.now().toString()
     );
   }
 

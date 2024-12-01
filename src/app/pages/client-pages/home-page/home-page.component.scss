@@ -1,9 +1,9 @@
-
-
 nz-carousel {
-  height: 85vh;
+  // height: 85vh;
+  width: 100vw;
   aspect-ratio: 2048 / 904;
   overflow: hidden;
+
   img {
     height: 100%;
     width: auto;
@@ -11,8 +11,8 @@ nz-carousel {
   }
 }
 
-.flickity-button  {
-  z-index: 10000;
+.flickity-button {
+  z-index: 1001;
 }
 
 [nz-carousel-content] {

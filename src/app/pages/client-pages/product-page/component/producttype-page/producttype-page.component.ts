@@ -20,6 +20,7 @@ export class ProducttypePageComponent {
   pageData: Product[] = [];
   slideData: Product[] = [];
   productType!: string | null;
+  metaImg: string = '';
   constructor(
     private productService: ProductService,
     private route: ActivatedRoute,
@@ -50,13 +51,32 @@ export class ProducttypePageComponent {
   }
 
   setMeta() {
-    this.SEOservice.updateTitle(this.typeText(this.productType));
-    this.SEOservice.updateDescription(this.pageTitle(this.productType));
+    this.SEOservice.defaultSetup(
+      this.typeText(this.productType),
+      this.pageTitle(this.productType),
+      'https://cuanhuago.vn/san-pham' + this.productType,
+      'assets/img/producttype-page/' + this.metaImg,
+      Date.now().toString()
+    );
   }
 
   getProductType() {
     this.productType = this.route.snapshot.paramMap.get('productType');
     this.data = this.productService.findProductbyType(this.productType);
+    this.metaImg = this.metaImgString(this.productType!);
+  }
+
+  metaImgString(type: string) {
+    switch (type) {
+      case 'cua-go-nhua-composite':
+        return 'chua-biet-ten1-1024x1024.jpg';
+      case 'cua-go-cong-nghiep':
+        return '358089813_640830444734611_2778823727039750723_n.jpg';
+      case 'cua-chong-chay':
+        return 'z4366752216011_6c5050d59dfeca3995457a92f763c87b-790x1024.jpg';
+      default:
+        return '';
+    }
   }
 
   onPageIndexChange() {

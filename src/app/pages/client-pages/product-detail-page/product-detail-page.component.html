@@ -456,6 +456,10 @@
                           'left: 0px; transform: translateX(-' + 0 + '%)'
                         "
                       >
+                        <nz-empty
+                          *ngIf="slideData.length == 0"
+                          nzNotFoundContent="Chưa có dữ liệu"
+                        ></nz-empty>
                         <div
                           *ngFor="let product of slideData; let i = index"
                           class="product-small col has-hover product type-product post-615 status-publish first instock product_cat-cua-go-nhua-composite product_tag-cua-2-canh product_tag-cua-chinh product_tag-cua-go-nhua-composite has-post-thumbnail shipping-taxable purchasable product-type-simple is-selected"

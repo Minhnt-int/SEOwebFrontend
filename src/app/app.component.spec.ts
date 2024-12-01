@@ -5,12 +5,8 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterModule.forRoot([])
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [RouterModule.forRoot([])],
+      declarations: [AppComponent],
     }).compileComponents();
   });
 
@@ -20,16 +16,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'SEOwebFront'`, () => {
+  it(`should have as title 'Cửa gỗ nhựa Kinh Bắc'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('SEOwebFront');
+    expect(app.title).toEqual('Cửa gỗ nhựa Kinh Bắc');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, SEOwebFront');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Hello, Cửa gỗ nhựa Kinh Bắc'
+    );
   });
 });

@@ -11,7 +11,7 @@ import { ProductDetailPageComponent } from './product-detail-page/product-detail
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { IntroPageComponent } from './intro-page/intro-page.component';
 import { CookieService } from 'ngx-cookie-service';
-
+import { NzEmptyModule } from 'ng-zorro-antd/empty';
 @NgModule({
   declarations: [
     PricePageComponent,
@@ -19,16 +19,15 @@ import { CookieService } from 'ngx-cookie-service';
     DesignPageComponent,
     ProductPageLayoutComponent,
     ProductDetailPageComponent,
-    IntroPageComponent
+    IntroPageComponent,
   ],
   imports: [
     CommonModule,
     ClientPagesRoutingModule,
     NzCarouselModule,
     NzTabsModule,
+    NzEmptyModule,
   ],
-  providers: [
-    CookieService
-  ]
+  providers: [CookieService],
 })
-export class ClientPagesModule { }
+export class ClientPagesModule {}

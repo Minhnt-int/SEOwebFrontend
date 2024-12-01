@@ -13,9 +13,12 @@ export class ProjectPageComponent {
   constructor(private SEOservice: SEOService) {}
 
   ngOnInit() {
-    this.SEOservice.updateTitle('Bộ sưu tập dự án SEOweb');
-    this.SEOservice.updateDescription(
-      'ĐỘI NGŨ THIẾT KẾ VỚI VÔ VÀN Ý TƯỞNG, có 20 nhân sự với nhiều năm trong ngành sản xuất nội thất. Hướng dẫn, tư vấn Khách hàng lựa chọn xu hướng nội thất phù hợp.'
+    this.SEOservice.defaultSetup(
+      'Bộ sưu tập dự án Cửa gỗ nhựa Kinh Bắc',
+      'ĐỘI NGŨ THIẾT KẾ VỚI VÔ VÀN Ý TƯỞNG, có 20 nhân sự với nhiều năm trong ngành sản xuất nội thất. Hướng dẫn, tư vấn Khách hàng lựa chọn xu hướng nội thất phù hợp.',
+      'https://cuanhuago.vn/du-an',
+      '',
+      Date.now().toString()
     );
   }
 }

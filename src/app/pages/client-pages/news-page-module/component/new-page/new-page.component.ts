@@ -37,7 +37,12 @@ export class NewPageComponent {
   }
 
   setMeta() {
-    this.SEOservice.updateTitle(this.data!.title);
-    this.SEOservice.updateDescription(this.data!.desc);
+    this.SEOservice.defaultSetup(
+      this.data!.title,
+      this.data!.desc,
+      'https://cuanhuago.vn/blog/' + this.data!.name,
+      'assets/img/news-page/441312691_320492447738928_5030056107160077507_n-769x1024.jpg',
+      Date.now().toString()
+    );
   }
 }

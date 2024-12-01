@@ -12,7 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-
+import { MenuService, NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 
 registerLocaleData(en);
@@ -26,13 +27,16 @@ registerLocaleData(en);
     AppRoutingModule,
     FormsModule,
     NzDropDownModule,
-    NzIconModule
+    NzIconModule,
+    NzMenuModule,
+    NzLayoutModule
   ],
   providers: [
     provideClientHydration(),
     provideHttpClient(),
     { provide: NZ_I18N, useValue: en_US },
     provideAnimationsAsync(),
+    MenuService
   ],
   bootstrap: [AppComponent]
 })
