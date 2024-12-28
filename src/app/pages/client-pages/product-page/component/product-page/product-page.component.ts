@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import {  Component } from '@angular/core';
 import { Product } from '../../../../../models/product';
 import { ProductService } from '../../../../../service/product.service';
-import { Meta, Title } from '@angular/platform-browser';
 import { SEOService } from '../../../../../service/seo.service';
 
 @Component({
@@ -14,7 +13,6 @@ export class ProductPageComponent {
   PageIndex = 1;
   PageSize = 12;
   pageData: Product[] = [];
-
   truncateString(str: string, maxLength: number): string {
     return str.length > maxLength ? str.slice(0, maxLength) + '...' : str;
   }
@@ -22,13 +20,24 @@ export class ProductPageComponent {
   constructor(
     private productService: ProductService,
     private SEOservice: SEOService
-  ) {}
+  ) {
+  }
   ngOnInit() {
     this.data = this.productService.getProducts();
     this.getSlideData();
     this.setMeta();
     this.onRecentSlideChange();
     this.onPageIndexChange();
+    if(window) {
+      var width = window.innerWidth;
+      if(width<=549) this.slideSize = 2
+      else if(width<=849) this.slideSize = 3
+    }
+  }
+
+  scrollToTop(){
+    if(window)
+    window.scrollTo(0,0)
   }
 
   setMeta() {
@@ -65,6 +74,7 @@ export class ProductPageComponent {
       (this.PageIndex - 1) * this.PageSize,
       this.PageIndex * this.PageSize
     );
+    this.scrollToTop()
   }
 
   indexChange($event: number) {

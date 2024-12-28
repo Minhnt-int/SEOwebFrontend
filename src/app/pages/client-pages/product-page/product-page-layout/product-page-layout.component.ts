@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
-import { filter } from 'rxjs';
+
 
 @Component({
   selector: 'app-product-page-layout',
@@ -9,11 +7,5 @@ import { filter } from 'rxjs';
   styleUrl: './product-page-layout.component.scss'
 })
 export class ProductPageLayoutComponent {
-
-
-  constructor() { }
-  ngOnInit() {
-
-  }
 
 }

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Product } from '../../../../../models/product';
 import { ProductService } from '../../../../../service/product.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { Meta, Title } from '@angular/platform-browser';
 import { filter } from 'rxjs';
 import { SEOService } from '../../../../../service/seo.service';
 
@@ -21,12 +20,14 @@ export class ProducttypePageComponent {
   slideData: Product[] = [];
   productType!: string | null;
   metaImg: string = '';
+  
   constructor(
     private productService: ProductService,
     private route: ActivatedRoute,
     private SEOservice: SEOService,
     private router: Router
-  ) {}
+  ) {
+  }
   ngOnInit() {
     this.getProductType();
     // this.data = this.productService.getProducts();
@@ -34,7 +35,11 @@ export class ProducttypePageComponent {
     this.setMeta();
     this.onPageIndexChange();
     this.onSlideChange();
-
+    if(window) {
+      var width = window.innerWidth;
+      if(width<=549) this.slideSize = 2
+      else if(width<=849) this.slideSize = 3
+    }
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
@@ -42,14 +47,13 @@ export class ProducttypePageComponent {
         this.onPageIndexChange();
         this.onSlideChange();
         this.setMeta();
-
-        // console.log(event);
-        window.scrollTo(0, 0);
-
-        // code goes here...
       });
   }
 
+  scrollToTop(){
+    if(window)
+    window.scrollTo(0,0)
+  }
   setMeta() {
     this.SEOservice.defaultSetup(
       this.typeText(this.productType),
@@ -84,6 +88,7 @@ export class ProducttypePageComponent {
       (this.PageIndex - 1) * this.PageSize,
       this.PageIndex * this.PageSize
     );
+    this.scrollToTop()
   }
   onSlideChange() {
     this.slideData = this.data.slice(

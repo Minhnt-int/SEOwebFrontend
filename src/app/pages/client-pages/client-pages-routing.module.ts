@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
-import { IntroPageComponent } from './intro-page/intro-page.component';
-import { PricePageComponent } from './price-page/price-page.component';
+import { NewsPageLayoutComponent } from './news-page-module/news-page-layout/news-page-layout.component';
+
 import { DesignPageComponent } from './design-page/design-page.component';
+import { IntroPageComponent } from './intro-page/intro-page.component';
 import { ProductPageLayoutComponent } from './product-page/product-page-layout/product-page-layout.component';
 import { ProductDetailPageComponent } from './product-detail-page/product-detail-page.component';
-import { ProjectPageComponent } from './project-page/project-page.component';
-import { NewsPageLayoutComponent } from './news-page-module/news-page-layout/news-page-layout.component';
+import { PricePageComponent } from './price-page/price-page.component';
+import { ProjectPageComponent } from './project-page/project-page/project-page.component';
+
+
 
 const routes: Routes = [
   {
@@ -47,13 +50,14 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'detail/:productUrl',
+    path: 'chi-tiet/:productUrl',
     component: ProductDetailPageComponent,
   },
   {
     path: 'bao-gia',
     component: PricePageComponent,
   },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

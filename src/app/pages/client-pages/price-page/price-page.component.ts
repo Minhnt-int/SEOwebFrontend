@@ -17,8 +17,8 @@ export class PricePageComponent {
     const date = today.getDate();
 
     this.SEOservice.defaultSetup(
-      'Báo giá mới nhất' + date + '/' + month + '/' + year,
-      `Báo giá thiết kế thi công cửa gỗ nhựa ngày + ${date} + "/" + ${month} + "/" + ${year}`,
+      'Báo giá mới nhất ' + date + '/' + month + '/' + year,
+      `Báo giá thiết kế thi công cửa gỗ nhựa ngày ${date}/${month}/${year}`,
       'https://cuanhuago.vn/bao-gia',
       '',
       Date.now().toString()

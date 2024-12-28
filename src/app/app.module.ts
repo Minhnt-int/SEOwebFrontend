@@ -14,8 +14,7 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { MenuService, NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
-
-
+import { NgOptimizedImage } from '@angular/common'
 registerLocaleData(en);
 
 @NgModule({
@@ -29,7 +28,8 @@ registerLocaleData(en);
     NzDropDownModule,
     NzIconModule,
     NzMenuModule,
-    NzLayoutModule
+    NzLayoutModule,
+    NgOptimizedImage
   ],
   providers: [
     provideClientHydration(),

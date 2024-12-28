@@ -203,5 +203,30 @@ export const PRODUCTS: Product[] = [
         productType: "cua-go-nhua-composite",
         productName: "Cửa Composite KB_W 02",
         productPrice: 3650000
-    }
+    },
+    {
+        url: "cua-cong-nghiep-mau-02",
+        pic: "assets/img/product-page/KB-W-03-01-300x300.jpg",
+        hovPic: "assets/img/product-page/1-01-300x300.jpg",
+        productType: "cua-go-nhua-composite",
+        productName: "Cửa Composite KB_W 03",
+        productPrice: 3650000
+    },
+    {
+        url: "cua-composite-kb_w-06",
+        pic: "assets/img/product-page/KB-W6-01-300x300.jpg",
+        hovPic: "assets/img/product-page/1-01-300x300.jpg",
+        productType: "cua-go-nhua-composite",
+        productName: "Cửa Composite KB_W 06",
+        productPrice: 3350000
+    },
+    {
+        url: "cua-chong-chay-mau-01",
+        pic: "assets/img/product-page/KB-W-07-01-300x300.jpg",
+        hovPic: "assets/img/product-page/1-01-300x300.jpg",
+        productType: "cua-go-nhua-composite",
+        productName: "Cửa Composite KB_W 07",
+        productPrice: 3650000
+    },
+    
 ]

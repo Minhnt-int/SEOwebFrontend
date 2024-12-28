@@ -1,4 +1,6 @@
 export interface News {
+  isNews: boolean;
+  isProject: boolean;
   name: string;
   title: string;
   img: string;
@@ -10,6 +12,8 @@ export interface News {
 
 export const NEWS: News[] = [
   {
+isNews: true,
+isProject: false,
     name: 'cong-trinh-duong-van-be-hoang-mai',
     title: 'CÔNG TRÌNH DƯƠNG VĂN BÉ – HOÀNG MAI',
     img: '441312691_320492447738928_5030056107160077507_n-769x1024.jpg',
@@ -361,6 +365,8 @@ export const NEWS: News[] = [
 `,
   },
   {
+isNews: true,
+isProject: false,
     name: 'ly-do-nen-chon-cua-go-composite',
     title: 'LÝ DO NÊN CHỌN CỬA GỖ COMPOSITE',
     img: '386067336_187252144396293_425490963523801210_n-1024x1024.jpg',
@@ -631,6 +637,8 @@ export const NEWS: News[] = [
 `,
   },
   {
+isNews: true,
+isProject: false,
     name: 'nhung-dieu-can-biet-ve-cua-go-nhua-composite',
     title: 'NHỮNG ĐIỀU CẦN BIẾT VỀ CỬA GỖ NHỰA COMPOSITE',
     img: '433622897_291488830639290_1165563850270327400_n-1024x883.jpg',
@@ -1110,6 +1118,8 @@ export const NEWS: News[] = [
 `,
   },
   {
+isNews: true,
+isProject: false,
     name: 'cong-trinh-bac-giang',
     img: '401588885_211921415262699_1755972951023720929_n-1024x1024.jpg',
     title: 'CÔNG TRÌNH BẮC GIANG',
@@ -1383,6 +1393,8 @@ export const NEWS: News[] = [
 `,
   },
   {
+isNews: true,
+isProject: false,
     name: 'cong-trinh-hoai-duc',
     img: '421220494_253437127777794_5091502003108169300_n-768x1024.jpg',
     title: 'CÔNG TRÌNH HOÀI ĐỨC',
@@ -1695,6 +1707,8 @@ export const NEWS: News[] = [
 `,
   },
   {
+isNews: true,
+isProject: false,
     name: 'cong-trinh-trinh-van-bo-my-dinh',
     img: '378675301_175661242222050_7579627838630473744_n-1024x1024.jpg',
     title: 'CÔNG TRÌNH TRỊNH VĂN BÔ – MỸ ĐÌNH',
@@ -1969,6 +1983,8 @@ export const NEWS: News[] = [
 `,
   },
   {
+isNews: true,
+isProject: false,
     name: 'cong-trinh-nguyen-co-thach-my-dinh',
     img: '412493720_234083843046456_4614229372694491664_n-1024x1024.jpg',
     title: 'CÔNG TRÌNH NGUYỄN CƠ THẠCH – MỸ ĐÌNH',
@@ -2299,6 +2315,8 @@ export const NEWS: News[] = [
 `,
   },
   {
+isNews: true,
+isProject: false,
     name: 'cong-trinh-mai-dong-hoang-mai-ha-noi-2',
     img: '419474292_247804471674393_1819937790699113300_n-1024x1024.jpg',
     title: 'CÔNG TRÌNH MAI ĐỘNG – HOÀNG MAI -HÀ NỘI',
@@ -2584,6 +2602,8 @@ export const NEWS: News[] = [
 `,
   },
   {
+isNews: true,
+isProject: false,
     name: 'cong-trinh-hoang-dao-thuy',
     img: 'post-FB-Cua-1-03-1024x1024.jpg',
     title: 'CÔNG TRÌNH 17T5 HOÀNG ĐẠO THÚY – HÀ NỘI',
@@ -2898,6 +2918,8 @@ export const NEWS: News[] = [
 `,
   },
   {
+isNews: true,
+isProject: false,
     name: 'cong-trinh-lang-son',
     img: '433460615_288004804321026_8007460511073407141_n-1024x1024.jpg',
     title: 'CÔNG TRÌNH LẠNG SƠN',

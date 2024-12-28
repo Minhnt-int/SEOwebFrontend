@@ -1,5 +1,5 @@
 {
-  "name": "seoweb-front",
+  "name": "SEOwebFront",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,12 +7,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:seoweb-front": "node dist/seoweb-front/server/server.mjs"
+    "serve:ssr:SEOwebFront": "node dist/SEOwebFront/server/server.mjs"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.2.0",
-    "@angular/cdk": "^18.2.12",
+    "@angular/cdk": "^18.2.14",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
     "@angular/core": "^18.2.0",

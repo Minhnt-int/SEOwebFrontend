@@ -30,7 +30,6 @@ export class NewPageComponent {
         this.newName = this.route.snapshot.paramMap.get('newName');
         this.data = this.productService.findNewbyName(this.newName)[0];
         this.setMeta();
-        window.scrollTo(0, 0);
 
         // code goes here...
       });

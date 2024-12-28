@@ -26,7 +26,7 @@ import { NzEmptyModule } from 'ng-zorro-antd/empty';
     ClientPagesRoutingModule,
     NzCarouselModule,
     NzTabsModule,
-    NzEmptyModule,
+    NzEmptyModule
   ],
   providers: [CookieService],
 })

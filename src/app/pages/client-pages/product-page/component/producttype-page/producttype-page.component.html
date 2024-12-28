@@ -21,7 +21,7 @@
                 <div class="box-image">
                   <div class="image-fade_in_back">
                     <a
-                      [routerLink]="'/detail/' + product.url"
+                      [routerLink]="'/chi-tiet/' + product.url"
                       [attr.aria-label]="
                         'Xem chi tiết về ' + product.productName
                       "
@@ -36,6 +36,13 @@
                         decoding="async"
                         fetchpriority="high"
                         sizes="(max-width: 300px) 100vw, 300px"
+                        [srcset]="product.pic + '?w=11866 11866w, ' +
+                        product.pic + '?w=300 300w, ' +
+                        product.pic + '?w=1024 1024w, ' +
+                        product.pic + '?w=768 768w, ' +
+                        product.pic + '?w=1536 1536w, ' +
+                        product.pic + '?w=2048 2048w, ' +
+                        product.pic + '?w=600 600w'"
                       /><img
                         *ngIf="product.hovPic != ''"
                         width="300"
@@ -45,6 +52,13 @@
                         alt=""
                         decoding="async"
                         sizes="(max-width: 300px) 100vw, 300px"
+                        [srcset]="product.hovPic + '?w=11866 11866w, ' +
+                        product.hovPic + '?w=300 300w, ' +
+                        product.hovPic + '?w=1024 1024w, ' +
+                        product.hovPic + '?w=768 768w, ' +
+                        product.hovPic + '?w=1536 1536w, ' +
+                        product.hovPic + '?w=2048 2048w, ' +
+                        product.hovPic + '?w=600 600w'"
                       />
                     </a>
                   </div>
@@ -130,7 +144,7 @@
               >
                 <div
                   class="flickity-slider"
-                  [style]="'left: 0px; transform: translateX(-' + 0 + '%)'"
+                  [style]="'left: 0px; transform: translateX(-0%)'"
                 >
                   <nz-empty
                     *ngIf="slideData.length == 0"
@@ -139,7 +153,7 @@
                   <div
                     *ngFor="let product of slideData; let i = index"
                     class="product-small col has-hover product type-product post-615 status-publish first instock product_cat-cua-go-nhua-composite product_tag-cua-2-canh product_tag-cua-chinh product_tag-cua-go-nhua-composite has-post-thumbnail shipping-taxable purchasable product-type-simple is-selected"
-                    [style]="'position: absolute; left:' + i * 25 + '%'"
+                    [style]="'position: absolute; left:' + i * 100/slideSize + '%'"
                   >
                     <div class="col-inner">
                       <div class="badge-container absolute left top z-1"></div>
@@ -147,7 +161,7 @@
                         <div class="box-image">
                           <div class="image-fade_in_back">
                             <a
-                              [routerLink]="'/detail/' + product.url"
+                              [routerLink]="'/chi-tiet/' + product.url"
                               [attr.aria-label]="
                                 'Xem chi tiết về ' + product.productName
                               "
@@ -161,7 +175,14 @@
                                 decoding="async"
                                 loading="lazy"
                                 sizes="auto, (max-width: 300px) 100vw, 300px"
-                              />
+                                [srcset]="product.pic + '?w=11866 11866w, ' +
+                                product.pic + '?w=300 300w, ' +
+                                product.pic + '?w=1024 1024w, ' +
+                                product.pic + '?w=768 768w, ' +
+                                product.pic + '?w=1536 1536w, ' +
+                                product.pic + '?w=2048 2048w, ' +
+                                product.pic + '?w=600 600w'"
+                                />
                             </a>
                           </div>
                         </div>

@@ -17,7 +17,7 @@ export class HomePageComponent {
 
   ngOnInit() {
     this.SEOservice.defaultSetup(
-      'Trang chủ Cửa gỗ nhựa Kinh Bắc',
+      'Trang chủ Cuanhuago.vn',
       'Cửa hàng kinh doanh cửa gỗ nhựa',
       'https://cuanhuago.vn/',
       '',

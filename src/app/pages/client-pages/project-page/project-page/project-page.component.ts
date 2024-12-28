@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { SEOService } from '../../../service/seo.service';
+import { SEOService } from '../../../../service/seo.service';
+
 
 @Component({
   selector: 'app-project-page',

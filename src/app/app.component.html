@@ -5,7 +5,6 @@
     <div id="yith-wcwl-message"></div>
   </div>
 
-  <a class="skip-link screen-reader-text" routerLink="#main">Skip to content</a>
   <div id="wrapper">
 
     <header id="header" class="header has-sticky sticky-jump">
@@ -106,19 +105,11 @@
             <div class="flex-col show-for-medium flex-left">
               <ul class="mobile-nav nav nav-left">
                 <li class="nav-icon has-icon">
-                  <a
+                  <button
                   (click)="toggleCollapsed()"
-                    data-open="#main-menu"
-                    data-pos="left"
-                    data-bg="main-menu-overlay"
-                    data-color=""
-                    class="is-small"
-                    aria-label="Menu"
-                    aria-controls="main-menu"
-                    aria-expanded="false"
                   >
                     <i class="fa fa-bars" aria-hidden="true"></i>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -285,7 +276,7 @@
                   class="social-icons follow-icons footer_social_icons full-width text-center"
                   style="font-size: 110%"
                 >
-                  <a
+                  <!-- <a
                     routerLink="https://www.facebook.com/thedinofa"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
@@ -339,9 +330,9 @@
                     aria-label="Send us an email"
                   >
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                  </a>
+                  </a> -->
                   <a
-                    routerLink="tel:https://www.facebook.com/thedinofa"
+                  href="tel:+84948556333"
                     data-label="Phone"
                     target="_blank"
                     rel="nofollow"
@@ -351,7 +342,7 @@
                   >
                     <i class="fa fa-phone" aria-hidden="true"></i>
                   </a>
-                  <a
+                  <!-- <a
                     routerLink="https://www.facebook.com/thedinofa"
                     data-label="YouTube"
                     target="_blank"
@@ -361,7 +352,7 @@
                     aria-label="Follow on YouTube"
                   >
                     <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                  </a>
+                  </a> -->
                 </div>
 
                 <div
@@ -492,7 +483,7 @@
                   </p>
                   <p>
                     <i class="fa fa-envelope-o mr-3" aria-hidden="true"></i>
-                    Email: noithatkinhbac68 gmail.com.
+                    Email: noithatkinhbac68&commat;gmail.com.
                   </p>
                   <p>
                     Nhà máy 1: Số 1 ngõ 2 -&nbsp; đường Liên Mạc&nbsp; -&nbsp;
@@ -512,7 +503,7 @@
             </div>
 
             <div id="col-1696323435" class="col medium-4 small-12 large-4">
-              <div class="col-inner">
+              <!-- <div class="col-inner">
                 <div id="text-4146476909" class="text hidden">
                   <h6>Chính sách</h6>
                   <hr
@@ -556,7 +547,7 @@
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -580,17 +571,17 @@
         </div>
       </div>
 
-      <a
-        routerLink="#top"
+      <button
+        (click)="scrollToTop()"
         class="back-to-top button icon invert plain fixed bottom z-1 is-outline hide-for-medium circle"
         id="top-link"
         aria-label="Go to top"
         ><i class="fa fa-angle-up" aria-hidden="true"></i
-      ></a>
+      ></button>
     </footer>
   </div>
  
-  <nz-sider class="mobile-bar sidebar-menu" [nzCollapsed]="isCollapsed" [nzCollapsedWidth]="0"
+  <nz-sider id="main-menu" class="mobile-bar sidebar-menu" [nzCollapsed]="isCollapsed" [nzCollapsedWidth]="0"
   nzWidth="256px"
   nzBreakpoint="md">
     <ul nz-menu nzMode="inline"  [nzInlineCollapsed]="isCollapsed">
@@ -691,7 +682,7 @@
             Đăng nhập </span>
         </a>
       </li> -->
-      <li class="header-newsletter-item has-icon" nz-menu-item>
+      <!-- <li class="header-newsletter-item has-icon" nz-menu-item>
         <a
           href="#header-newsletter-signup"
           title="Sign up for Newsletter"
@@ -699,9 +690,9 @@
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
           <span class="header-newsletter-title"> Newsletter </span>
         </a>
-      </li>
+      </li> -->
       <li>
-        <div class="social-icons follow-icons">
+        <!-- <div class="social-icons follow-icons">
           <a
             href="http://url/"
             target="_blank"
@@ -739,7 +730,7 @@
             aria-label="Send us an email"
             ><i class="fa fa-envelope-o" aria-hidden="true"></i
           ></a>
-        </div>
+        </div> -->
       </li>
     </ul>
   </nz-sider>

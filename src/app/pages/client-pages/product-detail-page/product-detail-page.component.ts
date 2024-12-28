@@ -2,12 +2,9 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { ProductService } from '../../../service/product.service';
 import { productDetail } from '../../../models/product-detail';
-import { Meta, Title } from '@angular/platform-browser';
 import { Product } from '../../../models/product';
-import { filter, map } from 'rxjs';
-import { CookieService } from 'ngx-cookie-service';
+import { filter } from 'rxjs';
 import { SEOService } from '../../../service/seo.service';
-
 @Component({
   selector: 'app-product-detail-page',
   templateUrl: './product-detail-page.component.html',
@@ -74,23 +71,24 @@ export class ProductDetailPageComponent {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
-    private meta: Meta,
-    private title: Title,
     private router: Router,
-    private cookieService: CookieService,
     private SEOservice: SEOService
-  ) {}
+  ) {
+  }
   ngOnInit(): void {
     this.getProductDetail();
     this.getSlideData();
     this.onRecentSlideChange();
     this.onRecommendSlideChange();
     this.setMeta();
+    if(window) {
+      var width = window.innerWidth;
+      if(width<=549) this.slideSize = 2
+      else if(width<=849) this.slideSize = 3
+    }
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
-        console.log();
-
         this.getProductDetail();
         this.productService.saveCookie(this.productName!);
         this.getSlideData();
@@ -99,7 +97,6 @@ export class ProductDetailPageComponent {
         this.recentSlideIndex = 1;
         this.recommendSlideIndex = 1;
         this.setMeta();
-        window.scrollTo(0, 0);
       });
   }
 
@@ -120,7 +117,7 @@ export class ProductDetailPageComponent {
     this.SEOservice.defaultSetup(
       this.detail!.productName,
       this.truncateString(this.detail!.desc, 50),
-      'https://cuanhuago.vn/detail/' + this.detail?.url,
+      'https://cuanhuago.vn/chi-tiet/' + this.detail?.url,
       this.detail!.pic,
       Date.now().toString()
     );
