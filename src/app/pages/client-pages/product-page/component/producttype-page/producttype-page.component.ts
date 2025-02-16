@@ -4,6 +4,7 @@ import { ProductService } from '../../../../../service/product.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { SEOService } from '../../../../../service/seo.service';
+import { productDetail } from '../../../../../models/product-detail';
 
 @Component({
   selector: 'app-producttype-page',
@@ -11,13 +12,13 @@ import { SEOService } from '../../../../../service/seo.service';
   styleUrl: './producttype-page.component.scss',
 })
 export class ProducttypePageComponent {
-  data: Product[] = [];
+  data: productDetail[] = [];
   PageIndex = 1;
   PageSize = 12;
   slideIndex = 1;
   slideSize = 4;
-  pageData: Product[] = [];
-  slideData: Product[] = [];
+  pageData: productDetail[] = [];
+  slideData: productDetail[] = [];
   productType!: string | null;
   metaImg: string = '';
   
@@ -66,7 +67,7 @@ export class ProducttypePageComponent {
 
   getProductType() {
     this.productType = this.route.snapshot.paramMap.get('productType');
-    this.data = this.productService.findProductbyType(this.productType);
+    this.data = this.productService.findProductDetailbyType(this.productType);
     this.metaImg = this.metaImgString(this.productType!);
   }
 

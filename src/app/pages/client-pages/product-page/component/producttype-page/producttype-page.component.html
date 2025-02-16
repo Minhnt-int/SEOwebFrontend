@@ -44,21 +44,20 @@
                         product.pic + '?w=2048 2048w, ' +
                         product.pic + '?w=600 600w'"
                       /><img
-                        *ngIf="product.hovPic != ''"
                         width="300"
                         height="300"
-                        [src]="product.hovPic"
+                        src="assets/img/product-page/KB-01-SA-01-300x300.jpg"
                         class="show-on-hover absolute fill hide-for-small back-image"
                         alt=""
                         decoding="async"
                         sizes="(max-width: 300px) 100vw, 300px"
-                        [srcset]="product.hovPic + '?w=11866 11866w, ' +
-                        product.hovPic + '?w=300 300w, ' +
-                        product.hovPic + '?w=1024 1024w, ' +
-                        product.hovPic + '?w=768 768w, ' +
-                        product.hovPic + '?w=1536 1536w, ' +
-                        product.hovPic + '?w=2048 2048w, ' +
-                        product.hovPic + '?w=600 600w'"
+                        srcset="assets/img/product-page/KB-01-SA-01-300x300.jpg?w=11866 11866w, 
+                        assets/img/product-page/KB-01-SA-01-300x300.jpg?w=300 300w, 
+                        assets/img/product-page/KB-01-SA-01-300x300.jpg?w=1024 1024w, 
+                        assets/img/product-page/KB-01-SA-01-300x300.jpg?w=768 768w, 
+                        assets/img/product-page/KB-01-SA-01-300x300.jpg?w=1536 1536w, 
+                        assets/img/product-page/KB-01-SA-01-300x300.jpg?w=2048 2048w, 
+                        assets/img/product-page/KB-01-SA-01-300x300.jpg?w=600 600w"
                       />
                     </a>
                   </div>
@@ -71,7 +70,7 @@
                     <p
                       class="category uppercase is-smaller no-text-overflow product-cat op-7"
                     >
-                      {{ typeText(product.productType) }}
+                      {{ typeText(product.type) }}
                     </p>
                     <p
                       class="name product-title woocommerce-loop-product__title"
@@ -194,7 +193,7 @@
                             <p
                               class="category uppercase is-smaller no-text-overflow product-cat op-7"
                             >
-                              {{ typeText(product.productType) }}
+                              {{ typeText(product.type) }}
                             </p>
                             <p
                               class="name product-title woocommerce-loop-product__title"

@@ -11,12 +11,12 @@ import { SEOService } from '../../../service/seo.service';
   styleUrl: './product-detail-page.component.scss',
 })
 export class ProductDetailPageComponent {
-  data: Product[] = [];
+  data: productDetail[] = [];
   recentSlideIndex = 1;
   recommendSlideIndex = 1;
   slideSize = 4;
-  cookie: Product[] = [];
-  slideData: Product[] = [];
+  cookie: productDetail[] = [];
+  slideData: productDetail[] = [];
 
   onRecentSlideChange() {
     this.slideData = this.cookie.slice(
@@ -89,6 +89,7 @@ export class ProductDetailPageComponent {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
+        
         this.getProductDetail();
         this.productService.saveCookie(this.productName!);
         this.getSlideData();
@@ -101,16 +102,14 @@ export class ProductDetailPageComponent {
   }
 
   getSlideData() {
-    this.cookie = this.productService.findProductsbyNames(
-      this.productService.getCookie()
-    );
+    this.productService.getCookie().forEach(p=>this.cookie.push(this.productService.findProductDetailbyUrl(p)[0]));
   }
 
   getProductDetail() {
     this.productName = this.route.snapshot.paramMap.get('productUrl');
-    this.details = this.productService.findProductDetailbyUrl(this.productName);
-    this.detail = this.details[0];
-    this.data = this.productService.getProducts();
+    this.detail = this.productService.findProductDetailbyUrl(this.productName)[0];
+    this.data = this.productService.getProductsDetail();
+    
   }
 
   setMeta() {

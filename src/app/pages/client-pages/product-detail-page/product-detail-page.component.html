@@ -211,7 +211,8 @@
                 <nz-tabset>
                   <nz-tab *ngIf="detail" nzTitle="Mô tả">
                     <div>
-                      <p [innerText]="detail!.desc"></p>
+                      <p [innerHtml]="detail!.desc"></p>
+                      <!-- <p [innerText]="detail!.desc"></p> -->
                     </div>
                   </nz-tab>
                   <nz-tab nzTitle="Bảo hành">
@@ -512,7 +513,7 @@
                                   <p
                                     class="category uppercase is-smaller no-text-overflow product-cat op-7"
                                   >
-                                    {{ typeText(product.productType) }}
+                                    {{ typeText(product.type) }}
                                   </p>
                                   <p
                                     class="name product-title woocommerce-loop-product__title"

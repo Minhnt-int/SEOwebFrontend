@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { productDetail, productDetails } from '../models/product-detail';
 import { Product } from '../models/product';
-import { News } from '../models/news';
+import { NEWS, News } from '../models/news';
 import * as productjson from './../../assets/data/products.json';
 import * as newsjson from './../../assets/data/news.json';
 import { CookieService } from 'ngx-cookie-service';
@@ -11,8 +11,10 @@ import { CookieService } from 'ngx-cookie-service';
   providedIn: 'root',
 })
 export class ProductService {
+
+  private url = 'http://localhost:8080/';
   Productjson = (productjson as any).default;
-  Newsjson = (newsjson as any).default;
+  Newsjson = (newsjson as any).default as Array<News>;
 
   cookieData: string[] = [];
 
@@ -23,14 +25,9 @@ export class ProductService {
 
   getProductsObs(): Observable<any> {
     return this.http.get<any>(this.ProductjsonUrl);
+    // return this.http.get<any>(this.url + "products");
   }
-  getProducts(): Product[] {
-    var products: Product[] = [];
-    this.getProductsObs().subscribe((p) => (products = p));
-    // return products;
 
-    return this.Productjson;
-  }
   getProductsDetail() {
     return productDetails;
   }
@@ -40,46 +37,41 @@ export class ProductService {
     }
     return this.getProductsDetail().filter((u) => u.url === url);
   }
-  findProductbyType(type: string | null): Product[] {
+
+  findProductDetailbyName(name: string | null): productDetail[] {
+    if (name === null) {
+      return [];
+    }
+    return this.getProductsDetail().filter((u) => u.productName === name);
+  }
+
+  findProductDetailbyType(type: string | null): productDetail[] {
     if (type === null) {
       return [];
     }
-    return this.getProducts().filter((product) => product.productType === type);
-  }
-
-  findProductsbyName(url: string | null): Product[] {
-    if (url === null) {
-      return [];
-    }
-    return this.getProducts().filter((product) => product.url === url);
-  }
-
-  findProductsbyNames(urls: string[]): Product[] {
-    var products: Product[] = [];
-    for (let url of urls) {
-      products = products.concat(this.findProductsbyName(url));
-    }
-    return products;
+    return this.getProductsDetail().filter((u) => u.type === type);
   }
 
   getNewsObs(): Observable<any> {
     return this.http.get<any>(this.NewsjsonUrl);
+    // return this.http.get<any>(this.url + "news");
   }
-  getNews(): News[] {
+
+  getProject(project: string): News[] {
     // var news: News[] = [];
     // this.getNewsObs().subscribe((n) => (news = n));
 
     // return news;
-
-    return this.Newsjson;
+    var news: News[] = this.Newsjson.filter(item=>item.project.includes(project));
+    return news;
   }
 
-  findNewbyName(name: string | null): News[] {
+  findProjectbyName(name: string | null): News[] {
     if (name === null) {
       return [];
     }
 
-    return this.getNews().filter((newsItem) => newsItem.name === name);
+    return this.getProject("").filter((newsItem) => newsItem.name === name);
   }
 
   getCookie() {

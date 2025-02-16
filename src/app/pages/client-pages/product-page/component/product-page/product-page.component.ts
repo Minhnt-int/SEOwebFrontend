@@ -2,6 +2,7 @@ import {  Component } from '@angular/core';
 import { Product } from '../../../../../models/product';
 import { ProductService } from '../../../../../service/product.service';
 import { SEOService } from '../../../../../service/seo.service';
+import { productDetail } from '../../../../../models/product-detail';
 
 @Component({
   selector: 'app-product-page',
@@ -9,10 +10,10 @@ import { SEOService } from '../../../../../service/seo.service';
   styleUrl: './product-page.component.scss',
 })
 export class ProductPageComponent {
-  data: Product[] = [];
+  data: productDetail[] = [];
   PageIndex = 1;
   PageSize = 12;
-  pageData: Product[] = [];
+  pageData: productDetail[] = [];
   truncateString(str: string, maxLength: number): string {
     return str.length > maxLength ? str.slice(0, maxLength) + '...' : str;
   }
@@ -23,7 +24,7 @@ export class ProductPageComponent {
   ) {
   }
   ngOnInit() {
-    this.data = this.productService.getProducts();
+    this.data = this.productService.getProductsDetail();
     this.getSlideData();
     this.setMeta();
     this.onRecentSlideChange();
@@ -51,9 +52,11 @@ export class ProductPageComponent {
   }
 
   getSlideData() {
-    this.cookie = this.productService.findProductsbyNames(
-      this.productService.getCookie()
-    );
+
+    this.productService.getCookie().forEach(p => this.cookie.push(this.productService.findProductDetailbyUrl(p)[0]));
+
+    console.log(this.cookie + " + hi + " + this.productService.getCookie()[0]);
+    
   }
 
   typeText(text: string): String {
@@ -86,8 +89,8 @@ export class ProductPageComponent {
   }
 
   recentSlideIndex = 1;
-  cookie: Product[] = [];
-  slideData: Product[] = [];
+  cookie: productDetail[] = [];
+  slideData: productDetail[] = [];
   slideSize = 4;
   onRecentSlideChange() {
     this.slideData = this.cookie.slice(

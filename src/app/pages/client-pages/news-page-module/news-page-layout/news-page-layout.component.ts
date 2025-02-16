@@ -11,6 +11,6 @@ export class NewsPageLayoutComponent {
   data: News[] = [];
   constructor(private service: ProductService) {}
   ngOnInit() {
-    this.data = this.service.getNews().slice(0, 5);
+    this.data = this.service.getProject("news").slice(0, 5);
   }
 }

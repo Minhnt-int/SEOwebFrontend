@@ -22,4 +22,9 @@ export class ProjectPageComponent {
       Date.now().toString()
     );
   }
+
+  poiter(event: MouseEvent) {
+    console.log(event);
+    
+  }
 }

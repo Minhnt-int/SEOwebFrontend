@@ -3,7 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { provideHttpClient } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
@@ -29,7 +29,7 @@ registerLocaleData(en);
     NzIconModule,
     NzMenuModule,
     NzLayoutModule,
-    NgOptimizedImage
+    NgOptimizedImage,
   ],
   providers: [
     provideClientHydration(),

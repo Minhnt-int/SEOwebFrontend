@@ -22,13 +22,13 @@ export class NewPageComponent {
   ) {}
   ngOnInit() {
     this.newName = this.route.snapshot.paramMap.get('newName');
-    this.data = this.productService.findNewbyName(this.newName)[0];
+    this.data = this.productService.findProjectbyName(this.newName)[0];
     this.setMeta();
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
         this.newName = this.route.snapshot.paramMap.get('newName');
-        this.data = this.productService.findNewbyName(this.newName)[0];
+        this.data = this.productService.findProjectbyName(this.newName)[0];
         this.setMeta();
 
         // code goes here...

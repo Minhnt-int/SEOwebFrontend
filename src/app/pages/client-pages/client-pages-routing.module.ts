@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'du-an',
-    component: ProjectPageComponent,
+    loadChildren: () => import('./project-page/project-page.module').then(m=>m.ProjectPageModule)
   },
   {
     path: 'thiet-ke-thi-cong-noi-that',

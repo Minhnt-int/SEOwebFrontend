@@ -17,8 +17,9 @@ export class NewsPageComponent {
   ) {}
   data: News[] = [];
   ngOnInit() {
-    this.data = this.service.getNews();
-
+    this.data = this.service.getProject("news");
+    console.log(this.data);
+    
     const today = new Date();
     const year = today.getFullYear();
     const month = today.getMonth() + 1;
